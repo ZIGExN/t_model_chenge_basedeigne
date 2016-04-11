@@ -1,0 +1,22 @@
+/*---------------------------------------------------
+  * _z_list.scss
+  * zigexn common list class (sass partial file)
+  * date:2014.12.8
+  * author: syuzo(Minori Matsuoka)
+  * version 0.0.1
+  ---------------------------------------------------*/
+
+// list
+.list_default {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list_horizontal {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  li{
+    display: inline-block;
+  }
+}

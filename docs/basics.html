@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+  <head>
+    <title>a brand new styleguide: </title>
+    <link rel="stylesheet" href="../dist/stylesheets/master.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+        
+          <li><a href="index.html">basics</a></li>
+        
+        </ul>
+      </nav>
+
+      <h1>a brand new style guide, it's super effective</h1>
+      <section class="content">
+        <ul>
+        
+          <li><a href="#z_breadcrumb">z_breadcrumb</a></li>
+        
+          <li><a href="#z_button">z_button</a></li>
+        
+          <li><a href="#z_layout">z_layout</a></li>
+        
+          <li><a href="#z_skin">z_skin</a></li>
+        
+          <li><a href="#z_table">z_table</a></li>
+        
+        </ul>
+<h1 id="z_breadcrumb" class="styleguide">z_breadcrumb</h1>
+
+<h3>breadcrumb</h3>
+<p class="styleguide">パンくずリストを定義しています。
+基本パーツはmixinで定義しているので、要素同士のスペースや区切り線はinclude時に引数で変更可能です。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="breadcrumb">
+  <div class="breadcrumb_list">
+    <div class="breadcrumb_step">パンくず1</div>
+    <div class="breadcrumb_step"><a href="#">パンくず2</a></div>
+    <div class="breadcrumb_step"><a href="#">パンくず3</a></div>
+    <div class="breadcrumb_step">パンくず4</div>
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumb_list"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumb_step"</span><span class="nt">&gt;</span>パンくず1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumb_step"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>パンくず2<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumb_step"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>パンくず3<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumb_step"</span><span class="nt">&gt;</span>パンくず4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="z_button" class="styleguide">z_button</h1>
+
+<h3>button style</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<a href="#" class="btn">default ボタン</a>
+<a href="#" class="btn btn_flat_a">flat b ボタン</a>
+<a href="#" class="btn btn_raised_a">raised a ボタン</a>
+<a href="#" class="btn btn_action_a">action a ボタン</a>
+<a href="#" class="btn_link_a">text リンク</a>
+<a href="#" class="btn_link_b">text リンク</a>
+
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn"</span><span class="nt">&gt;</span>default ボタン<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_flat_a"</span><span class="nt">&gt;</span>flat b ボタン<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_raised_a"</span><span class="nt">&gt;</span>raised a ボタン<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_action_a"</span><span class="nt">&gt;</span>action a ボタン<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn_link_a"</span><span class="nt">&gt;</span>text リンク<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn_link_b"</span><span class="nt">&gt;</span>text リンク<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>button size</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<a href="#" class="btn btn_flat_a btn_x_large">x large サイズ</a>
+<a href="#" class="btn btn_flat_a btn_large">large サイズ</a>
+<a href="#" class="btn btn_flat_a btn_midium">midium サイズ</a>
+<a href="#" class="btn btn_flat_a">default サイズ</a>
+<a href="#" class="btn btn_flat_a btn_small">small サイズ</a>
+<a href="#" class="btn btn_flat_a btn_x_small">x_small サイズ</a>
+
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_flat_a btn_x_large"</span><span class="nt">&gt;</span>x large サイズ<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_flat_a btn_large"</span><span class="nt">&gt;</span>large サイズ<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_flat_a btn_midium"</span><span class="nt">&gt;</span>midium サイズ<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_flat_a"</span><span class="nt">&gt;</span>default サイズ<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_flat_a btn_small"</span><span class="nt">&gt;</span>small サイズ<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn_flat_a btn_x_small"</span><span class="nt">&gt;</span>x_small サイズ<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="z_layout" class="styleguide">z_layout</h1>
+
+<h2>Responsive</h2>
+<p class="styleguide">レスポンシブ対応する場合、containerのブレイクポイントは768px,992px,1200pxです。</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="container">
+  <div class="demo_box">container box</div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>container box<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>grid</h2>
+<ul class="styleguide"><li>グリッドレイアウトをする際に使用します。(グリッドレイアウトを理解していない場合、使用しないでください)</li>
+<li>固定カラムを採用する場合は、theme内で独自のクラス定義を行ってください。</li>
+<li>固定カラムを採用する場合は、予めサイズを計算して、それぞれの値を付与したクラスを使用してください。</li>
+<li>レスポンシブ対応する場合は、固定カラムは非推奨です。レイアウトが崩れてしまうからです。</li>
+<li>固定値と相対値を混同しないようにしてください。(左カラムが210pxで、右カラムが70%とか。)</li>
+</ul><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="mb_30">
+  <div class="row">
+    <div class="cols_12">
+      <div class="demo_box">cols_12</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_11">
+      <div class="demo_box">cols_11</div>
+    </div>
+    <div class="cols_1">
+      <div class="demo_box">cols_1</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_10">
+      <div class="demo_box">cols_10</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_9">
+      <div class="demo_box">cols_9</div>
+    </div>
+    <div class="cols_3">
+      <div class="demo_box">cols_3</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_8">
+      <div class="demo_box">cols_8</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_7">
+      <div class="demo_box">cols_7</div>
+    </div>
+    <div class="cols_5">
+      <div class="demo_box">cols_5</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_6">
+      <div class="demo_box">cols_6</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb_30"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_12"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_12<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_11"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_11<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_1"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_10"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_10<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_9"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_9<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_3"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_8"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_8<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_7"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_7<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_5"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_5<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_6"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_2"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo_box"</span><span class="nt">&gt;</span>cols_2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>table_grid</h2>
+<ul class="styleguide"><li>グリッドレイアウトを採用し、更にインライン要素の縦方向を操作したい際に使用します。</li>
+<li>固定カラムを採用する場合は、theme内で独自のクラス定義を行ってください。</li>
+<li>固定カラムを採用する場合は、予めサイズを計算して、それぞれの値を付与したクラスを使用してください。</li>
+<li>レスポンシブ対応する場合は、固定カラムは非推奨です。レイアウトが崩れてしまうからです。</li>
+<li>固定値と相対値を混同しないようにしてください。(左カラムが210pxで、右カラムが70%とか。)</li>
+</ul><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="mb_30">
+  <div class="demo">
+    <div class="table_row mb_10">
+      <div class="cols_12">
+        cols_12
+      </div>
+    </div>
+    <div class="table_row mb_10">
+      <div class="cols_11">
+        cols_11
+      </div>
+      <div class="cols_1">
+        cols_1
+      </div>
+    </div>
+    <div class="table_row mb_10">
+      <div class="cols_10">
+        cols_10
+      </div>
+      <div class="cols_2">
+        cols_2
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb_30"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table_row mb_10"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_12"</span><span class="nt">&gt;</span>
+        cols_12
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table_row mb_10"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_11"</span><span class="nt">&gt;</span>
+        cols_11
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_1"</span><span class="nt">&gt;</span>
+        cols_1
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table_row mb_10"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_10"</span><span class="nt">&gt;</span>
+        cols_10
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"cols_2"</span><span class="nt">&gt;</span>
+        cols_2
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="z_skin" class="styleguide">z_skin</h1>
+
+<h2>Color</h2>
+<p class="styleguide">じげんのコーポレートカラーと、基本のグレースケールを定義しています。
+サイト個々のカラーはthemeのcolor.scssで別途定義をしてください。
+背景、ボーダー、フォントのカラーを個別に定義する場合はそれぞれ、.z＿bg＿hoge、.z＿border＿hoge、.z＿color＿hogeという指定が可能です。</p>
+<h3>zigexn corporate color chart</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<div class="z_bg_orange_a">#f93</div>
+<div class="z_bg_orange_b">#f60</div>
+<div class="z_bg_blue_a">#7cf</div>
+<div class="z_bg_blue_b">#2ae</div>
+<div class="z_bg_green_a">#ad5</div>
+<div class="z_bg_green_b">#8b1</div>
+<div class="z_bg_pink_a">#f68</div>
+<div class="z_bg_pink_b">#f36</div>
+<div class="z_bg_navy_a">#4f515d</div>
+<div class="z_bg_navy_b">#242635</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_orange_a"</span><span class="nt">&gt;</span>#f93<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_orange_b"</span><span class="nt">&gt;</span>#f60<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_blue_a"</span><span class="nt">&gt;</span>#7cf<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_blue_b"</span><span class="nt">&gt;</span>#2ae<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_green_a"</span><span class="nt">&gt;</span>#ad5<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_green_b"</span><span class="nt">&gt;</span>#8b1<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_pink_a"</span><span class="nt">&gt;</span>#f68<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_pink_b"</span><span class="nt">&gt;</span>#f36<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_navy_a"</span><span class="nt">&gt;</span>#4f515d<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_navy_b"</span><span class="nt">&gt;</span>#242635<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>grayscale color chart</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="z_bg_gray_150">#e3e3e3</div>
+<div class="z_bg_gray_140">#e6e6e6</div>
+<div class="z_bg_gray_130">#ccc</div>
+<div class="z_bg_gray_120">#b3b3b3</div>
+<div class="z_bg_gray_110">#999</div>
+<div class="z_bg_gray_100">#808080</div>
+<div class="z_bg_gray_90">#666</div>
+<div class="z_bg_gray_80">#4d4d4d</div>
+<div class="z_bg_gray_70">#333</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_150"</span><span class="nt">&gt;</span>#e3e3e3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_140"</span><span class="nt">&gt;</span>#e6e6e6<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_130"</span><span class="nt">&gt;</span>#ccc<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_120"</span><span class="nt">&gt;</span>#b3b3b3<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_110"</span><span class="nt">&gt;</span>#999<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_100"</span><span class="nt">&gt;</span>#808080<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_90"</span><span class="nt">&gt;</span>#666<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_80"</span><span class="nt">&gt;</span>#4d4d4d<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"z_bg_gray_70"</span><span class="nt">&gt;</span>#333<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="z_table" class="styleguide">z_table</h1>
+
+<h3>table</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    
+<table class="table table_default">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>性</th>
+      <th>名</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>じげん</td>
+      <td>ぶ</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>じげん</td>
+      <td>ぶー</td>
+    </tr>
+  </tbody>
+</table>
+
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table_default"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>ID<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>性<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;th&gt;</span>名<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+  <span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>1<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>じげん<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>ぶ<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+      <span class="nt">&lt;th&gt;</span>2<span class="nt">&lt;/th&gt;</span>
+      <span class="nt">&lt;td&gt;</span>じげん<span class="nt">&lt;/td&gt;</span>
+      <span class="nt">&lt;td&gt;</span>ぶー<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></pre>
+    </div>
+  </div>
+</div>
+      </section>
+      <footer>
+        <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+      </footer>
+    </div>
+  </body>
+</html>

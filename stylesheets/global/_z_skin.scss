@@ -1,0 +1,125 @@
+/*---------------------------------------------------
+  * _z_skin.scss
+  * zigexn common skin class (sass partial file)
+  * date:2015.5.8
+  * author: zigexn
+  * version 0.0.2
+  ---------------------------------------------------*/
+
+/*doc
+---
+title: z_skin
+name: z_skin
+category: basics
+---
+
+## Color
+じげんのコーポレートカラーと、基本のグレースケールを定義しています。
+サイト個々のカラーはthemeのcolor.scssで別途定義をしてください。
+背景、ボーダー、フォントのカラーを個別に定義する場合はそれぞれ、.z＿bg＿hoge、.z＿border＿hoge、.z＿color＿hogeという指定が可能です。
+
+### zigexn corporate color chart
+
+```html_example
+
+<div class="z_bg_orange_a">#f93</div>
+<div class="z_bg_orange_b">#f60</div>
+<div class="z_bg_blue_a">#7cf</div>
+<div class="z_bg_blue_b">#2ae</div>
+<div class="z_bg_green_a">#ad5</div>
+<div class="z_bg_green_b">#8b1</div>
+<div class="z_bg_pink_a">#f68</div>
+<div class="z_bg_pink_b">#f36</div>
+<div class="z_bg_navy_a">#4f515d</div>
+<div class="z_bg_navy_b">#242635</div>
+```
+
+### grayscale color chart
+
+```html_example
+<div class="z_bg_gray_150">#e3e3e3</div>
+<div class="z_bg_gray_140">#e6e6e6</div>
+<div class="z_bg_gray_130">#ccc</div>
+<div class="z_bg_gray_120">#b3b3b3</div>
+<div class="z_bg_gray_110">#999</div>
+<div class="z_bg_gray_100">#808080</div>
+<div class="z_bg_gray_90">#666</div>
+<div class="z_bg_gray_80">#4d4d4d</div>
+<div class="z_bg_gray_70">#333</div>
+```
+*/
+
+/* background corporate color */
+.z_bg_orange_a {background-color: $z_color_orange_a;}
+.z_bg_orange_b {background-color: $z_color_orange_b;}
+.z_bg_blue_a {background-color: $z_color_blue_a;}
+.z_bg_blue_b {background-color: $z_color_blue_b;}
+.z_bg_green_a {background-color: $z_color_green_a;}
+.z_bg_green_b {background-color: $z_color_green_b;}
+.z_bg_pink_a {background-color: $z_color_pink_a;}
+.z_bg_pink_b {background-color: $z_color_pink_b;}
+.z_bg_navy_a {background-color: $z_color_navy_a;}
+.z_bg_navy_b {background-color: $z_color_navy_b;}
+
+/* background grayscale color */
+.z_bg_white {background-color: $z_color_white;}
+.z_bg_black {background-color: $z_color_black;}
+.z_bg_gray_150 {background-color: $z_color_gray_150;}
+.z_bg_gray_140 {background-color: $z_color_gray_140;}
+.z_bg_gray_130 {background-color: $z_color_gray_130;}
+.z_bg_gray_120 {background-color: $z_color_gray_120;}
+.z_bg_gray_110 {background-color: $z_color_gray_110;}
+.z_bg_gray_100 {background-color: $z_color_gray_100;}
+.z_bg_gray_90 {background-color: $z_color_gray_90;}
+.z_bg_gray_80 {background-color: $z_color_gray_80;}
+.z_bg_gray_70 {background-color: $z_color_gray_70;}
+
+/* border corporate color */
+.z_border_orange_a {border-color: $z_color_orange_a;}
+.z_border_orange_b {border-color: $z_color_orange_b;}
+.z_border_blue_a {border-color: $z_color_blue_a;}
+.z_border_blue_b {border-color: $z_color_blue_b;}
+.z_border_green_a {border-color: $z_color_green_a;}
+.z_border_green_b {border-color: $z_color_green_b;}
+.z_border_pink_a {border-color: $z_color_pink_a;}
+.z_border_pink_b {border-color: $z_color_pink_b;}
+.z_border_navy_a {border-color: $z_color_navy_a;}
+.z_border_navy_b {border-color: $z_color_navy_b;}
+
+/* border grayscale color */
+.z_border_white {border-color: $z_color_white;}
+.z_border_black {border-color: $z_color_black;}
+.z_border_gray_150 {border-color: $z_color_gray_150;}
+.z_border_gray_140 {border-color: $z_color_gray_140;}
+.z_border_gray_130 {border-color: $z_color_gray_130;}
+.z_border_gray_120 {border-color: $z_color_gray_120;}
+.z_border_gray_110 {border-color: $z_color_gray_110;}
+.z_border_gray_100 {border-color: $z_color_gray_100;}
+.z_border_gray_90  {border-color: $z_color_gray_90;}
+.z_border_gray_80  {border-color: $z_color_gray_80;}
+.z_border_gray_70  {border-color: $z_color_gray_70;}
+
+/* font corporate color */
+.z_color_orange_a {color: $z_color_orange_a;}
+.z_color_orange_b {color: $z_color_orange_b;}
+.z_color_blue_a {color: $z_color_blue_a;}
+.z_color_blue_b {color: $z_color_blue_b;}
+.z_color_green_a {color: $z_color_green_a;}
+.z_color_green_b {color: $z_color_green_b;}
+.z_color_pink_a {color: $z_color_pink_a;}
+.z_color_pink_b {color: $z_color_pink_b;}
+.z_color_navy_a {color: $z_color_navy_a;}
+.z_color_navy_b {color: $z_color_navy_b;}
+
+/* font grayscale color */
+.z_color_white {color: $z_color_white;}
+.z_color_black {color: $z_color_black;}
+.z_color_gray_150 {color: $z_color_gray_150;}
+.z_color_gray_140 {color: $z_color_gray_140;}
+.z_color_gray_130 {color: $z_color_gray_130;}
+.z_color_gray_120 {color: $z_color_gray_120;}
+.z_color_gray_110 {color: $z_color_gray_110;}
+.z_color_gray_100 {color: $z_color_gray_100;}
+.z_color_gray_90 {color: $z_color_gray_90;}
+.z_color_gray_80 {color: $z_color_gray_80;}
+.z_color_gray_70 {color: $z_color_gray_70;}

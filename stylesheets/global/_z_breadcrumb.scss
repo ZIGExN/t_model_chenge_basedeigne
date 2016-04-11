@@ -1,0 +1,60 @@
+/*---------------------------------------------------
+  * _z_breadcrumb.scss
+  * zigexn common breadcrumb class (sass partial file)
+  * date:2015.5.8
+  * author: zigexn
+  * version 0.0.2
+  ---------------------------------------------------*/
+
+/*doc
+---
+title: z_breadcrumb
+name: z_breadcrumb
+category: basics
+---
+
+### breadcrumb
+パンくずリストを定義しています。
+基本パーツはmixinで定義しているので、要素同士のスペースや区切り線はinclude時に引数で変更可能です。
+
+```html_example
+<div class="breadcrumb">
+  <div class="breadcrumb_list">
+    <div class="breadcrumb_step">パンくず1</div>
+    <div class="breadcrumb_step"><a href="#">パンくず2</a></div>
+    <div class="breadcrumb_step"><a href="#">パンくず3</a></div>
+    <div class="breadcrumb_step">パンくず4</div>
+  </div>
+</div>
+```
+
+*/
+
+/* breadcrumb */
+@mixin breadcrumb($divider, $space) {
+  display: inline-block;
+  vertical-align: middle;
+  .breadcrumb_list {
+    position: relative;
+    list-style: none;
+    padding-left: 0;
+    .breadcrumb_step {
+      float: left;
+      font-weight: normal;
+      &:after {
+        content: $divider;
+        display: inline;
+        margin: $space;
+      }
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}
+
+// params difine by valiable.scss
+// defalut $breadcrumbDivider -> '>', $breadcrumbSpace -> 0 .5em
+.breadcrumb {
+  @include breadcrumb($breadcrumbDivider, $breadcrumbSpace);
+}

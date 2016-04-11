@@ -1,0 +1,79 @@
+/*---------------------------------------------------
+  * _z_table.scss
+  * zigexn common table class (sass partial file)
+  * date:2015.4.15
+  * author: zigexn
+  * version 0.0.2
+  ---------------------------------------------------*/
+
+/*doc
+---
+title: z_table
+name: z_table
+category: basics
+---
+
+
+### table
+
+```html_example
+
+<table class="table table_default">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>性</th>
+      <th>名</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>じげん</td>
+      <td>ぶ</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>じげん</td>
+      <td>ぶー</td>
+    </tr>
+  </tbody>
+</table>
+
+```
+*/
+
+  /* table class */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+  th,
+  td {
+    font-weight: normal;
+    text-align: left;
+    padding: .68rem;
+    border: 1px solid transparent;
+  }
+}
+
+// type default
+.table_default {
+  background: $z_color_white;
+  th,
+  td {
+    border: 1px solid $z_color_gray_130;
+  }
+  thead th {
+    background: $z_color_gray_140;
+  }
+  tbody th {
+    background: $z_color_gray_150;
+  }
+}
+
+.table_inset_line_white {
+  th {
+    box-shadow: 1px 1px 0 $z_color_white inset, -1px -1px 0 $z_color_white inset;
+  }
+}

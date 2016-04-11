@@ -1,0 +1,97 @@
+/*---------------------------------------------------
+  * _z_helper.scss
+  * zigexn common helper class (sass partial file)
+  * date:2015.5.7
+  * author: zigexn
+  * version 0.0.3
+  ---------------------------------------------------*/
+
+/* inline position */
+.t_center { text-align: center !important; }
+.t_right { text-align: right !important; }
+.t_left { text-align: left !important; }
+
+.v_top { vertical-align: top !important; }
+.v_middle { vertical-align: middle !important; }
+.v_baseline { vertical-align: baseline !important; }
+.v_bottom { vertical-align: bottom !important; }
+
+.p_static { position: static !important; }
+.p_relative { position: relative !important; }
+.p_absolute { position: absolute !important; }
+.p_fixed { position: fixed !important; }
+
+/* displayBlock */
+.d_inline { display: inline !important; }
+.d_inline_block { display: inline-block !important; }
+.d_block { display: block !important; }
+.d_table { display: table !important; }
+.d_table_fixed {
+  display: table !important;
+  table-layout: fixed !important;
+}
+.d_table_cell { display: table-cell !important; }
+.d_none { display: none !important; }
+
+/* overflow */
+.o_hidden { overflow: hidden !important; }
+.o_visible { overflow: visible !important; }
+.o_scroll { overflow: scroll !important; }
+
+/* text */
+.f_bold { font-weight: bold !important;}
+.f_normal { font-weight: normal !important;}
+.t_underline { text-decoration: underline !important;}
+.t_none { text-decoration: none !important;}
+
+/* float */
+.f_left { float: left !important; }
+.f_right { float: right !important; }
+
+/* fixed width */
+.w_200px { width: 200px; }
+.w_210px { width: 210px; }
+.w_760px { width: 760px; }
+.w_770px { width: 770px; }
+
+.w_100per{ width: 100%; }
+
+/* margin */
+$numList: 1, 3, 5, 10, 15, 20, 25, 30;
+$marginList: m, mt, mr, mb, ml;
+$paddingList: p, pt, pr, pb, pl;
+@each $margin in $marginList {
+  @each $num in $numList {
+  	@if $margin == m {
+      .#{$margin}_#{$num} { margin: #{$num}px !important; }
+    } @else if $margin == mt {
+      .#{$margin}_#{$num} { margin-top: #{$num}px !important; }
+    } @else if $margin == mr {
+      .#{$margin}_#{$num} { margin-right: #{$num}px !important; }
+    } @else if $margin == mb {
+      .#{$margin}_#{$num} { margin-bottom: #{$num}px !important; }
+    } @else if $margin == ml {
+      .#{$margin}_#{$num} { margin-left: #{$num}px !important; }
+    } @else {
+      .mr_auto { margin-right: auto !important; }
+      .ml_auto { margin-left: auto !important; }
+    }
+  }
+}
+
+/* padding */
+@each $padding in $paddingList {
+  @each $num in $numList {
+  	@if $padding == p {
+      .#{$padding}_#{$num} { padding: #{$num}px !important; }
+    } @else if $padding == pt {
+      .#{$padding}_#{$num} { padding-top: #{$num}px !important; }
+    } @else if $padding == pr {
+      .#{$padding}_#{$num} { padding-right: #{$num}px !important; }
+    } @else if $padding == pb {
+      .#{$padding}_#{$num} { padding-bottom: #{$num}px !important; }
+    } @else if $padding == pl {
+      .#{$padding}_#{$num} { padding-left: #{$num}px !important; }
+    }
+  }
+}

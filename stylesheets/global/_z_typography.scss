@@ -1,0 +1,24 @@
+/*---------------------------------------------------
+  * _z_typography.scss
+  * zigexn common list class (sass partial file)
+  * date:2014.12.8
+  * author: syuzo(Minori Matsuoka)
+  * version 0.0.1
+  ---------------------------------------------------*/
+
+// base font family
+body{
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック体", "Yu Gothic", 'meiryo', 'メイリオ', 'Osaka', 'ＭＳ Ｐゴシック', sans-serif;
+}
+// class setting
+/* typograpy */
+.z_typo_color_white    {color: $z_color_white;}
+.z_typo_color_black    {color: $z_color_black;}
+.z_typo_color_gray_140 {color: $z_color_gray_140;}
+.z_typo_color_gray_130 {color: $z_color_gray_130;}
+.z_typo_color_gray_120 {color: $z_color_gray_120;}
+.z_typo_color_gray_110 {color: $z_color_gray_110;}
+.z_typo_color_gray_100 {color: $z_color_gray_100;}
+.z_typo_color_gray_90  {color: $z_color_gray_90;}
+.z_typo_color_gray_80  {color: $z_color_gray_80;}
+.z_typo_color_gray_70  {color: $z_color_gray_70;}
