@@ -1,15 +1,15 @@
 {
   "devDependencies": {
-    "browser-sync": "^2.5.3",
-    "gulp": "^3.8.11",
-    "gulp-autoprefixer": "^2.1.0",
-    "gulp-compass": "^2.0.1",
-    "gulp-ruby-sass": "^1.0.1",
+    "browser-sync": "^2.12.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-ruby-sass": "^1.4.0",
     "gulp-size": "^1.2.1",
     "run-sequence": "^1.0.2"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=5.10.1"
   },
   "private": true,
   "scripts": {

@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 typography setting
+//    date: 2016.04.15
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+html{
+  font-size: 0.75%;
+}
+
+body{
+  background: #fff;
+  font-style: normal;
+  font-size: 1rem;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック体", "Yu Gothic", 'meiryo', 'メイリオ', sans-serif;;
+  color: $z_color_gray_70; 
+}
