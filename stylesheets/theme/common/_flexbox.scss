@@ -1,0 +1,85 @@
+
+//=========================================
+//
+// tenshoku-ex v3 flexbox layout helper
+//    date: 2016.04.22
+//  author: vancho
+// version: 0.0.1
+//
+//=========================================
+
+// flex-directionのプロパティ値とクラス名の定義
+$flex-direction-value: row, row-reverse, column, column-reverse;
+// flex-wrapのプロパティ値とクラス名を定義
+$flex-wrap-value: wrap, nowrap, wrap-reverse;
+// justify-contentのプロパティ値とクラス名を定義
+$justify-content-value: flex-start, flex-end, center;
+// align-itemのプロパティ値とクラス名を定義
+$align-items-value: stretch, flex-start, flex-end, center, baseline;
+// align-contentのプロパティ値とクラス名を定義
+$align-content-value: stretch, flex-start, flex-end, center, space-between, space-around;
+// orderの値
+// flex-growのプロパティ値とクラス名を定義
+// flex-basisのプロパティ値とクラス名を定義
+
+
+.flex-conteiner{
+  display: -webkit-flex;
+  display: flex;
+  &.inline-flex{
+    display: inline-flex;
+  }
+  &.direction-row{
+    flex-direction: row;
+  }
+  &.direction-row-reverse{
+    flex-direction: row-reverse;
+  }
+  &.direction-colum{
+    flex-direction: column;
+  }
+  &.direction-colum-reverse{
+    flex-direction: column-reverse;
+  }
+  &.direction-nowrap{
+    flex-wrap: nowrap;
+  }
+  &.direction-wrap{
+    flex-warp: wrap;
+  }
+  &.direction-wrap-reverse{
+    flex-wrap: wrap-reverse;
+  }
+  &.justify-flex-start{
+    justify-content: flex-start;
+  }
+  &.justify-flex-end{
+    justify-content: flex-end;
+  }
+  &.justify-center{
+    justify-contet: center;
+  }
+  &.justify-space-between{
+    justify-content: space-between;
+  }
+  &.justify-space-around{
+    justify-content: space-around;
+  }
+  &.align-item-stretch{
+    align-item: stretch;
+  }
+  &.align-item-flex-start{
+    align-item: flex-start;
+  }
+  &.align-item-flex-end{
+    align-item: flex-end;
+  }
+  &.align-item-center{
+    align-item: center;
+  }
+  &.align-item-baseline{
+    align-item: baseline;
+  }
+
+}
+

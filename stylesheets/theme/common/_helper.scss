@@ -1,0 +1,43 @@
+/*---------------------------------------------------
+  * _helper.scss
+  * tenshoku ex design helper css
+  * date:2016.04.18
+  * author: vancho
+  * version 0.0.1
+  ---------------------------------------------------*/
+//====================================
+//
+// font size module setting
+//
+//ex. if base font size setting with 13px
+//
+// font-size: fz(10) is font size 10px render.
+//
+//====================================
+$font_size_list: 62%, 70%, 77%, 85%, 93%, 100%, 108%, 116%, 124%, 131%, 139%, 147%, 154%, 162%, 170%, 177%, 185%, 193%, 200%, 208%, 216%, 224%, 231%, 239%, 247%, 254%, 262%, 270%, 277%, 285%, 293%, 300%, 308%;
+
+@function fz($font_size){
+  @if $font_size < 8{
+    $font_size: 8;
+  }
+  @if $font_size > 40 {
+    $font_size: 40;
+  }
+  @return nth($font_size_list, $font_size -7);
+}
+
+
+//====================================
+//
+// width module setting
+//
+// ex. if class name was width_500px.
+// .width_500px{
+//   width: 500px;
+// }
+//====================================
+@for $width_value from 1 through 960{
+  .width_#{$width_value}px{
+    width: 1px * $width_value;
+  }
+}
