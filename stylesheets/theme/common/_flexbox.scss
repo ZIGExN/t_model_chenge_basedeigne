@@ -1,85 +1,172 @@
-
 //=========================================
 //
 // tenshoku-ex v3 flexbox layout helper
 //    date: 2016.04.22
 //  author: vancho
 // version: 0.0.1
+// refarence by http://codepen.io/irinakramer/pen/jcLlp
 //
 //=========================================
+// DEMO mode setting
+$base-color: rgba($z_color_black, .6);
+$base-border-color: $z_color_black;
 
-// flex-directionのプロパティ値とクラス名の定義
-$flex-direction-value: row, row-reverse, column, column-reverse;
-// flex-wrapのプロパティ値とクラス名を定義
-$flex-wrap-value: wrap, nowrap, wrap-reverse;
-// justify-contentのプロパティ値とクラス名を定義
-$justify-content-value: flex-start, flex-end, center;
-// align-itemのプロパティ値とクラス名を定義
-$align-items-value: stretch, flex-start, flex-end, center, baseline;
-// align-contentのプロパティ値とクラス名を定義
-$align-content-value: stretch, flex-start, flex-end, center, space-between, space-around;
-// orderの値
-// flex-growのプロパティ値とクラス名を定義
-// flex-basisのプロパティ値とクラス名を定義
-
-
-.flex-conteiner{
-  display: -webkit-flex;
-  display: flex;
-  &.inline-flex{
-    display: inline-flex;
-  }
-  &.direction-row{
-    flex-direction: row;
-  }
-  &.direction-row-reverse{
-    flex-direction: row-reverse;
-  }
-  &.direction-colum{
-    flex-direction: column;
-  }
-  &.direction-colum-reverse{
-    flex-direction: column-reverse;
-  }
-  &.direction-nowrap{
-    flex-wrap: nowrap;
-  }
-  &.direction-wrap{
-    flex-warp: wrap;
-  }
-  &.direction-wrap-reverse{
-    flex-wrap: wrap-reverse;
-  }
-  &.justify-flex-start{
-    justify-content: flex-start;
-  }
-  &.justify-flex-end{
-    justify-content: flex-end;
-  }
-  &.justify-center{
-    justify-contet: center;
-  }
-  &.justify-space-between{
-    justify-content: space-between;
-  }
-  &.justify-space-around{
-    justify-content: space-around;
-  }
-  &.align-item-stretch{
-    align-item: stretch;
-  }
-  &.align-item-flex-start{
-    align-item: flex-start;
-  }
-  &.align-item-flex-end{
-    align-item: flex-end;
-  }
-  &.align-item-center{
-    align-item: center;
-  }
-  &.align-item-baseline{
-    align-item: baseline;
-  }
-
+// Contents classes
+.demo{
+ .content-1of1::before { content: "1"; } 
+ .content-1of2::before { content: "1/2"; }
+ .content-1of3::before { content: "1/3"; }
+ .content-1of4::before { content: "1/4"; }
+ .content-1of6::before { content: "1/6"; }
+ .content-1of12::before { content: "1/12"; }
 }
 
+.flexgrid{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+// gutter setting
+$gutter: 1em;
+
+.flexgrid--gutter{
+  margin-left: -$gutter;
+  .flexgrid-cell{
+    padding-left: $gutter;
+  }
+  .flexgrid--nested{
+    .flexgrid--cell:first-of-type{
+      .demo{
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+// justify per row
+.flexgrid--right{
+  justify-content: flex-end;
+}
+.flexgrid--center{
+  justify-content: center;
+}
+
+// alignment per row
+.flexgrid--top{
+  align-items: flex-start;
+}
+.flexgrid--bottom{
+  align-items: flex-end;
+}
+.flexgrid--center{
+  align-items: center;
+}
+
+// alignment per cell
+.flexgrid-cell-top{
+  align-self: flex-start;
+}
+.flexgrid-cell-bottom{
+  align-self: flex-end;
+}
+.flexgrid-cell-center{
+  align-self: center;
+}
+
+// base classes for media - mobile first
+.flexgrid--cols-2 > .flexgrid-cell{
+  flex: 0 0 100%;
+}
+.flexgrid--cols-3 > .flexgrid-cell{
+  flex: 0 0 100%;
+}
+.flexgrid--cols-4 > .flexgrid-cell{
+  flex: 0 0 calc(50% - #{$gutter});
+}
+.flexbox--cols-6 > .flexgrid-cell{
+  flex: 0 0 calc(33.3333% - #{$gutter});
+}
+.flexgrid--holly-grail{
+  .aside, .main{
+    flex: 1 100%;
+  }
+}
+
+// one of -- columns
+.flexgrid--1of2 > .flexgrid-cell,
+.flexgrid--1of4 > .flexgrid-cell:first-of-type,
+.flexgrid--1of3 > .flexgrid-cell:first-of-type{
+  flex: 0 0 100%;
+}
+.flexgrid--1of6 > .flexgrid-cell:first-of-type{
+  flex: 0 0 50%;
+}
+.flexgrid--fot > .flexgrid-cell{
+  flex: 1;
+}
+.flexgrid--full > .flexgrid-cell{
+  flex: 0 0 100%;
+}
+
+// tablet (medium) screen
+@media (min-width: 30em){
+  .flexgrid--cols-4 > .flexgrid-cell{
+    flex: 0 0 calc(50% - #{$gutter});
+  }
+  .flexgrid--cols-6 > .flexgrid{
+    flex: 0 0 calc(33.3333% - #{$gutter});
+  }
+  .flexgrid--cols-12 > .flexgrid-cell{
+    flex: 0 0 calc(16.6666% - #{$gutter});
+  }
+  .flexgrid--holly-grail{
+    .aside{
+      flex: 1 calc(25% - #{$gutter});
+    }
+  }
+  .flexgrid--1of2 > .flexgrid-cell{
+    flex: 0 0 50%;
+  }
+  .flexgrid--1of6 > .flexgrid-cell:first-of-type{
+    flex: 0 0 30%;
+  }
+  .flexgrid--1of3 > .flexgrid-cell:first-of-type{
+    flex: 0 0 100%;
+  }
+}
+
+@media (min-width: 48em) {
+  .flexgrid--cols-2 > .felxgrid-cell,
+  .flexgrid--cols-3 > .felxgrid-cell,
+  .flexgrid--cols-4 > .felxgrid-cell,
+  .flexgrid--cols-6 > .felxgrid-cell,
+  .flexgrid--cols-12 >.felxgrid-cell{
+    flex: 1;  
+  }
+  .Grid--holly-grail {
+    .main    { flex: 2; }
+    .aside   { flex: 1; }
+    .aside-1 { order: 1; } 
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+  }
+  .Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+  .Grid--1of6 > .Grid-cell:first-of-type {
+    flex: 0 0 16.6666%;
+  }
+  .Grid--1of4 > .Grid-cell:first-of-type {
+    flex: 0 0 25%;
+  }
+  .Grid--1of3 > .Grid-cell:first-of-type {
+    flex: 0 0 30%;
+  }
+  .Grid--gutters.Grid--nested {
+    .Grid-cell:first-of-type {
+      .Demo {
+        margin-right: 0;
+      }
+    }
+  }
+}
