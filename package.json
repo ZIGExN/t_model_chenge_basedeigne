@@ -1,4 +1,4 @@
-{
+
   "devDependencies": {
     "browser-sync": "^2.12.1",
     "gulp": "^3.9.1",

@@ -8,7 +8,7 @@
 //
 //=========================================
 // DEMO mode setting
-$base-color: rgba($z_color_black, .6);
+$base-color: rgba(0, 0, 0, .6);
 $base-border-color: $z_color_black;
 
 // Contents classes
@@ -29,7 +29,7 @@ $base-border-color: $z_color_black;
 // gutter setting
 $gutter: 1em;
 
-.flexgrid--gutter{
+.flexgrid--gutters{
   margin-left: -$gutter;
   .flexgrid-cell{
     padding-left: $gutter;

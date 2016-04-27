@@ -54,9 +54,22 @@ gulp.task('styles_sp', function() {
   .pipe(gulp.dest('dist/stylesheets/theme/sp'))
 });
 
+gulp.task('styles_common', function() {
+  return sass('stylesheets/theme/common/master.scss', {
+    bundleExec: true,
+    style: 'expanded',
+    compass: false
+  })
+  .on('error', function(err) {
+    console.error('Error', err.message);
+  })
+  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+  .pipe(gulp.dest('dist/stylesheets/theme/common'))
+});
+
 // Default task
 gulp.task('default', function() {
-  runSequence('styles_pc', 'styles_sp', 'browser-sync'),
+  runSequence('styles_pc', 'styles_sp', 'styles_common', 'browser-sync'),
   gulp.watch(['*.html'], reload);
-  gulp.watch(["stylesheets/*.scss", "stylesheets/**/*.scss"], ['styles_pc', 'styles_sp', reload]);
+  gulp.watch(["stylesheets/*.scss", "stylesheets/**/*.scss"], ['styles_pc', 'styles_sp', 'styles_common', reload]);
 });

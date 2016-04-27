@@ -1,11 +1,13 @@
-//---------------------------------------------------
-//  * master.scss
-//  * zigexn style import file
-//  * date:2015.6.23
-//  * author: zigexn
-//  * version 0.0.2
-//  ---------------------------------------------------*/
+@charset 'utf-8';
 
+//=========================================
+//
+// tenshoku-ex v3 PC/SP common import setting
+//    date: 2016.04.15
+//  author: vancho
+// version: 0.0.1
+//
+//=========================================
 // browser reset
 @import '../../global/_normalize';
 
@@ -22,7 +24,10 @@
 @import '../../global/_z_forms';
 @import '../../global/_z_helper';
 
+@import '_flexbox';
+@import '_helper';
+@import '_typography';
+@import '_color';
+@import '_table';
+@import '_button';
 
-// themes set
-@import '_main';
-@import '_valiable';
