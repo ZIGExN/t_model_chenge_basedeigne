@@ -4,19 +4,19 @@ var runSequence   = require('run-sequence');
 var reload        = browserSync.reload;
 var sass          = require('gulp-ruby-sass');
 var compass       = require('gulp-compass');
-var autoprefixer  = require('gulp-autoprefixer');
+// var autoprefixer  = require('gulp-autoprefixer');
 
-var AUTOPREFIXER_BROWSERS = [
-  'ie >= 8',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
-];
+//var AUTOPREFIXER_BROWSERS = [
+//  'ie >= 8',
+//  'ie_mob >= 10',
+//  'ff >= 30',
+//  'chrome >= 34',
+//  'safari >= 7',
+//  'opera >= 23',
+//  'ios >= 7',
+//  'android >= 4.4',
+//  'bb >= 10'
+//];
 
 // Static server
 gulp.task('browser-sync', function() {
@@ -37,7 +37,7 @@ gulp.task('styles_pc', function() {
   .on('error', function(err) {
     console.error('Error', err.message);
   })
-  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+//  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
   .pipe(gulp.dest('dist/stylesheets/theme/pc'))
 });
 
@@ -50,7 +50,7 @@ gulp.task('styles_sp', function() {
   .on('error', function(err) {
     console.error('Error', err.message);
   })
-  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+//  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
   .pipe(gulp.dest('dist/stylesheets/theme/sp'))
 });
 
@@ -63,7 +63,7 @@ gulp.task('styles_common', function() {
   .on('error', function(err) {
     console.error('Error', err.message);
   })
-  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+//  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
   .pipe(gulp.dest('dist/stylesheets/theme/common'))
 });
 
