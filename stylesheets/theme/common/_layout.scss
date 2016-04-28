@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 PC/SP layout setting
+//    date: 2016.04.15
+//  author: vancho
+// version: 0.0.1
+//
+//=========================================
+
+// responsive setting
+$responsive : false;
+
+//max width setting
+.wrapper{
+  margin: auto;
+  max-width: 1200px;
+}

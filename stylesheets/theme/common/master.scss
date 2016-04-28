@@ -15,16 +15,18 @@
 @import '../../global/_z_color';
 @import '../../global/_z_typography';
 @import '../../global/_z_common';
-@import '../../global/_z_layout';
+//@import '../../global/_z_layout';
 @import '../../global/_z_list';
 @import '../../global/_z_skin';
-@import '../../global/_z_button';
+//@import '../../global/_z_button';
 @import '../../global/_z_table';
-@import '../../global/_z_breadcrumb';
+//@import '../../global/_z_breadcrumb';
 @import '../../global/_z_forms';
 @import '../../global/_z_helper';
 
+// theme set
 @import '_flexbox';
+@import '_layout';
 @import '_helper';
 @import '_typography';
 @import '_color';
