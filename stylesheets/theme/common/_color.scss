@@ -8,11 +8,44 @@
 // version: 0.0.1
 //
 //=========================================
+// 基本色の変数設定
+$t-pallete-chacole-gray  : #333, #111;
+$t-pallete-smokey-gray   : #eeeeee, #e3e3e3;
+$t-pallete-cherry-red    : #d90000, #bd0000;
+$t-pallete-sky-blue      : #0c3bff, #0b85ff;
+$t-pallete-reaf-green    : #ee994d, #eb730c;
+$t-pallete-apricot-orange: #ee994d, #eb730c;
 
 // 基本色
-.t_color_smokegray{}
-.t_color_cherry{}
-.t_color_skybleu{}
-.t_color_reefgreen{}
-.t_color_orangeyellow{}
+$chacole-gray  : nth($t-pallete-chacole-gray, 1);
+$smokey-gray   : nth($t-pallete-smokey-gray, 2);
+$cherry-red    : nth($t-pallete-cherry-red, 1);
+$sky-blue      : nth($t-pallete-sky-blue, 1);
+$reaf-green    : nth($t-pallete-reaf-green, 1);
+$apricot-orange: nth($t-pallete-apricot-orange, 1);
+
+//テキスト色
+body{
+  color: $chacole-gray;
+}
+
+//リンク色
+@mixin link-color($normal, $hover){
+  color: $normal;
+  &:hover{
+    color: $hover;
+    text-decoration: none;
+  }
+}
+a{
+  @include link-color(nth($t-pallete-sky-blue,2), nth($t-pallete-sky-blue,1));
+}
+
+//ボーダー色
+$border-default-color: $smokey-gray;
+$border-red-color    : $cherry-red;
+
+// グラデーション設定
+// z-templateの設定を使う。
+
 

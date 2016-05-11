@@ -1,11 +1,10 @@
-/*---------------------------------------------------
-  * _z_breadcrumb.scss
-  * zigexn common breadcrumb class (sass partial file)
-  * date:2015.5.8
-  * author: zigexn
-  * version 0.0.2
-  ---------------------------------------------------*/
-
+//====================================================== 
+//  * _z_breadcrumb.scss
+//  * zigexn common breadcrumb class (sass partial file)
+//  * date:2015.5.8
+//  * author: zigexn
+//  * version 0.0.2
+//======================================================
 /*doc
 ---
 title: z_breadcrumb
@@ -55,6 +54,10 @@ category: basics
 
 // params difine by valiable.scss
 // defalut $breadcrumbDivider -> '>', $breadcrumbSpace -> 0 .5em
+
+// breadcrumb
+$breadcrumbDivider: '>' !default;
+$breadcrumbSpace: 0 .5em !default;
 .breadcrumb {
   @include breadcrumb($breadcrumbDivider, $breadcrumbSpace);
 }

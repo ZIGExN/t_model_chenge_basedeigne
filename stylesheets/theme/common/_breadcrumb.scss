@@ -1,13 +1,14 @@
 @charset 'utf-8';
+
 //=========================================
 //
-// tenshoku-ex v3 tenshoku-ex button setting
+// tenshoku-ex v3 PC/SP breadcrumb setting
 //    date: 2016.04.15
 //  author: vancho
 // version: 0.0.1
 //
 //=========================================
 
-// ボタンの基本設定
-
-
+// breadcrumb
+$breadcrumbDivider: '>' !default;
+$breadcrumbSpace: 0 .5em !default;
