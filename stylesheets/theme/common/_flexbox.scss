@@ -7,6 +7,8 @@
 // refarence by http://codepen.io/irinakramer/pen/jcLlp
 //
 //=========================================
+
+
 // DEMO mode setting
 $base-color: rgba(51, 153, 204, 0.2);
 $base-border-color: #3cc;
@@ -55,6 +57,133 @@ $demohollydark: rgba(102, 51, 255, 0.25);
     }
   }
 }
+
+/*doc
+---
+title: flexbox layout grid design pattern
+name: flexbox-layout
+category: layout
+---
+
+## sample demo
+
+``` html_example
+
+<p>Responsive grid with Flexbox</p>
+<h1>Basic flexgrid</h1>
+<p></p>
+<div class="flexgrid flexgrid--full u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of1"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-2 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-4 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-6 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--cols-12 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+</div>  
+<hr />  
+
+<h1>Sidebar and main content</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of6">
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--1of4">
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--1of3">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div> 
+<hr /> 
+
+<h1>Left / Center / Right content alignment</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of2">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--center">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--right">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+<hr />   
+
+<h1>Nesting</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo">     
+      <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+        <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+        <div class="flexgrid-cell"><div class="demo">
+            <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+              <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+              <div class="flexgrid-cell"><div class="demo">auto</div></div>
+            </div>        
+        </div></div>
+      </div>      
+    </div>
+  </div>
+</div>
+<hr /> 
+
+<h1>Vertical alignment</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--top">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>top-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--center">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>center-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--bottom">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>bottom-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+
+```
+
+*/
+
 
 // flexgrid basement setting
 .flexgrid{
@@ -123,27 +252,27 @@ $gutter: 1em;
 //
 //=========================================
 .flexgrid--cols-2 > .flexgrid-cell{
-  flex: 0 0 100%;
+  flex: 0 1 100%;
 }
 .flexgrid--cols-3 > .flexgrid-cell{
-  flex: 0 0 100%;
+  flex: 0 1 100%;
 }
 .flexgrid--cols-4 > .flexgrid-cell{
-  flex: 0 0 100%;
+  flex: 0 1 100%;
 }
 .flexgrid-cols-12 > .flexgrid-cell{
-  flex: 0 0 calc(33.3333% - #{$gutter});
+  flex: 0 1 calc(33.3333% - #{$gutter});
 }
 
 // one of -- columns
 .flexgrid--1of2 > .flexgrid-cell,
 .flexgrid--1of4 > .flexgrid-cell:first-of-type,
 .flexgrid--1of3 > .flexgrid-cell:first-of-type{
-  flex: 0 0 100%;
+  flex: 0 1 100%;
 }
 
 .flexgrid--1of6 > .flexgrid-cell:first-of-type {
-  flex: 0 0 50%;
+  flex: 0 1 50%;
 }
 
 .flexgrid--fit > .flexgrid-cell {
