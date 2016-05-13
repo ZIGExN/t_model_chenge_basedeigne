@@ -32,13 +32,15 @@ body{
   color: $z_color_gray_70; 
 }
 
-
-
-
-
 //=========================================
 // headline elements setting
 //=========================================
+%headline-bottom-margin{
+  margin: 0 0 1rem 0;
+}
+h1,h2,h3,h4,h5,h6{
+  @extend %headline-bottom-margin;
+}
 h1{
   @include font-size(48);
   small{
@@ -79,3 +81,21 @@ ol{
     list-style: decimal;
   }
 }
+dl{
+  padding: 0 0 0 1rem;
+  dt{
+    margin: 0;
+  }
+  dd{
+    margin: 0 0 0 1rem;
+  }
+}
+//=========================================
+// paragraph style setting
+//=========================================
+p{
+  margin: 0 0 1rem 0;
+}
+
+
+

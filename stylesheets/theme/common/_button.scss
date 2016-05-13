@@ -7,6 +7,68 @@
 // version: 0.0.1
 //
 //=========================================
+/*doc
+---
+title: button colors
+name: button colors$
+category: design
+---
+
+``` html_example
+
+<a class="btn demo"></a>
+
+<a class="btn btn-smokygray demo"></a>
+<a class="btn btn-cherry-red demo"></a>
+<a class="btn btn-sky-blue demo"></a>
+<a class="btn btn-reaf-green demo"></a>
+<a class="btn btn-apricot-orange demo"></a>
+
+```
+
+*/
+
+/*doc
+---
+title: button sizing
+name: button sizing
+category: design
+---
+
+``` html_example
+
+<a class="btn btn-medium demo"></a>
+<a class="btn btn-small demo"></a>
+<a class="btn btn-large demo"></a>
+
+```
+
+*/
+
+/*doc
+---
+title: button styling
+name: button styling
+category: design
+---
+
+``` html_example
+
+<a class="btn btn-inline demo"></a>
+<a class="btn btn-block demo"></a>
+<a class="btn btn-iblock demo"></a>
+
+```
+
+*/
+
+// sample demo style
+.btn{
+  &.demo:before{
+    content:"button sample";
+  }
+}
+
 // borderの設定
 @mixin btn-border-radius($radius){
   border-radius: $radius;
@@ -16,30 +78,64 @@
   border-style: solid;
   border-color: transparent;
 }
+
 // ボタンの基本設定
-[class^='btn']{
+%btn{
   @extend %btn-border-style;
   @include btn-border-radius(4px);
-  &-medium{
-    font-size: 1rem;
-  }
-  &-small{
-    font-size: .75rem;
-  }
-  &-large{
-    font-size: 1.2rem;
-  }
-//  &-smokey-gray{
-//    color: $smokey-gray;
-//  }
-//  &-cherry-red{
-//    color: $cherry-red;
-//  }
-//  &-sky-bule{
-//    color: $sky-blue;
-//  }
-//  &-reaf-green{
-//    color: $reaf-green;
-//  }
+  background: transparent;
+  color: $z_color_white;
+  text-shadow: 0 0 -1px rgba($z_color_black, .3);
 }
 
+// botton coloring
+.btn-smokygray{
+  @extend %btn;
+  border-color: nth($t-pallete-chacole-gray, 2);
+  background: gradient-two-vertical(nth($t-pallete-chacole-gray, 2),nth($t-pallete-chacole-gray, 1));
+}
+.btn-cherry-red{
+  @extend %btn;
+  border-color: $cherry-red;
+  background: gradation-two-vertical(nth($t-pallete-cherry-red, 1),nth($t-pallete-cherry-red, 2));
+}
+.btn-sky-blue{
+  @extend %btn;
+  border-color: $sky-blue;
+  background: gradation-two-vertical(nth($t-pallete-sky-blue, 1),nth($t-pallete-sky-blue, 2));
+}
+.btn-reaf-green{
+  @extend %btn;
+  border-color: $reaf-green;
+  background: gradation-two-vertical(nth($t-pallete-reaf-green, 1),nth($t-pallete-reaf-green, 2));
+}
+.btn-apricot-orage{
+  @extend %btn;
+  border-color: $apricot-orange;
+  background: gradation-two-vertical(nth($t-pallete-apricot-orange, 1),nth($t-pallete-apricot-orange, 2))
+}
+
+//button sizing
+.btn-medium{
+  @include font-size(14);
+  padding: .8rem 1.5rem;
+}
+.btn-small{
+  @include font-size(9);
+  padding: .9rem 1.7rem;
+}
+.btn-large{
+  @include font-size(36);
+  padding: .6rem 1.2rem;
+}
+
+// button styling
+.btn-inline{
+  display: inline;
+}
+.btn-block{
+  display: block;
+}
+.btn-iblock{
+  display: inline-block;
+}
