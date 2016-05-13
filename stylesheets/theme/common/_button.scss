@@ -16,13 +16,13 @@ category: design
 
 ``` html_example
 
-<a class="btn demo"></a>
+<a class="btn-demo"></a>
 
-<a class="btn btn-smokygray demo"></a>
-<a class="btn btn-cherry-red demo"></a>
-<a class="btn btn-sky-blue demo"></a>
-<a class="btn btn-reaf-green demo"></a>
-<a class="btn btn-apricot-orange demo"></a>
+<a class="btn-smokygray btn-demo"></a>
+<a class="btn-cherry-red btn-demo"></a>
+<a class="btn-sky-blue btn-demo"></a>
+<a class="btn-reaf-green btn-demo"></a>
+<a class="btn-apricot-orange btn-demo"></a>
 
 ```
 
@@ -37,9 +37,9 @@ category: design
 
 ``` html_example
 
-<a class="btn btn-medium demo"></a>
-<a class="btn btn-small demo"></a>
-<a class="btn btn-large demo"></a>
+<a class="btn-smokygray btn-medium btn-demo"></a>
+<a class="btn-smokygray btn-small btn-demo"></a>
+<a class="btn-smokygray btn-large btn-demo"></a>
 
 ```
 
@@ -54,19 +54,17 @@ category: design
 
 ``` html_example
 
-<a class="btn btn-inline demo"></a>
-<a class="btn btn-block demo"></a>
-<a class="btn btn-iblock demo"></a>
+<p><a class="btn-smokygray btn-inline btn-demo"></a></p>
+<p><a class="btn-smokygray btn-block btn-demo"></a></p>
+<p><a class="btn-smokygray btn-iblock btn-demo"></a></p>
 
 ```
 
 */
 
-// sample demo style
-.btn{
-  &.demo:before{
-    content:"button sample";
-  }
+// sample btn-demo style
+.btn-demo:before{
+  content:"button sample";
 }
 
 // borderの設定
@@ -74,7 +72,7 @@ category: design
   border-radius: $radius;
 }
 %btn-border-style{ 
-  border-width: 1px 1px 5px;
+  border-width: 1px 1px 3px;
   border-style: solid;
   border-color: transparent;
 }
@@ -83,49 +81,62 @@ category: design
 %btn{
   @extend %btn-border-style;
   @include btn-border-radius(4px);
+  padding: .3rem 1rem;
   background: transparent;
   color: $z_color_white;
-  text-shadow: 0 0 -1px rgba($z_color_black, .3);
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba($z_color_black, .3);
+  cursor: pointer;
+  &:hover{
+    color: $z_color_white;
+    text-decoration: none;
+    opacity: .8;
+  }
 }
 
 // botton coloring
 .btn-smokygray{
   @extend %btn;
-  border-color: nth($t-pallete-chacole-gray, 2);
-  background: gradient-two-vertical(nth($t-pallete-chacole-gray, 2),nth($t-pallete-chacole-gray, 1));
+  color: $chacole-gray;
+  text-shadow: 0 1px 0 rgba($z_color_white, 1);
+  border-color: nth($t-pallete-smokey-gray, 2);
+  background: nth($t-pallete-smokey-gray,1);
+  &:hover{
+    color: $chacole-gray;
+  }
 }
 .btn-cherry-red{
   @extend %btn;
-  border-color: $cherry-red;
-  background: gradation-two-vertical(nth($t-pallete-cherry-red, 1),nth($t-pallete-cherry-red, 2));
+  border-color: nth($t-pallete-cherry-red,2);
+  background: $cherry-red;
 }
 .btn-sky-blue{
   @extend %btn;
-  border-color: $sky-blue;
-  background: gradation-two-vertical(nth($t-pallete-sky-blue, 1),nth($t-pallete-sky-blue, 2));
+  border-color: nth($t-pallete-sky-blue, 2);
+  background: $sky-blue;
 }
 .btn-reaf-green{
   @extend %btn;
-  border-color: $reaf-green;
-  background: gradation-two-vertical(nth($t-pallete-reaf-green, 1),nth($t-pallete-reaf-green, 2));
+  border-color: nth($t-pallete-reaf-green, 2);
+  background: $reaf-green;
 }
-.btn-apricot-orage{
+.btn-apricot-orange{
   @extend %btn;
-  border-color: $apricot-orange;
-  background: gradation-two-vertical(nth($t-pallete-apricot-orange, 1),nth($t-pallete-apricot-orange, 2))
+  border-color: nth($t-pallete-apricot-orange, 2);
+  background: $apricot-orange;
 }
 
 //button sizing
 .btn-medium{
   @include font-size(14);
-  padding: .8rem 1.5rem;
+  padding: .3rem 1rem;
 }
 .btn-small{
   @include font-size(9);
-  padding: .9rem 1.7rem;
+  padding: .2rem .6rem;
 }
 .btn-large{
-  @include font-size(36);
+  @include font-size(26);
   padding: .6rem 1.2rem;
 }
 

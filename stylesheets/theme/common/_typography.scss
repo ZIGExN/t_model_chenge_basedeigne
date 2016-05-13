@@ -29,9 +29,21 @@ body{
   font-style: normal;
   font:100 1em/150%;
   font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック体", "Yu Gothic", 'meiryo', 'メイリオ', sans-serif;;
-  color: $z_color_gray_70; 
+  color: $chacole-gray;
 }
 
+
+//=========================================
+// anchr elements setting
+//=========================================
+a{
+  color: #0c3bff;
+  text-decoration: underline;
+  &:hover{
+    color: #0b85ff;
+    text-decoration: none;
+  }
+}
 //=========================================
 // headline elements setting
 //=========================================
