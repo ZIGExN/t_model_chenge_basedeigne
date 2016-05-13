@@ -9,12 +9,19 @@
 //
 //=========================================
 
+//=========================================
+// font size mixin setting
+//=========================================
+@mixin font-size($size: 24, $base: 14){
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
 
 //=========================================
 // base setting
 //=========================================
 html{
-  font-size: 0.75%;
+  @include font-size(14);
 }
 
 body{
@@ -26,31 +33,49 @@ body{
 }
 
 
+
+
+
 //=========================================
 // headline elements setting
 //=========================================
 h1{
-  &small{}
+  @include font-size(48);
+  small{
+    @include font-size(48 / 2)
+  }
 }
 h2{
-  &small{}
+  @include font-size(36);
+  small{
+    @include font-size(36 / 2);
+  }
 }
 h3{
-  &small{}
+  @include font-size(24);
+  small{
+    @include font-size(24 /2);
+  }
 }
-h4{
-  &small{}
-}
-h5{
-  &small{}
-}
-h6{
-  &small{}
+h4, h5, h6{
+  @include font-size(16);
+  small{
+    @include font-size(16 / 2);
+  }
 }
 
 //=========================================
 // list style setting
 //=========================================
 
-
-
+ul{
+  li{
+    list-style: disc;
+    
+  }
+}
+ol{
+  li{
+    list-style: decimal;
+  }
+}

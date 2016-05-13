@@ -7,7 +7,39 @@
 // version: 0.0.1
 //
 //=========================================
-
+// borderの設定
+@mixin btn-border-radius($radius){
+  border-radius: $radius;
+}
+%btn-border-style{ 
+  border-width: 1px 1px 5px;
+  border-style: solid;
+  border-color: transparent;
+}
 // ボタンの基本設定
-
+[class^='btn']{
+  @extend %btn-border-style;
+  @include btn-border-radius(4px);
+  &-medium{
+    font-size: 1rem;
+  }
+  &-small{
+    font-size: .75rem;
+  }
+  &-large{
+    font-size: 1.2rem;
+  }
+//  &-smokey-gray{
+//    color: $smokey-gray;
+//  }
+//  &-cherry-red{
+//    color: $cherry-red;
+//  }
+//  &-sky-bule{
+//    color: $sky-blue;
+//  }
+//  &-reaf-green{
+//    color: $reaf-green;
+//  }
+}
 
