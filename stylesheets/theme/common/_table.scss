@@ -8,15 +8,78 @@
 // version: 0.0.1
 //
 //=========================================
+
+/*doc
+---
+title: table style setting
+name: table default setting
+category: table
+---
+
+## table default setting
+
+
+``` html_example
+<table class="table style-default">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+---
+
+*/
+
+
+//=========================================
+//
+// base design setting
+//
+//=========================================
+
+//
 .table{
   width: 100%;
   border-collapse: collapse;
   background-color: transparent;
   font-weight: normal;
-  border: 1px solid transparent;i
-  &.style_default{
+  border: 1px solid transparent;
+  &.style-default{
     th,td{
-       border-color: $z_color_gray_130;
+       border-color: lighten($chacole-gray,50%);
+    }
+    th{
+      box-shadow: inset 1px 1px 0 $z_color_white;
+      background: $smokey-gray;
+      font-weight: bold;
+      text-shadow: 0 1px 0 $z_color_white;
     }
   }
 }
