@@ -8,21 +8,22 @@
 // version: 0.0.1
 //
 //=========================================
+
 // 基本色の変数設定
-$t-pallete-chacole-gray  : #333, #111;
-$t-pallete-smokey-gray   : #eeeeee, #e3e3e3;
-$t-pallete-cherry-red    : #d90000, #bd0000;
-$t-pallete-sky-blue      : #5274ff, #0d3cff;
-$t-pallete-reaf-green    : #98cb00, #76bd00;
-$t-pallete-apricot-orange: #ee994d, #eb730c;
+//$t-pallete-chacole-gray  : #333, #111;
+//$t-pallete-smokey-gray   : #eeeeee, #e3e3e3;
+//$t-pallete-cherry-red    : #d90000, #bd0000;
+//$t-pallete-sky-blue      : #5274ff, #0d3cff;
+//$t-pallete-reaf-green    : #98cb00, #76bd00;
+//$t-pallete-apricot-orange: #ee994d, #eb730c;
 
 // 基本色
-$chacole-gray  : nth($t-pallete-chacole-gray, 1);
-$smokey-gray   : nth($t-pallete-smokey-gray, 2);
-$cherry-red    : nth($t-pallete-cherry-red, 1);
-$sky-blue      : nth($t-pallete-sky-blue, 1);
-$reaf-green    : nth($t-pallete-reaf-green, 1);
-$apricot-orange: nth($t-pallete-apricot-orange, 1);
+$chacole-gray  : #333;
+$smokey-gray   : #eee;
+$cherry-red    : #d90000;
+$sky-blue      : #0d3cff;
+$reaf-green    : #98cb00;
+$apricot-orange: #ee994d;
 
 //テキスト色
 body{
@@ -38,7 +39,7 @@ body{
   }
 }
 a{
-  @include link-color(nth($t-pallete-sky-blue,2), nth($t-pallete-sky-blue,1));
+  @include link-color($sky-blue, lighten($sky-blue,20%));
 }
 
 //ボーダー色
