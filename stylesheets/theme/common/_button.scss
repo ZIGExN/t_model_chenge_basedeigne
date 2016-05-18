@@ -9,10 +9,12 @@
 //=========================================
 /*doc
 ---
-title: button colors
-name: button colors$
+title: button style
+name: button style$
 category: design
 ---
+
+## anchr button style
 
 ``` html_example
 
@@ -26,14 +28,7 @@ category: design
 
 ```
 
-*/
-
-/*doc
----
-title: button sizing
-name: button sizing
-category: design
----
+## button sizing
 
 ``` html_example
 
@@ -43,14 +38,7 @@ category: design
 
 ```
 
-*/
-
-/*doc
----
-title: button styling
-name: button styling
-category: design
----
+## button display type
 
 ``` html_example
 
@@ -60,6 +48,26 @@ category: design
 
 ```
 
+## button elements style demo
+
+``` html_example
+
+<div class="mb_20">
+  <button class="btn-demo"></button>
+  
+  <button class="btn-smokygray btn-demo"></button>
+  <button class="btn-cherry-red btn-demo"></button>
+  <button class="btn-sky-blue btn-demo"></button>
+  <button class="btn-reaf-green btn-demo"></button>
+  <button class="btn-apricot-orange btn-demo"></button>
+</div>
+<div class="mb_20">
+  <button class="btn-smokygray btn-medium btn-demo"></button>
+  <button class="btn-smokygray btn-small btn-demo"></button>
+  <button class="btn-smokygray btn-large btn-demo"></button>
+</div>
+
+```
 */
 
 // sample btn-demo style
@@ -77,7 +85,7 @@ category: design
 
 // ボタンの基本設定
 %btn{
-  padding: .3rem 1rem;
+  padding: .8rem 1.5rem;
   background: transparent;
   color: $z_color_white;
   text-decoration: none;
@@ -125,15 +133,15 @@ category: design
 //button sizing
 .btn-medium{
   @include font-size(14);
-  padding: .3rem 1rem;
+  padding: .8rem 1.5rem;
 }
 .btn-small{
   @include font-size(9);
-  padding: .2rem .6rem;
+  padding: .5rem .8rem;
 }
 .btn-large{
   @include font-size(26);
-  padding: .6rem 1.2rem;
+  padding: 1.2rem 2rem;
 }
 
 // button styling
