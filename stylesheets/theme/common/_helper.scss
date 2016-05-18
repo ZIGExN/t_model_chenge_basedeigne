@@ -36,8 +36,8 @@ $font_size_list: 62%, 70%, 77%, 85%, 93%, 100%, 108%, 116%, 124%, 131%, 139%, 14
 //   width: 500px;
 // }
 //====================================
-@for $width_value from 1 through 960{
-  .width_#{$width_value}px{
-    width: 1px * $width_value;
-  }
-}
+//@for $width_value from 1 through 960{
+//  .width_#{$width_value}px{
+//    width: 1px * $width_value;
+//  }
+//}
