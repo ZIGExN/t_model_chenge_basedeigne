@@ -231,12 +231,12 @@ category: table
   }
   &.style-green{
     th{
-      background: lighten($reaf-green, 55%);
+      background: lighten($reaf-green, 60%);
     }
   }
   &.style-orange{
     th{
-      background: lighten($apricot-orange, 35%);
+      background: lighten($apricot-orange, 50%);
     }
   }
 }
