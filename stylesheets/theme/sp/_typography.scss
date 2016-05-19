@@ -1,0 +1,38 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 typography setting
+//    date: 2016.05.19
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+
+//=========================================
+// icon setting
+//=========================================
+%icon-default-style{
+  display: inline-block;
+  margin: 0;
+  padding: .4rem .2rem;
+  border-radius: 2px;
+  @include font-size(10);
+}
+.icon-new{
+  @extend %icon-default-style;
+  background: $cherry-red;
+  color: $z_color_white;
+  font-weight: bold;
+}
+.icon-type{
+  @extend %icon-default-style;
+  background: $chacole-gray;
+  color: $z_color_white;
+  font-weight: bold;
+}
+.icon-pr{
+  @extend %icon-default-style;
+  border: solid 1px $reaf-green;
+}
