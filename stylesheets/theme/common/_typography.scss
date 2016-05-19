@@ -200,4 +200,28 @@ p{
 }
 
 
+//=========================================
+// tenshoku headline element style setting
+//=========================================
+
+// level h1 setting
+%headline-default-style{
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+.headlinetype-mt-001{
+  @extend %headline-default-style;
+  border-bottom: solid 3px $cherry-red;
+}
+
+// level h2 setting
+.hedlinetype-st-001{
+  border-bottom: solid 1px $smokey-gray;
+}
+.headlinetype-st-002{
+  border-top: solid 1px transparent;
+  border-bottom: dotted 1px transparent;
+  border-color: $smokey-gray;
+}
 
