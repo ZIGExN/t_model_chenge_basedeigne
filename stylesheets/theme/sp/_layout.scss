@@ -1,0 +1,59 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 layout setting
+//    date: 2016.05.20
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+//=========================================
+// section container setting
+//=========================================
+@mixin section-default-style($border-color){
+  margin: 0;
+  padding: 0;
+  border-top: solid 4px $border-color;
+  background: $z_color_white;
+  box-shadow: 0 0 3px $chacole-gray;
+}
+.container-red{
+  @include section-default-style($cherry-red);
+}
+.container-blue{
+  @include section-default-style($sky-blue);
+}
+.container-green{
+  @include section-default-style($reaf-green);
+}
+.container-orange{
+  @include section-default-style($apricot-orange);
+}
+
+.container-demo{
+  height: 200px;
+}
+.container-demo:before{
+  content: 'ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。';
+}
+
+/*doc
+
+---
+title: container style
+name: container style
+category: Smartphone
+---
+
+``` html_example
+
+<div class="mb_20 container-red container-demo"></div>
+<div class="mb_20 container-blue container-demo"></div>
+<div class="mb_20 container-green container-demo"></div>
+<div class="mb_20 container-orange container-demo"></div>
+```
+
+*/
+
