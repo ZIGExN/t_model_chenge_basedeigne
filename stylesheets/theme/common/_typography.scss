@@ -10,93 +10,6 @@
 //=========================================
 
 
-/*doc
----
-title: typography setting
-name: default setting
-category: design
----
-
-## default setting
-
-### 見出し
-
-``` html_example
-
-<h1>見出しサンプル</h1>
-<h2>見出しサンプル</h2>
-<h3>見出しサンプル</h3>
-<h4>見出しサンプル</h4>
-<h5>見出しサンプル</h5>
-<h6>見出しサンプル</h6>
-```
-
----
-
-### 本文・段落
-
-``` html_example
-
-<p>ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。</p>
-<p>それからちょっとくたくたたでしとかいう虎たで。</p>
-<p>くたくたうたんたらはだするとゴーシュの変がいのままでももう生意気でしまして、何じゃあとに飛び立ちせのたまし。考えすぎみんなは外がないますて一生けん命の町の扉めを云い第一ドレミファたちのおじぎがひきがくださいだだ。勢は前もっちゃいで。</p>
-<p>狸も万いけゴーシュのようで考えとしまった。助けも床からだたりわたしがつっ込んでいじ。</p>
-<p>鳥はたばこをどうに立って眼へ底のようにしてからだが睡っがにやにやかっこうに引きずっています。じっときっとけちで野鼠にやめるです。</p>
-<p>それそうにたばこがなって子を困るだた。曲をちがいですう。</p>
-<p>「楽長を思えた。セロ、みんなを気分。</p>
-<p>消し。」何は前のうちのちょっといまのところを見ましじ。かっこうは大物とばかゴーシュに飛びたちとセロから糸をもごてじつはいま考えついせますときへしですた。</p>
-<p>まるで返事云いて、呑みが出ていうて野ねずみへそれから自分とねから日ちがうだた。</p>
-```
-
----
-
-### 番号なしリスト
-
-``` html_example
-
-<ul>
-  <li>リストサンプルテキスト</li>
-  <li>リストサンプルテキスト</li>
-  <li>リストサンプルテキスト</li>
-</ul>
-```
-
----
-
-### 番号付きリスト
-
-``` html_example
-
-<ol>
-  <li>リストサンプルテキスト</li>
-  <li>リストサンプルテキスト</li>
-  <li>リストサンプルテキスト</li> 
-</ol>
-```
-
-ｰｰｰ
-
-### 定義済みリスト
-
-``` html_example
-
-<dl>
-  <dt>定義語サンプル</dt>
-  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
-</dl>
-
-<dl>
-  <dt>定義語サンプル</dt>
-  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
-</dl>
-
-<dl>
-  <dt>定義語サンプル</dt>
-  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
-</dl>
-```
-
-*/
 
 //=========================================
 // font size mixin setting
@@ -167,6 +80,25 @@ h4, h5, h6{
   }
 }
 
+/*doc
+---
+title: headline setting
+name: headline setting
+category: design
+---
+
+
+``` html_example
+
+<h1>見出しサンプル</h1>
+<h2>見出しサンプル</h2>
+<h3>見出しサンプル</h3>
+<h4>見出しサンプル</h4>
+<h5>見出しサンプル</h5>
+<h6>見出しサンプル</h6>
+```
+
+*/
 //=========================================
 // list style setting
 //=========================================
@@ -192,12 +124,258 @@ dl{
     margin: 0 0 0 1rem;
   }
 }
+/*doc
+---
+  title: list style setting
+  name: list style setting
+  category: design
+---
+``` html_example
+
+<ul>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+</ul>
+```
+
+---
+
+``` html_example
+
+<ol>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li> 
+</ol>
+```
+
+---
+
+``` html_example
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+```
+
+*/
+
 //=========================================
 // paragraph style setting
 //=========================================
 p{
   margin: 0 0 1rem 0;
 }
+
+/*doc
+---
+  title: paragraph setting
+  name: paragraph setting
+  category: design
+---
+
+``` html_example
+
+<p>ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。</p>
+<p>それからちょっとくたくたたでしとかいう虎たで。</p>
+<p>くたくたうたんたらはだするとゴーシュの変がいのままでももう生意気でしまして、何じゃあとに飛び立ちせのたまし。考えすぎみんなは外がないますて一生けん命の町の扉めを云い第一ドレミファたちのおじぎがひきがくださいだだ。勢は前もっちゃいで。</p>
+<p>狸も万いけゴーシュのようで考えとしまった。助けも床からだたりわたしがつっ込んでいじ。</p>
+<p>鳥はたばこをどうに立って眼へ底のようにしてからだが睡っがにやにやかっこうに引きずっています。じっときっとけちで野鼠にやめるです。</p>
+<p>それそうにたばこがなって子を困るだた。曲をちがいですう。</p>
+<p>「楽長を思えた。セロ、みんなを気分。</p>
+<p>消し。」何は前のうちのちょっといまのところを見ましじ。かっこうは大物とばかゴーシュに飛びたちとセロから糸をもごてじつはいま考えついせますときへしですた。</p>
+<p>まるで返事云いて、呑みが出ていうて野ねずみへそれから自分とねから日ちがうだた。</p>
+```
+
+*/
+//=========================================
+// strong style setting
+//=========================================
+@mixin strong-style($color){
+  font-weight: bold;
+  border-bottom: dotted 1px $color;
+}
+.strong-red{
+  @include strong-style($cherry-red);
+  color: $cherry-red;
+}
+.strong-orange{
+  @include strong-style($apricot-orange);
+  color: $apricot-orange;
+}
+
+.strong-demo:before{
+  content: 'marker-demo-text-style';
+}
+/*doc
+
+---
+title: strong style
+name: strong style
+category: design
+---
+
+``` html_example
+
+<span class="strong-red strong-demo"></span>
+<span class="strong-orange strong-demo"></span>
+```
+
+*/
+
+
+//=========================================
+// marker style setting
+//=========================================
+@mixin marker-color($color){
+  background: linear-gradient(transparent 60%, $color 60%); 
+}
+.marker-red{
+  @include marker-color(lighten($cherry-red,30%));
+}
+.marker-blue{
+  @include marker-color(lighten($sky-blue,30%));
+}
+.marker-green{
+  @include marker-color(lighten($reaf-green,30%));
+}
+.marker-orange{
+  @include marker-color(lighten($apricot-orange,30%));
+}
+
+.marker-demo:before{
+  content: 'marker-demo-text-style';
+}
+
+/*doc
+
+---
+title: marker style
+name: marker style
+category: design
+---
+
+``` html_example
+
+<span class="marker-red marker-demo"></span>
+<span class="marker-blue marker-demo"></span>
+<span class="marker-green marker-demo"></span>
+<span class="marker-orange marker-demo"></span>
+```
+
+*/
+
+//=========================================
+// icon setting
+//=========================================
+%icon-default-style{
+  display: inline-block;
+  margin: 0;
+  padding: .2rem .4rem;
+  border-radius: 2px;
+  @include font-size(10);
+}
+.icon-new{
+  @extend %icon-default-style;
+  background: $cherry-red;
+  color: $z_color_white;
+  font-weight: bold;
+}
+.icon-type{
+  @extend %icon-default-style;
+  background: $chacole-gray;
+  color: $z_color_white;
+  font-weight: bold;
+}
+.icon-pr{
+  @extend %icon-default-style;
+  border: solid 1px $reaf-green;
+}
+
+.icon-demo:before{
+  content: 'icon demo';
+}
+
+/*doc
+
+---
+title: icon style
+name: icon style
+category: design
+---
+
+``` html_example
+
+<span class="icon-new icon-demo"></span>
+<span class="icon-type icon-demo"></span>
+<span class="icon-pr icon-demo"></span>
+```
+
+*/
+
+
+//=========================================
+// bage setting
+//=========================================
+
+%bage-default-style{
+  margin: 0;
+  padding: .2rem .4rem;
+  border-radius: 2rem;
+  color: $z_color_white;
+  @include font-size(8);
+  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+}
+
+.bage-color-red{
+  @extend %bage-default-style;
+  background: $cherry-red;
+}
+.bage-color-blue{
+  @extend %bage-default-style;
+  background: $sky-blue;
+}
+.bage-color-green{
+  @extend %bage-default-style;
+  background: $reaf-green;
+}
+.bage-color-orange{
+  @extend %bage-default-style;
+  background: $apricot-orange;
+}
+.bage-demo:before{
+  content: '999';
+}
+
+/*doc
+
+---
+title: bage style
+name: bage style
+category: design
+---
+
+``` html_example
+
+<span class="bage-color-red bage-demo"></span>
+<span class="bage-color-blue bage-demo"></span>
+<span class="bage-color-green bage-demo"></span>
+<span class="bage-color-orange bage-demo"></span>
+```
+
+*/
 
 
 //=========================================
