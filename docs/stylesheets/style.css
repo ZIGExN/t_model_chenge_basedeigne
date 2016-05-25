@@ -32,6 +32,7 @@
   margin: 0;
   border: 0;
 }
+/*
 .styleguide_content ul li,
 .styleguide_content ol li {
   margin-left: 20px;
@@ -62,7 +63,7 @@
 }
 .styleguide_content ol li ul li {
   list-style-type: circle;
-}
+}*/
 .styleguide_content img {
   max-width: 100%;
 }
