@@ -22,7 +22,7 @@
   @include font-size(18);
   font-weight: bold;
   color: $z_color_white;
-  text-shadow: -1px 0 0 rgba($z_color_black, .5);
+  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
 }
 
 [class^=headlinebutton-]{

@@ -7,7 +7,94 @@
 // version: 0.0.1
 //
 //=========================================
+
+// sample btn-demo style
+.btn-demo:before{
+  content:"button sample";
+}
+
+// borderの設定
+@mixin btn-border-style($radius,$border-color){
+  border-radius: $radius;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color:darken($border-color,7%);
+}
+
+// ボタンの基本設定
+%btn{
+  padding: .8rem 1.5rem;
+  background: transparent;
+  color: $z_color_white;
+  text-decoration: none;
+  @include textshadow-black;
+  cursor: pointer;
+  &:hover{
+    color: $z_color_white;
+    text-decoration: none;
+    opacity: .8;
+  }
+}
+
+// botton coloring
+.btn-smokygray{
+  @extend %btn;
+  @include btn-border-style(4px,$smokey-gray);
+  color: $chacole-gray;
+  @include textshadow-white;
+  background: $smokey-gray;
+  &:hover{
+    color: $chacole-gray;
+  }
+}
+.btn-cherry-red{
+  @extend %btn;
+  @include btn-border-style(4px,$cherry-red);
+  background: $cherry-red;
+}
+.btn-sky-blue{
+  @extend %btn;
+  @include btn-border-style(4px,$sky-blue);
+  background: $sky-blue;
+}
+.btn-reaf-green{
+  @extend %btn;
+  @include btn-border-style(4px,$reaf-green);
+  background: $reaf-green;
+}
+.btn-apricot-orange{
+  @extend %btn;
+  @include btn-border-style(4px,$apricot-orange);
+  background: $apricot-orange;
+}
+
+//button sizing
+.btn-medium{
+  @include font-size(14);
+  padding: .8rem 1.5rem;
+}
+.btn-small{
+  @include font-size(9);
+  padding: .5rem .8rem;
+}
+.btn-large{
+  @include font-size(26);
+  padding: 1.2rem 2rem;
+}
+
+// button styling
+.btn-inline{
+  display: inline;
+}
+.btn-block{
+  display: block;
+}
+.btn-iblock{
+  display: inline-block;
+}
+
 /*doc
+
 ---
 title: button style
 name: button style$
@@ -69,88 +156,3 @@ category: design
 
 ```
 */
-
-// sample btn-demo style
-.btn-demo:before{
-  content:"button sample";
-}
-
-// borderの設定
-@mixin btn-border-style($radius,$border-color){
-  border-radius: $radius;
-  border-style: solid;
-  border-width: 1px 1px 3px;
-  border-color:darken($border-color,7%);
-}
-
-// ボタンの基本設定
-%btn{
-  padding: .8rem 1.5rem;
-  background: transparent;
-  color: $z_color_white;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 rgba($z_color_black, .3);
-  cursor: pointer;
-  &:hover{
-    color: $z_color_white;
-    text-decoration: none;
-    opacity: .8;
-  }
-}
-
-// botton coloring
-.btn-smokygray{
-  @extend %btn;
-  @include btn-border-style(4px,$smokey-gray);
-  color: $chacole-gray;
-  text-shadow: 0 1px 0 rgba($z_color_white, 1);
-  background: $smokey-gray;
-  &:hover{
-    color: $chacole-gray;
-  }
-}
-.btn-cherry-red{
-  @extend %btn;
-  @include btn-border-style(4px,$cherry-red);
-  background: $cherry-red;
-}
-.btn-sky-blue{
-  @extend %btn;
-  @include btn-border-style(4px,$sky-blue);
-  background: $sky-blue;
-}
-.btn-reaf-green{
-  @extend %btn;
-  @include btn-border-style(4px,$reaf-green);
-  background: $reaf-green;
-}
-.btn-apricot-orange{
-  @extend %btn;
-  @include btn-border-style(4px,$apricot-orange);
-  background: $apricot-orange;
-}
-
-//button sizing
-.btn-medium{
-  @include font-size(14);
-  padding: .8rem 1.5rem;
-}
-.btn-small{
-  @include font-size(9);
-  padding: .5rem .8rem;
-}
-.btn-large{
-  @include font-size(26);
-  padding: 1.2rem 2rem;
-}
-
-// button styling
-.btn-inline{
-  display: inline;
-}
-.btn-block{
-  display: block;
-}
-.btn-iblock{
-  display: inline-block;
-}

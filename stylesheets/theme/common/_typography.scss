@@ -19,6 +19,12 @@
   font-size: ($size / $base) * 1rem;
 }
 
+@mixin textshadow-black{
+  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+}
+@mixin textshadow-white{
+  text-shadow: 0 1px 0 $z_color_white;
+}
 //=========================================
 // base setting
 //=========================================
@@ -200,6 +206,42 @@ p{
 ```
 
 */
+
+//=========================================
+// text color style setting
+//=========================================
+.textcolor-red{
+  color: $cherry-red;
+}
+.textcolor-blue{
+  color: $sky-blue;
+}
+.textcolor-green{
+  color: $reaf-green;
+}
+.textcolor-orange{
+  color: $apricot-orange;
+}
+
+.textcolor-demo:before{
+  content:'text color demo.';
+}
+
+/*doc
+---
+  title: text color
+  name: text color
+  category: design
+---
+
+``` html_example
+<p class="textcolor-demo textcolor-red"></p>
+<p class="textcolor-demo textcolor-blue"></p>
+<p class="textcolor-demo textcolor-green"></p>
+<p class="textcolor-demo textcolor-orange"></p>
+```
+
+*/
 //=========================================
 // strong style setting
 //=========================================
@@ -278,49 +320,51 @@ category: design
 */
 
 //=========================================
-// icon setting
+// label setting
 //=========================================
-%icon-default-style{
+%label-default-style{
   display: inline-block;
   margin: 0;
   padding: .2rem .4rem;
   border-radius: 2px;
   @include font-size(10);
 }
-.icon-new{
-  @extend %icon-default-style;
+.label-new{
+  @extend %label-default-style;
+  @include textshadow-black;
   background: $cherry-red;
   color: $z_color_white;
   font-weight: bold;
 }
-.icon-type{
-  @extend %icon-default-style;
+.label-type{
+  @extend %label-default-style;
+  @include textshadow-black;
   background: $chacole-gray;
   color: $z_color_white;
   font-weight: bold;
 }
-.icon-pr{
-  @extend %icon-default-style;
+.label-pr{
+  @extend %label-default-style;
   border: solid 1px $reaf-green;
 }
 
-.icon-demo:before{
+.label-demo:before{
   content: 'icon demo';
 }
 
 /*doc
 
 ---
-title: icon style
-name: icon style
-category: design
+  title: label style
+  name: label style
+  category: design
 ---
 
 ``` html_example
 
-<span class="icon-new icon-demo"></span>
-<span class="icon-type icon-demo"></span>
-<span class="icon-pr icon-demo"></span>
+<span class="label-new label-demo"></span>
+<span class="label-type label-demo"></span>
+<span class="label-pr label-demo"></span>
 ```
 
 */
@@ -336,7 +380,7 @@ category: design
   border-radius: 2rem;
   color: $z_color_white;
   @include font-size(8);
-  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+  @include textshadow-black;
 }
 
 .bage-color-red{
