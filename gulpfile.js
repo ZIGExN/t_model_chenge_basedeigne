@@ -3,8 +3,8 @@ var browserSync   = require('browser-sync');
 var runSequence   = require('run-sequence');
 var reload        = browserSync.reload;
 var sass          = require('gulp-ruby-sass');
-var compass       = require('gulp-compass');
-// var autoprefixer  = require('gulp-autoprefixer');
+//var compass       = require('gulp-compass');
+//var autoprefixer  = require('gulp-autoprefixer');
 
 //var AUTOPREFIXER_BROWSERS = [
 //  'ie >= 8',
@@ -22,24 +22,24 @@ var compass       = require('gulp-compass');
 gulp.task('browser-sync', function() {
   browserSync({
     server: {
-    	baseDir: "./"
+    	baseDir: "./docs/"
     }
   });
 });
 
 // Compile sass, autoprefix
-gulp.task('styles_pc', function() {
-  return sass('stylesheets/theme/pc/master.scss', {
-    bundleExec: true,
-    style: 'expanded',
-    compass: false
-  })
-  .on('error', function(err) {
-    console.error('Error', err.message);
-  })
-//  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-  .pipe(gulp.dest('dist/stylesheets/theme/pc'))
-});
+//gulp.task('styles_pc', function() {
+//  return sass('stylesheets/theme/pc/master.scss', {
+//    bundleExec: true,
+//    style: 'expanded',
+//    compass: false
+//  })
+//  .on('error', function(err) {
+//    console.error('Error', err.message);
+//  })
+////  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+//  .pipe(gulp.dest('dist/stylesheets/theme/pc'))
+//});
 
 gulp.task('styles_sp', function() {
   return sass('stylesheets/theme/sp/master.scss', {
@@ -51,25 +51,25 @@ gulp.task('styles_sp', function() {
     console.error('Error', err.message);
   })
 //  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-  .pipe(gulp.dest('dist/stylesheets/theme/sp'))
+  .pipe(gulp.dest('docs/stylesheets/theme/sp'))
 });
 
-gulp.task('styles_common', function() {
-  return sass('stylesheets/theme/common/master.scss', {
-    bundleExec: true,
-    style: 'expanded',
-    compass: false
-  })
-  .on('error', function(err) {
-    console.error('Error', err.message);
-  })
-//  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
-  .pipe(gulp.dest('dist/stylesheets/theme/common'))
-});
+//gulp.task('common', function() {
+//  return sass('stylesheets/theme/common/master.scss', {
+//    bundleExec: true,
+//    style: 'expanded',
+//    compass: false
+//  })
+//  .on('error', function(err) {
+//    console.error('Error', err.message);
+//  })
+////  .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
+//  .pipe(gulp.dest('dist/stylesheets/theme/common'))
+//});
 
 // Default task
 gulp.task('default', function() {
-  runSequence('styles_pc', 'styles_sp', 'styles_common', 'browser-sync'),
+  runSequence('styles_sp', 'browser-sync'),
   gulp.watch(['*.html'], reload);
-  gulp.watch(["stylesheets/*.scss", "stylesheets/**/*.scss"], ['styles_pc', 'styles_sp', 'styles_common', reload]);
+  gulp.watch(['stylesheets/*.scss', 'stylesheets/**/*.scss'], ['styles_sp', reload]);
 });

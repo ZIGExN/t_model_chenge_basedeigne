@@ -1,0 +1,3448 @@
+@charset "UTF-8";
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/*---------------------------------------------------
+  * _z_color.scss
+  * zigexn common color class (sass partial file)
+  * date:2015.4.20
+  * author: zigexn
+  * version 1.0.1
+  ---------------------------------------------------*/
+/*---------------------------------------------------
+  * _z_typography.scss
+  * zigexn common list class (sass partial file)
+  * date:2014.12.8
+  * author: syuzo(Minori Matsuoka)
+  * version 0.0.1
+  ---------------------------------------------------*/
+body {
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック体", "Yu Gothic", 'meiryo', 'メイリオ', 'Osaka', 'ＭＳ Ｐゴシック', sans-serif;
+}
+
+/* typograpy */
+.z_typo_color_white {
+  color: #fff;
+}
+
+.z_typo_color_black {
+  color: #000;
+}
+
+.z_typo_color_gray_140 {
+  color: #e6e6e6;
+}
+
+.z_typo_color_gray_130 {
+  color: #ccc;
+}
+
+.z_typo_color_gray_120 {
+  color: #b3b3b3;
+}
+
+.z_typo_color_gray_110 {
+  color: #999;
+}
+
+.z_typo_color_gray_100 {
+  color: #808080;
+}
+
+.z_typo_color_gray_90 {
+  color: #666;
+}
+
+.z_typo_color_gray_80 {
+  color: #4d4d4d;
+}
+
+.z_typo_color_gray_70 {
+  color: #333;
+}
+
+/*---------------------------------------------------
+  * _z_common.scss
+  * zigexn common footer class (sass partial file)
+  * date:2015.1.21
+  * author: vancho(kasumi suzuki)
+  * version 0.0.2
+  ---------------------------------------------------*/
+#zigexnFooter {
+  padding: 25px 30px;
+  background: #efefef;
+  font-size: 14px;
+  color: #666;
+  text-shadow: 1px 1px 0 #fff;
+  overflow: hidden;
+}
+#zigexnFooter a {
+  color: #000;
+  text-decoration: none;
+}
+#zigexnFooter a:hover {
+  text-decoration: underline;
+}
+#zigexnFooter .floatLeft {
+  float: left;
+  margin-top: 1.3em;
+  width: 400px;
+}
+#zigexnFooter .floatRight {
+  float: right;
+  width: 380px;
+}
+#zigexnFooter .zigexnLogo {
+  float: left;
+  box-shadow: 1px 0 0 0 #fff;
+  margin-right: .8em;
+  padding-right: .8em;
+  border-right: 1px solid #ccc;
+  width: 91px;
+  height: 31px;
+  background: url(../images/zigexnLogo.png) no-repeat top left;
+  text-indent: -7777px;
+}
+#zigexnFooter ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+#zigexnFooter ul li {
+  position: relative;
+  float: left;
+  margin-right: 1.5em;
+  width: 8em;
+}
+#zigexnFooter ul li a:before {
+  content: "";
+  display: block;
+  float: left;
+  margin-top: 6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #666;
+  border-width: 3px;
+}
+#zigexnFooter p {
+  margin: 0;
+  padding: 0;
+}
+#zigexnFooter .copyright {
+  font-size: 10px;
+  font-family: Arial,Helvetica,sans-serif;
+  color: #999;
+}
+#zigexnFooter .pmark {
+  float: left;
+  width: 55px;
+  height: 55px;
+}
+#zigexnFooter .privacy {
+  margin-left: 70px;
+  padding: 1em 0;
+  font-size: 12px;
+}
+#zigexnFooter .privacy span {
+  display: block;
+  font-weight: bold;
+}
+
+/*---------------------------------------------------
+  * _z_list.scss
+  * zigexn common list class (sass partial file)
+  * date:2014.12.8
+  * author: syuzo(Minori Matsuoka)
+  * version 0.0.1
+  ---------------------------------------------------*/
+.list_default {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list_horizontal {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.list_horizontal li {
+  display: inline-block;
+}
+
+/*---------------------------------------------------
+  * _z_skin.scss
+  * zigexn common skin class (sass partial file)
+  * date:2015.5.8
+  * author: zigexn
+  * version 0.0.2
+  ---------------------------------------------------*/
+/*doc
+---
+title: z_skin
+name: z_skin
+category: z_template
+---
+
+## Color
+じげんのコーポレートカラーと、基本のグレースケールを定義しています。
+サイト個々のカラーはthemeのcolor.scssで別途定義をしてください。
+背景、ボーダー、フォントのカラーを個別に定義する場合はそれぞれ、.z＿bg＿hoge、.z＿border＿hoge、.z＿color＿hogeという指定が可能です。
+
+### zigexn corporate color chart
+
+```html_example
+
+<div class="z_bg_orange_a">#f93</div>
+<div class="z_bg_orange_b">#f60</div>
+<div class="z_bg_blue_a">#7cf</div>
+<div class="z_bg_blue_b">#2ae</div>
+<div class="z_bg_green_a">#ad5</div>
+<div class="z_bg_green_b">#8b1</div>
+<div class="z_bg_pink_a">#f68</div>
+<div class="z_bg_pink_b">#f36</div>
+<div class="z_bg_navy_a">#4f515d</div>
+<div class="z_bg_navy_b">#242635</div>
+```
+
+### grayscale color chart
+
+```html_example
+<div class="z_bg_gray_150">#e3e3e3</div>
+<div class="z_bg_gray_140">#e6e6e6</div>
+<div class="z_bg_gray_130">#ccc</div>
+<div class="z_bg_gray_120">#b3b3b3</div>
+<div class="z_bg_gray_110">#999</div>
+<div class="z_bg_gray_100">#808080</div>
+<div class="z_bg_gray_90">#666</div>
+<div class="z_bg_gray_80">#4d4d4d</div>
+<div class="z_bg_gray_70">#333</div>
+```
+*/
+/* background corporate color */
+.z_bg_orange_a {
+  background-color: #f93;
+}
+
+.z_bg_orange_b {
+  background-color: #f60;
+}
+
+.z_bg_blue_a {
+  background-color: #7cf;
+}
+
+.z_bg_blue_b {
+  background-color: #2ae;
+}
+
+.z_bg_green_a {
+  background-color: #ad5;
+}
+
+.z_bg_green_b {
+  background-color: #8b1;
+}
+
+.z_bg_pink_a {
+  background-color: #f68;
+}
+
+.z_bg_pink_b {
+  background-color: #f36;
+}
+
+.z_bg_navy_a {
+  background-color: #4f515d;
+}
+
+.z_bg_navy_b {
+  background-color: #242635;
+}
+
+/* background grayscale color */
+.z_bg_white {
+  background-color: #fff;
+}
+
+.z_bg_black {
+  background-color: #000;
+}
+
+.z_bg_gray_150 {
+  background-color: #efefef;
+}
+
+.z_bg_gray_140 {
+  background-color: #e6e6e6;
+}
+
+.z_bg_gray_130 {
+  background-color: #ccc;
+}
+
+.z_bg_gray_120 {
+  background-color: #b3b3b3;
+}
+
+.z_bg_gray_110 {
+  background-color: #999;
+}
+
+.z_bg_gray_100 {
+  background-color: #808080;
+}
+
+.z_bg_gray_90 {
+  background-color: #666;
+}
+
+.z_bg_gray_80 {
+  background-color: #4d4d4d;
+}
+
+.z_bg_gray_70 {
+  background-color: #333;
+}
+
+/* border corporate color */
+.z_border_orange_a {
+  border-color: #f93;
+}
+
+.z_border_orange_b {
+  border-color: #f60;
+}
+
+.z_border_blue_a {
+  border-color: #7cf;
+}
+
+.z_border_blue_b {
+  border-color: #2ae;
+}
+
+.z_border_green_a {
+  border-color: #ad5;
+}
+
+.z_border_green_b {
+  border-color: #8b1;
+}
+
+.z_border_pink_a {
+  border-color: #f68;
+}
+
+.z_border_pink_b {
+  border-color: #f36;
+}
+
+.z_border_navy_a {
+  border-color: #4f515d;
+}
+
+.z_border_navy_b {
+  border-color: #242635;
+}
+
+/* border grayscale color */
+.z_border_white {
+  border-color: #fff;
+}
+
+.z_border_black {
+  border-color: #000;
+}
+
+.z_border_gray_150 {
+  border-color: #efefef;
+}
+
+.z_border_gray_140 {
+  border-color: #e6e6e6;
+}
+
+.z_border_gray_130 {
+  border-color: #ccc;
+}
+
+.z_border_gray_120 {
+  border-color: #b3b3b3;
+}
+
+.z_border_gray_110 {
+  border-color: #999;
+}
+
+.z_border_gray_100 {
+  border-color: #808080;
+}
+
+.z_border_gray_90 {
+  border-color: #666;
+}
+
+.z_border_gray_80 {
+  border-color: #4d4d4d;
+}
+
+.z_border_gray_70 {
+  border-color: #333;
+}
+
+/* font corporate color */
+.z_color_orange_a {
+  color: #f93;
+}
+
+.z_color_orange_b {
+  color: #f60;
+}
+
+.z_color_blue_a {
+  color: #7cf;
+}
+
+.z_color_blue_b {
+  color: #2ae;
+}
+
+.z_color_green_a {
+  color: #ad5;
+}
+
+.z_color_green_b {
+  color: #8b1;
+}
+
+.z_color_pink_a {
+  color: #f68;
+}
+
+.z_color_pink_b {
+  color: #f36;
+}
+
+.z_color_navy_a {
+  color: #4f515d;
+}
+
+.z_color_navy_b {
+  color: #242635;
+}
+
+/* font grayscale color */
+.z_color_white {
+  color: #fff;
+}
+
+.z_color_black {
+  color: #000;
+}
+
+.z_color_gray_150 {
+  color: #efefef;
+}
+
+.z_color_gray_140 {
+  color: #e6e6e6;
+}
+
+.z_color_gray_130 {
+  color: #ccc;
+}
+
+.z_color_gray_120 {
+  color: #b3b3b3;
+}
+
+.z_color_gray_110 {
+  color: #999;
+}
+
+.z_color_gray_100 {
+  color: #808080;
+}
+
+.z_color_gray_90 {
+  color: #666;
+}
+
+.z_color_gray_80 {
+  color: #4d4d4d;
+}
+
+.z_color_gray_70 {
+  color: #333;
+}
+
+/*---------------------------------------------------
+  * _z_table.scss
+  * zigexn common table class (sass partial file)
+  * date:2015.4.15
+  * author: zigexn
+  * version 0.0.2
+  ---------------------------------------------------*/
+/*doc
+---
+title: z_table
+name: z_table
+category: z_template
+---
+
+
+### table
+
+```html_example
+
+<table class="table table_default">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>性</th>
+      <th>名</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>じげん</td>
+      <td>ぶ</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>じげん</td>
+      <td>ぶー</td>
+    </tr>
+  </tbody>
+</table>
+
+```
+*/
+/* table class */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+.table th,
+.table td {
+  font-weight: normal;
+  text-align: left;
+  padding: .68rem;
+  border: 1px solid transparent;
+}
+
+.table_default {
+  background: #fff;
+}
+.table_default th,
+.table_default td {
+  border: 1px solid #ccc;
+}
+.table_default thead th {
+  background: #e6e6e6;
+}
+.table_default tbody th {
+  background: #efefef;
+}
+
+.table_inset_line_white th {
+  box-shadow: 1px 1px 0 #fff inset, -1px -1px 0 #fff inset;
+}
+
+/*doc
+---
+title: z_breadcrumb
+name: z_breadcrumb
+category: z_template
+---
+
+### breadcrumb
+パンくずリストを定義しています。
+基本パーツはmixinで定義しているので、要素同士のスペースや区切り線はinclude時に引数で変更可能です。
+
+```html_example
+<div class="breadcrumb">
+  <div class="breadcrumb_list">
+    <div class="breadcrumb_step">パンくず1</div>
+    <div class="breadcrumb_step"><a href="#">パンくず2</a></div>
+    <div class="breadcrumb_step"><a href="#">パンくず3</a></div>
+    <div class="breadcrumb_step">パンくず4</div>
+  </div>
+</div>
+```
+
+*/
+/* breadcrumb */
+.breadcrumb {
+  display: inline-block;
+  vertical-align: middle;
+}
+.breadcrumb .breadcrumb_list {
+  position: relative;
+  list-style: none;
+  padding-left: 0;
+}
+.breadcrumb .breadcrumb_list .breadcrumb_step {
+  float: left;
+  font-weight: normal;
+}
+.breadcrumb .breadcrumb_list .breadcrumb_step:after {
+  content: ">";
+  display: inline;
+  margin: 0 0.5em;
+}
+.breadcrumb .breadcrumb_list .breadcrumb_step:last-child:after {
+  content: "";
+}
+
+/*---------------------------------------------------
+  * _z_forms.scss
+  * zigexn common form class (sass partial file)
+  * date:2015.1.21
+  * author: syuzo(Minori Matsuoka)
+  * version 0.0.2
+  ---------------------------------------------------*/
+button,
+input,
+select,
+textarea {
+  box-sizing: border-box;
+}
+
+input[type='button'],
+input[type='submit'],
+input[type='reset'],
+button {
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[disabled],
+html input[disabled],
+html button[disabled],
+.form_control[disabled] {
+  box-shadow: none;
+  background: #e6e6e6;
+  color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+select[disabled] > option {
+  color: #b3b3b3;
+}
+
+.form_control {
+  padding: .3em .6em;
+  border-radius: .3em;
+  background-color: #fff;
+  transition: box-shadow ease-in-out .3s, border-color ease-in-out .3s;
+  box-shadow: inset 1px 1px 2px #e6e6e6;
+  border: 1px solid #b3b3b3;
+  outline: 0;
+}
+.form_control.block {
+  display: block;
+  width: 100%;
+}
+.form_control.inline_block {
+  display: inline-block;
+}
+.form_control:focus {
+  border-color: #7cf;
+  box-shadow: 0 0 6px rgba(119, 204, 255, 0.8);
+  outline: 0;
+}
+
+/*---------------------------------------------------
+  * _z_helper.scss
+  * zigexn common helper class (sass partial file)
+  * date:2015.5.7
+  * author: zigexn
+  * version 0.0.3
+  ---------------------------------------------------*/
+/* inline position */
+.t_center {
+  text-align: center !important;
+}
+
+.t_right {
+  text-align: right !important;
+}
+
+.t_left {
+  text-align: left !important;
+}
+
+.v_top {
+  vertical-align: top !important;
+}
+
+.v_middle {
+  vertical-align: middle !important;
+}
+
+.v_baseline {
+  vertical-align: baseline !important;
+}
+
+.v_bottom {
+  vertical-align: bottom !important;
+}
+
+.p_static {
+  position: static !important;
+}
+
+.p_relative {
+  position: relative !important;
+}
+
+.p_absolute {
+  position: absolute !important;
+}
+
+.p_fixed {
+  position: fixed !important;
+}
+
+/* displayBlock */
+.d_inline {
+  display: inline !important;
+}
+
+.d_inline_block {
+  display: inline-block !important;
+}
+
+.d_block {
+  display: block !important;
+}
+
+.d_table {
+  display: table !important;
+}
+
+.d_table_fixed {
+  display: table !important;
+  table-layout: fixed !important;
+}
+
+.d_table_cell {
+  display: table-cell !important;
+}
+
+.d_none {
+  display: none !important;
+}
+
+/* overflow */
+.o_hidden {
+  overflow: hidden !important;
+}
+
+.o_visible {
+  overflow: visible !important;
+}
+
+.o_scroll {
+  overflow: scroll !important;
+}
+
+/* text */
+.f_bold {
+  font-weight: bold !important;
+}
+
+.f_normal {
+  font-weight: normal !important;
+}
+
+.t_underline {
+  text-decoration: underline !important;
+}
+
+.t_none {
+  text-decoration: none !important;
+}
+
+/* float */
+.f_left {
+  float: left !important;
+}
+
+.f_right {
+  float: right !important;
+}
+
+/* fixed width */
+.w_200px {
+  width: 200px;
+}
+
+.w_210px {
+  width: 210px;
+}
+
+.w_760px {
+  width: 760px;
+}
+
+.w_770px {
+  width: 770px;
+}
+
+.w_100per {
+  width: 100%;
+}
+
+/* margin */
+.m_1 {
+  margin: 1px !important;
+}
+
+.m_3 {
+  margin: 3px !important;
+}
+
+.m_5 {
+  margin: 5px !important;
+}
+
+.m_10 {
+  margin: 10px !important;
+}
+
+.m_15 {
+  margin: 15px !important;
+}
+
+.m_20 {
+  margin: 20px !important;
+}
+
+.m_25 {
+  margin: 25px !important;
+}
+
+.m_30 {
+  margin: 30px !important;
+}
+
+.mt_1 {
+  margin-top: 1px !important;
+}
+
+.mt_3 {
+  margin-top: 3px !important;
+}
+
+.mt_5 {
+  margin-top: 5px !important;
+}
+
+.mt_10 {
+  margin-top: 10px !important;
+}
+
+.mt_15 {
+  margin-top: 15px !important;
+}
+
+.mt_20 {
+  margin-top: 20px !important;
+}
+
+.mt_25 {
+  margin-top: 25px !important;
+}
+
+.mt_30 {
+  margin-top: 30px !important;
+}
+
+.mr_1 {
+  margin-right: 1px !important;
+}
+
+.mr_3 {
+  margin-right: 3px !important;
+}
+
+.mr_5 {
+  margin-right: 5px !important;
+}
+
+.mr_10 {
+  margin-right: 10px !important;
+}
+
+.mr_15 {
+  margin-right: 15px !important;
+}
+
+.mr_20 {
+  margin-right: 20px !important;
+}
+
+.mr_25 {
+  margin-right: 25px !important;
+}
+
+.mr_30 {
+  margin-right: 30px !important;
+}
+
+.mb_1 {
+  margin-bottom: 1px !important;
+}
+
+.mb_3 {
+  margin-bottom: 3px !important;
+}
+
+.mb_5 {
+  margin-bottom: 5px !important;
+}
+
+.mb_10 {
+  margin-bottom: 10px !important;
+}
+
+.mb_15 {
+  margin-bottom: 15px !important;
+}
+
+.mb_20 {
+  margin-bottom: 20px !important;
+}
+
+.mb_25 {
+  margin-bottom: 25px !important;
+}
+
+.mb_30 {
+  margin-bottom: 30px !important;
+}
+
+.ml_1 {
+  margin-left: 1px !important;
+}
+
+.ml_3 {
+  margin-left: 3px !important;
+}
+
+.ml_5 {
+  margin-left: 5px !important;
+}
+
+.ml_10 {
+  margin-left: 10px !important;
+}
+
+.ml_15 {
+  margin-left: 15px !important;
+}
+
+.ml_20 {
+  margin-left: 20px !important;
+}
+
+.ml_25 {
+  margin-left: 25px !important;
+}
+
+.ml_30 {
+  margin-left: 30px !important;
+}
+
+/* padding */
+.p_1 {
+  padding: 1px !important;
+}
+
+.p_3 {
+  padding: 3px !important;
+}
+
+.p_5 {
+  padding: 5px !important;
+}
+
+.p_10 {
+  padding: 10px !important;
+}
+
+.p_15 {
+  padding: 15px !important;
+}
+
+.p_20 {
+  padding: 20px !important;
+}
+
+.p_25 {
+  padding: 25px !important;
+}
+
+.p_30 {
+  padding: 30px !important;
+}
+
+.pt_1 {
+  padding-top: 1px !important;
+}
+
+.pt_3 {
+  padding-top: 3px !important;
+}
+
+.pt_5 {
+  padding-top: 5px !important;
+}
+
+.pt_10 {
+  padding-top: 10px !important;
+}
+
+.pt_15 {
+  padding-top: 15px !important;
+}
+
+.pt_20 {
+  padding-top: 20px !important;
+}
+
+.pt_25 {
+  padding-top: 25px !important;
+}
+
+.pt_30 {
+  padding-top: 30px !important;
+}
+
+.pr_1 {
+  padding-right: 1px !important;
+}
+
+.pr_3 {
+  padding-right: 3px !important;
+}
+
+.pr_5 {
+  padding-right: 5px !important;
+}
+
+.pr_10 {
+  padding-right: 10px !important;
+}
+
+.pr_15 {
+  padding-right: 15px !important;
+}
+
+.pr_20 {
+  padding-right: 20px !important;
+}
+
+.pr_25 {
+  padding-right: 25px !important;
+}
+
+.pr_30 {
+  padding-right: 30px !important;
+}
+
+.pb_1 {
+  padding-bottom: 1px !important;
+}
+
+.pb_3 {
+  padding-bottom: 3px !important;
+}
+
+.pb_5 {
+  padding-bottom: 5px !important;
+}
+
+.pb_10 {
+  padding-bottom: 10px !important;
+}
+
+.pb_15 {
+  padding-bottom: 15px !important;
+}
+
+.pb_20 {
+  padding-bottom: 20px !important;
+}
+
+.pb_25 {
+  padding-bottom: 25px !important;
+}
+
+.pb_30 {
+  padding-bottom: 30px !important;
+}
+
+.pl_1 {
+  padding-left: 1px !important;
+}
+
+.pl_3 {
+  padding-left: 3px !important;
+}
+
+.pl_5 {
+  padding-left: 5px !important;
+}
+
+.pl_10 {
+  padding-left: 10px !important;
+}
+
+.pl_15 {
+  padding-left: 15px !important;
+}
+
+.pl_20 {
+  padding-left: 20px !important;
+}
+
+.pl_25 {
+  padding-left: 25px !important;
+}
+
+.pl_30 {
+  padding-left: 30px !important;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../common/font/fontello.eot?2834560");
+  src: url("../common/font/fontello.eot?2834560#iefix") format("embedded-opentype"), url("../common/font/fontello.woff?2834560") format("woff"), url("../common/font/fontello.ttf?2834560") format("truetype"), url("../common/font/fontello.svg?2834560#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../common/font/fontello.svg?2834560#fontello') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .29em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-list:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-search:before {
+  content: '\e801';
+}
+
+/* '' */
+.icon-desktop:before {
+  content: '\e802';
+}
+
+/* '' */
+.icon-clock:before {
+  content: '\e803';
+}
+
+/* '' */
+.icon-doc-text:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-cog:before {
+  content: '\e805';
+}
+
+/* '' */
+.icon-user-1:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-mail:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-ok:before {
+  content: '\e808';
+}
+
+/* '' */
+.icon-cancel-5:before {
+  content: '\e80b';
+}
+
+/* '' */
+.icon-login:before {
+  content: '\e80c';
+}
+
+/* '' */
+.icon-logout:before {
+  content: '\e80d';
+}
+
+/* '' */
+.icon-pencil:before {
+  content: '\e80e';
+}
+
+/* '' */
+.icon-attach:before {
+  content: '\e814';
+}
+
+/* '' */
+.icon-cancel:before {
+  content: '\e815';
+}
+
+/* '' */
+.icon-location:before {
+  content: '\e816';
+}
+
+/* '' */
+.icon-home:before {
+  content: '\e817';
+}
+
+/* '' */
+.icon-up-open-big:before {
+  content: '\e819';
+}
+
+/* '' */
+.icon-right-open:before {
+  content: '\e81a';
+}
+
+/* '' */
+.icon-right-open-big:before {
+  content: '\e81b';
+}
+
+/* '' */
+.icon-down-open-big:before {
+  content: '\e81c';
+}
+
+/* '' */
+.icon-user:before {
+  content: '\e81d';
+}
+
+/* '' */
+.icon-heart:before {
+  content: '\e81e';
+}
+
+/* '' */
+.icon-suitcase:before {
+  content: '\e81f';
+}
+
+/* '' */
+.demo {
+  padding: .8em 1em 0;
+  margin-bottom: 1em;
+  background: rgba(51, 153, 204, 0.2);
+  transition: background-color 0.3s ease;
+  border: 1px solid #33cccc;
+  border-radius: 3px;
+}
+.demo:after {
+  content: "";
+  display: block;
+  margin-top: .8em;
+  height: 1px;
+}
+.demo:hover {
+  background: rgba(51, 153, 204, 0.6);
+}
+
+.demo.holly {
+  background: rgba(102, 51, 255, 0.1);
+}
+.demo.holly:hover {
+  background: rgba(102, 51, 255, 0.25);
+}
+
+.content-1of1::before {
+  content: "1";
+}
+
+.content-1of2::before {
+  content: "1/2";
+}
+
+.content-1of3::before {
+  content: "1/3";
+}
+
+.content-1of4::before {
+  content: "1/4";
+}
+
+.content-1of6::before {
+  content: "1/6";
+}
+
+.content-1of12::before {
+  content: "1/12";
+}
+
+.flexgrid--gutters.flexgrid--nested .flexgrid-cell:first-of-type .Demo {
+  margin-right: 0;
+}
+
+/*doc
+---
+title: flexbox layout grid design pattern
+name: flexbox-layout
+category: layout
+---
+
+## sample demo
+
+``` html_example
+
+<p>Responsive grid with Flexbox</p>
+<h1>Basic flexgrid</h1>
+<p></p>
+<div class="flexgrid flexgrid--full u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of1"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-2 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-4 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-6 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--cols-12 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+</div>  
+<hr />  
+
+<h1>Sidebar and main content</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of6">
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--1of4">
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--1of3">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div> 
+<hr /> 
+
+<h1>Left / Center / Right content alignment</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of2">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--center">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--right">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+<hr />   
+
+<h1>Nesting</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo">     
+      <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+        <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+        <div class="flexgrid-cell"><div class="demo">
+            <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+              <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+              <div class="flexgrid-cell"><div class="demo">auto</div></div>
+            </div>        
+        </div></div>
+      </div>      
+    </div>
+  </div>
+</div>
+<hr /> 
+
+<h1>Vertical alignment</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--top">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>top-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--center">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>center-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--bottom">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>bottom-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+
+```
+
+*/
+.flexgrid {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.u-text-center {
+  text-align: center;
+}
+
+.flexgrid-cell {
+  flex: 1;
+}
+
+.flexgrid--gutters {
+  margin-left: -1em;
+}
+.flexgrid--gutters .flexgrid-cell {
+  padding-left: 1em;
+}
+.flexgrid--gutters .flexgrid--nested .flexgrid-cell .demo {
+  margin-right: 1em;
+}
+
+.flexgrid--right {
+  justify-content: flex-end;
+}
+
+.flexgrid--center {
+  justify-content: center;
+}
+
+.flexgrid--top {
+  align-items: flex-start;
+}
+
+.flexgrid--bottom {
+  align-items: flex-end;
+}
+
+.flexgrid--center {
+  align-items: center;
+}
+
+.flexgrid-cell-top {
+  align-self: flex-start;
+}
+
+.flexgrid-cell-bottom {
+  align-self: flex-end;
+}
+
+.flexgrid-cell-center {
+  align-self: center;
+}
+
+.flexgrid--cols-2 > .flexgrid-cell {
+  flex: 0 1 100%;
+}
+
+.flexgrid--cols-3 > .flexgrid-cell {
+  flex: 0 1 100%;
+}
+
+.flexgrid--cols-4 > .flexgrid-cell {
+  flex: 0 1 100%;
+}
+
+.flexgrid-cols-12 > .flexgrid-cell {
+  flex: 0 1 calc(33.3333% - 1em);
+}
+
+.flexgrid--1of2 > .flexgrid-cell,
+.flexgrid--1of4 > .flexgrid-cell:first-of-type,
+.flexgrid--1of3 > .flexgrid-cell:first-of-type {
+  flex: 0 1 100%;
+}
+
+.flexgrid--1of6 > .flexgrid-cell:first-of-type {
+  flex: 0 1 50%;
+}
+
+.flexgrid--fit > .flexgrid-cell {
+  flex: 1;
+}
+
+.flexgrid--full > .flexgrid-cell {
+  flex: 0 0 100%;
+}
+
+.flexgrid--cols-6 > .flexgrid-cell {
+  flex: 0 0 calc(50% - 1em);
+}
+
+@media (min-width: 30em) {
+  .flexgrid--cols-4 > .flexgrid-cell {
+    flex: 0 0 calc(50% - 1em);
+  }
+
+  .flexgrid--cols-6 > .flexgrid-cell {
+    flex: 0 0 calc(33.3333% - 1em);
+  }
+
+  .flexgrid--cols-12 > .flexgrid-cell {
+    flex: 0 0 calc(16.6666% - 1em);
+  }
+
+  .flexgrid--1of2 > .flexgrid-cell {
+    flex: 0 0 50%;
+  }
+
+  .flexgrid--1of6 > .flexgrid-cell:first-of-type {
+    flex: 0 0 30%;
+  }
+
+  .flexgrid--1of4 > .flexgrid-cell:first-of-type {
+    flex: 0 0 50%;
+  }
+
+  .flexgrid--1of3 > .flexgrid-cell:first-of-type {
+    flex: 0 0 100%;
+  }
+}
+@media (min-width: 48em) {
+  .flexgrid--cols-2 > .flexgrid-cell,
+  .flexgrid--cols-3 > .flexgrid-cell,
+  .flexgrid--cols-4 > .flexgrid-cell,
+  .flexgrid--cols-6 > .flexgrid-cell,
+  .flexgrid--cols-12 > .flexgrid-cell {
+    flex: 1;
+  }
+
+  .flexgrid--1of2 > .flexgrid-cell {
+    flex: 0 0 50%;
+  }
+
+  .flexgrid--1of6 > .flexgrid-cell:first-of-type {
+    flex: 0 0 16.6666%;
+  }
+
+  .flexgrid--1of4 > .flexgrid-cell:first-of-type {
+    flex: 0 0 25%;
+  }
+
+  .flexgrid--1of3 > .flexgrid-cell:first-of-type {
+    flex: 0 0 30%;
+  }
+}
+body {
+  color: #333;
+}
+
+a {
+  color: #0d3cff;
+}
+a:hover {
+  color: #738eff;
+  text-decoration: none;
+}
+
+html {
+  font-size: 14px;
+  font-size: 1rem;
+}
+
+body {
+  background: #fff;
+  font-style: normal;
+  font: 100 1em/150%;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック体", "Yu Gothic", 'meiryo', 'メイリオ', sans-serif;
+  color: #333;
+}
+
+a {
+  color: #0c3bff;
+  text-decoration: underline;
+}
+a:hover {
+  color: #0b85ff;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  font-size: 36px;
+  font-size: 2.57143rem;
+}
+h1 small {
+  font-size: 18px;
+  font-size: 1.28571rem;
+}
+
+h2 {
+  font-size: 24px;
+  font-size: 1.71429rem;
+}
+h2 small {
+  font-size: 12px;
+  font-size: 0.85714rem;
+}
+
+h3 {
+  font-size: 18px;
+  font-size: 1.28571rem;
+}
+h3 small {
+  font-size: 9px;
+  font-size: 0.64286rem;
+}
+
+h4, h5, h6 {
+  font-size: 14px;
+  font-size: 1rem;
+}
+h4 small, h5 small, h6 small {
+  font-size: 7px;
+  font-size: 0.5rem;
+}
+
+/*doc
+---
+title: headline setting
+name: headline setting
+category: design
+---
+
+
+``` html_example
+
+<h1>見出しサンプル</h1>
+<h2>見出しサンプル</h2>
+<h3>見出しサンプル</h3>
+<h4>見出しサンプル</h4>
+<h5>見出しサンプル</h5>
+<h6>見出しサンプル</h6>
+```
+
+*/
+ul li {
+  list-style: disc;
+}
+
+ol li {
+  list-style: decimal;
+}
+
+dl {
+  margin: 0 0 2rem;
+  padding: 0 0 0 1rem;
+}
+dl dt {
+  margin: 0;
+}
+dl dd {
+  margin: 0 0 0 1rem;
+}
+
+/*doc
+---
+  title: list style setting
+  name: list style setting
+  category: design
+---
+``` html_example
+
+<ul>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+</ul>
+```
+
+---
+
+``` html_example
+
+<ol>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li> 
+</ol>
+```
+
+---
+
+``` html_example
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+```
+
+*/
+p {
+  margin: 0 0 1rem 0;
+}
+
+/*doc
+---
+  title: paragraph setting
+  name: paragraph setting
+  category: design
+---
+
+``` html_example
+
+<p>ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。</p>
+<p>それからちょっとくたくたたでしとかいう虎たで。</p>
+<p>くたくたうたんたらはだするとゴーシュの変がいのままでももう生意気でしまして、何じゃあとに飛び立ちせのたまし。考えすぎみんなは外がないますて一生けん命の町の扉めを云い第一ドレミファたちのおじぎがひきがくださいだだ。勢は前もっちゃいで。</p>
+<p>狸も万いけゴーシュのようで考えとしまった。助けも床からだたりわたしがつっ込んでいじ。</p>
+<p>鳥はたばこをどうに立って眼へ底のようにしてからだが睡っがにやにやかっこうに引きずっています。じっときっとけちで野鼠にやめるです。</p>
+<p>それそうにたばこがなって子を困るだた。曲をちがいですう。</p>
+<p>「楽長を思えた。セロ、みんなを気分。</p>
+<p>消し。」何は前のうちのちょっといまのところを見ましじ。かっこうは大物とばかゴーシュに飛びたちとセロから糸をもごてじつはいま考えついせますときへしですた。</p>
+<p>まるで返事云いて、呑みが出ていうて野ねずみへそれから自分とねから日ちがうだた。</p>
+```
+
+*/
+.textcolor-red {
+  color: #d90000;
+}
+
+.textcolor-blue {
+  color: #0d3cff;
+}
+
+.textcolor-green {
+  color: #76bd00;
+}
+
+.textcolor-orange {
+  color: #e8730c;
+}
+
+.textcolor-demo:before {
+  content: 'text color demo.';
+}
+
+/*doc
+---
+  title: text color
+  name: text color
+  category: design
+---
+
+``` html_example
+<p class="textcolor-demo textcolor-red"></p>
+<p class="textcolor-demo textcolor-blue"></p>
+<p class="textcolor-demo textcolor-green"></p>
+<p class="textcolor-demo textcolor-orange"></p>
+```
+
+*/
+.strong-red {
+  font-weight: bold;
+  border-bottom: dotted 1px #d90000;
+  color: #d90000;
+}
+
+.strong-orange {
+  font-weight: bold;
+  border-bottom: dotted 1px #e8730c;
+  color: #e8730c;
+}
+
+.strong-demo:before {
+  content: 'marker-demo-text-style';
+}
+
+/*doc
+
+---
+title: strong style
+name: strong style
+category: design
+---
+
+``` html_example
+
+<span class="strong-red strong-demo"></span>
+<span class="strong-orange strong-demo"></span>
+```
+
+*/
+.marker-red {
+  background: linear-gradient(transparent 60%, #ff7373 60%);
+}
+
+.marker-blue {
+  background: linear-gradient(transparent 60%, #a6b7ff 60%);
+}
+
+.marker-green {
+  background: linear-gradient(transparent 60%, #c0ff57 60%);
+}
+
+.marker-orange {
+  background: linear-gradient(transparent 60%, #f9c394 60%);
+}
+
+.marker-demo:before {
+  content: 'marker-demo-text-style';
+}
+
+/*doc
+
+---
+title: marker style
+name: marker style
+category: design
+---
+
+``` html_example
+
+<span class="marker-red marker-demo"></span>
+<span class="marker-blue marker-demo"></span>
+<span class="marker-green marker-demo"></span>
+<span class="marker-orange marker-demo"></span>
+```
+
+*/
+.label-new, .label-type, .label-pr {
+  display: inline-block;
+  margin: 0;
+  padding: .2rem .4rem;
+  border-radius: 2px;
+  font-size: 10px;
+  font-size: 0.71429rem;
+}
+
+.label-new {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  background: #d90000;
+  color: #fff;
+  font-weight: bold;
+}
+
+.label-type {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.label-pr {
+  border: solid 1px #76bd00;
+}
+
+.label-demo:before {
+  content: 'icon demo';
+}
+
+/*doc
+
+---
+  title: label style
+  name: label style
+  category: design
+---
+
+``` html_example
+
+<span class="label-new label-demo"></span>
+<span class="label-type label-demo"></span>
+<span class="label-pr label-demo"></span>
+```
+
+*/
+.bage-color-red, .bage-color-blue, .bage-color-green, .bage-color-orange {
+  margin: 0;
+  padding: .2rem .4rem;
+  border-radius: 2rem;
+  color: #fff;
+  font-size: 8px;
+  font-size: 0.57143rem;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.bage-color-red {
+  background: #d90000;
+}
+
+.bage-color-blue {
+  background: #0d3cff;
+}
+
+.bage-color-green {
+  background: #76bd00;
+}
+
+.bage-color-orange {
+  background: #e8730c;
+}
+
+.bage-demo:before {
+  content: '999';
+}
+
+/*doc
+
+---
+title: bage style
+name: bage style
+category: design
+---
+
+``` html_example
+
+<span class="bage-color-red bage-demo"></span>
+<span class="bage-color-blue bage-demo"></span>
+<span class="bage-color-green bage-demo"></span>
+<span class="bage-color-orange bage-demo"></span>
+```
+
+*/
+.headlinetype-mt-001, [class^="headlinetype-"] {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+
+.headlinetype-mt-001 {
+  border-bottom: solid 3px #d90000;
+}
+
+.hedlinetype-st-001 {
+  border-bottom: solid 1px #eee;
+}
+
+.headlinetype-st-002 {
+  border-top: solid 1px transparent;
+  border-bottom: dotted 1px transparent;
+  border-color: #eee;
+}
+
+.form {
+  margin: 0;
+  padding: 0;
+}
+.form input[type='text'],
+.form input[type='password'],
+.form input[type='search'],
+.form input[type='tel'],
+.form input[type='email'],
+.form input[type='url'],
+.form input[type='number'],
+.form input[type='datetime'],
+.form input[type='date'],
+.form input[type='week'],
+.form input[type='month'],
+.form textarea {
+  border-radius: 4px;
+  border: solid 1px rgba(51, 51, 51, 0.5);
+  padding: .2rem .4rem;
+  transition: all linear .3s;
+}
+.form input[type='text']:focus,
+.form input[type='password']:focus,
+.form input[type='search']:focus,
+.form input[type='tel']:focus,
+.form input[type='email']:focus,
+.form input[type='url']:focus,
+.form input[type='number']:focus,
+.form input[type='datetime']:focus,
+.form input[type='date']:focus,
+.form input[type='week']:focus,
+.form input[type='month']:focus,
+.form textarea:focus {
+  outline: 0 none;
+  border-color: #d90000;
+  box-shadow: 0 0 6px #d90000;
+}
+.form .text-field-short {
+  max-width: 5rem;
+}
+.form .text-field-medium {
+  max-width: 12rem;
+}
+.form .text-field-long {
+  width: 100%;
+}
+.form .textarea-half {
+  width: 50%;
+}
+.form .textarea-large {
+  width: 100%;
+}
+
+/*doc
+---
+title: form style
+name: form style
+category: form
+---
+
+```html_example
+<div class="form">
+  <fieldset>
+    <legend>Legend</legend>
+    <p>もっとも、オッペケペッポーの攻勢に、ぐぅのネを上げた紳士や淑女がいたかどうか…西洋カブレとは、要するに欧米文化への信奉者のこと。〈鰯ノ頭ヲ信心〉する者があるならヨーロッパやアメリカの文物を信仰する者がいても一向に不思議はない。信ずる者の強さで、依然グラス片手に舞踏会、アン・ドゥ・トロヮとやっていたように思われる。</p>
+    <form>
+      <h2>Form Element</h2>
+      <p>憶測になるが、むしろ辛かったのは庶民の中の飲んべぇ連中ではなかったか。ハイカラ族にユサぶりをかけた手前、泰西の酒には手を出しづらい。「なに、ビールだとぉ、べらぼーめ、こちとら人間サマでぃ、カニじゃあるめぇしアブクなんか飲めるかってんだ」などと強がりながらも、サゾ飲みたかったろうという気がする。</p>
+      <p>
+        <label for="text_field">テキストフィールド(text)：</label>
+        <input type="text" id="text_field" />
+      </p>
+      <p>
+        <label for="search_field">検索ワード</label>
+        <input type="search" id="search_field">
+      </p>
+      <p>
+        <label for="tel_field">電話番号</label>
+        <input type="tel" id="tel_field">
+      </p>
+      <p>
+        <label for="url_field">サイトアドレス</label>
+        <input type="url" id="url_field">
+      </p>
+      <p>
+        <label for="email_field">メールアドレス</label>
+        <input type="email" id="email_field">
+      </p>
+      <p>
+        <label for="password_field">パスワード</label>
+        <input type="password" id="password_field">
+      </p>
+      <p>
+        <label for="datetime_field">時間</label>
+        <input type="datetime" id="datetime_field">
+      </p>
+      <p>
+        <label for="date_field">日にち</label>
+        <input type="date" id="date_field">
+      </p>
+      <p>
+        <label for="month_field">月</label>
+        <input type="month" id="month_field">
+      </p>
+      <p>
+        <label for="week_field">週</label>
+        <input type="week" id="week_field">
+      </p>
+      <p>
+        <label for="number_field">number</label>
+        <input type="number" id="number_field">
+      </p>
+      <p>
+        <label for="file_field">file</label>
+        <input type="file" id="file_field">
+      </p>
+      <p>
+        <label for="text_area">テキストエリア(textarea)：</label><br />
+        <textarea id="text_area"></textarea>
+      </p>
+      <p>
+        <label for="select_element">セレクト(select)：</label><br />
+        <select name="select_element">
+        <optgroup label="Option Group 1">
+          <option value="1">オプション 1</option>
+          <option value="2">オプション 2</option>
+          <option value="3">オプション 3</option>
+        </optgroup>
+        <optgroup label="Option Group 2">
+          <option value="1">オプション 1</option>
+          <option value="2">オプション 2</option>
+          <option value="3">オプション 3</option>
+        </optgroup>
+      </select>
+      </p>
+      <p>
+        <label for="radio_buttons">ラジオボタン(radio)：</label><br />
+        <input type="radio" class="radio" name="radio_button" value="radio_1" /> ラジオボタン 1<br/>
+        <input type="radio" class="radio" name="radio_button" value="radio_2" /> ラジオボタン 2<br/>
+        <input type="radio" class="radio" name="radio_button" value="radio_3" /> ラジオボタン 3<br/>
+      </p>
+      <p>
+        <label for="checkboxes">チェックボックス(checkbox)：</label><br />
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> チェックボックス 1<br/>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> チェックボックス 2<br/>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> チェックボックス 3<br/>
+      </p>
+      <p><label for="password">パスワード(password)：</label><input type="password" class="password" name="password"></p>
+      <p><label for="file">ファイル(file)：</label><input type="file" class="file" name="file"></p>
+      <p><input class="button" type="reset" value="リセット(reset)" /> <input class="button" type="submit" value="サブミット(submit)" /></p>
+      <p><label for="text-field-size-short">テキストフィールドサイズサンプル：short</label><input id="text-field-size-short" class="text-field-short" placeholder="text-field-size-short" type="text"></p>
+      <p><label for="text-field-size-medium">テキストフィールドサイズサンプル：medium</label><input id="text-field-size-medium" class="text-field-medium" placeholder="text-field-size-medium" type="text"></p>
+      <p><label for="text-field-size-long">テキストフィールドサイズサンプル：long</label><input id="text-field-size-long" class="text-field-long" placeholder="text-field-size-long" type="text"></p>
+      <p>
+        texarea:size_half<br>
+        <textarea class="textarea-half"></textarea>
+      </p>
+      <p>
+        textarea:size:large<br>
+        <textarea class="textarea-large"></textarea>
+      </p>
+    </form>
+  </fieldset>
+</form>
+```
+
+*/
+/*---------------------------------------------------
+  * _helper.scss
+  * tenshoku ex design helper css
+  * date:2016.04.18
+  * author: vancho
+  * version 0.0.1
+  ---------------------------------------------------*/
+.table-style {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-weight: normal;
+}
+.table-style tr {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #b3b3b3;
+}
+.table-style th {
+  box-shadow: inset 2px 2px 0 #fff;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+}
+.table-style th, .table-style td {
+  padding: .8rem 1.2rem;
+  border: none;
+  border-right: solid 1px #b3b3b3;
+}
+.table-style.border-horizontal tr {
+  border-width: 0 0 1px;
+  border-style: dotted;
+  border-color: #999999;
+}
+.table-style.border-horizontal tr:last-child {
+  border-bottom: none;
+}
+.table-style.border-horizontal th {
+  box-shadow: none;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+}
+.table-style.border-horizontal th, .table-style.border-horizontal td {
+  border-right: none;
+  border-left: none;
+}
+.table-style.style-default th {
+  background: #eee;
+}
+.table-style.style-blue th {
+  background: #f3f5ff;
+}
+.table-style.style-red th {
+  background: #fff3f3;
+}
+.table-style.style-green th {
+  background: #f9fff0;
+}
+.table-style.style-orange th {
+  background: #fef9f5;
+}
+
+/*doc
+---
+title: table style setting
+name: table default setting
+category: table
+---
+
+## table default setting
+
+
+``` html_example
+<table class="table-style style-default">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+---
+
+## table color setting
+
+
+``` html_example
+<table class="table-style style-blue">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+``` html_example
+<table class="table-style style-red">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+``` html_example
+<table class="table-style style-green">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+``` html_example
+<table class="table-style style-orange">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+
+``` html_example
+<table class="table-style border-horizontal style-default">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-blue">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-red">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-green">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-orange">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+*/
+.btn-demo:before {
+  content: "button sample";
+}
+
+.btn-smokygray, .btn-cherry-red, .btn-sky-blue, .btn-reaf-green, .btn-apricot-orange {
+  display: inline-block;
+  padding: .8rem 1.5rem;
+  background: transparent;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.btn-smokygray:hover, .btn-cherry-red:hover, .btn-sky-blue:hover, .btn-reaf-green:hover, .btn-apricot-orange:hover {
+  color: #fff;
+  text-decoration: none;
+  opacity: .8;
+}
+
+.btn-smokygray {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color: gainsboro;
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  background: #eee;
+}
+.btn-smokygray:hover {
+  color: #333;
+}
+
+.btn-cherry-red {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color: #b50000;
+  background: #d90000;
+}
+
+.btn-sky-blue {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color: #002de8;
+  background: #0d3cff;
+}
+
+.btn-reaf-green {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color: #609900;
+  background: #76bd00;
+}
+
+.btn-apricot-orange {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px 1px 3px;
+  border-color: #c6620a;
+  background: #e8730c;
+}
+
+.btn-medium {
+  font-size: 14px;
+  font-size: 1rem;
+  padding: .8rem 1.5rem;
+}
+
+.btn-small {
+  font-size: 9px;
+  font-size: 0.64286rem;
+  padding: .5rem .8rem;
+}
+
+.btn-large {
+  font-size: 26px;
+  font-size: 1.85714rem;
+  padding: 1.2rem 2rem;
+}
+
+.btn-inline {
+  display: inline;
+}
+
+.btn-block {
+  display: block;
+}
+
+.btn-iblock {
+  display: inline-block;
+}
+
+/*doc
+
+---
+title: button style
+name: button style$
+category: design
+---
+
+## anchr button style
+
+``` html_example
+
+<a class="btn-demo"></a>
+
+<a class="btn-smokygray btn-demo"></a>
+<a class="btn-cherry-red btn-demo"></a>
+<a class="btn-sky-blue btn-demo"></a>
+<a class="btn-reaf-green btn-demo"></a>
+<a class="btn-apricot-orange btn-demo"></a>
+
+```
+
+## button sizing
+
+``` html_example
+
+<a class="btn-smokygray btn-medium btn-demo"></a>
+<a class="btn-smokygray btn-small btn-demo"></a>
+<a class="btn-smokygray btn-large btn-demo"></a>
+
+```
+
+## button display type
+
+``` html_example
+
+<p><a class="btn-smokygray btn-inline btn-demo"></a></p>
+<p><a class="btn-smokygray btn-block btn-demo"></a></p>
+<p><a class="btn-smokygray btn-iblock btn-demo"></a></p>
+
+```
+
+## button elements style demo
+
+``` html_example
+
+<div class="mb_20">
+  <button class="btn-demo"></button>
+  
+  <button class="btn-smokygray btn-demo"></button>
+  <button class="btn-cherry-red btn-demo"></button>
+  <button class="btn-sky-blue btn-demo"></button>
+  <button class="btn-reaf-green btn-demo"></button>
+  <button class="btn-apricot-orange btn-demo"></button>
+</div>
+<div class="mb_20">
+  <button class="btn-smokygray btn-medium btn-demo"></button>
+  <button class="btn-smokygray btn-small btn-demo"></button>
+  <button class="btn-smokygray btn-large btn-demo"></button>
+</div>
+
+```
+*/
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+[class^=headlinebutton-] {
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-size: 1.28571rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+[class^=headlinebutton-] a, [class^=headlinebutton-] a:hover {
+  text-decoration: none;
+}
+[class^=headlinebutton-] .text, [class^=headlinebutton-] .arrow {
+  display: table-cell;
+  padding: .2rem .4rem;
+}
+[class^=headlinebutton-] .arrow {
+  width: 1rem;
+}
+[class^=headlinebutton-] .text.sample-demo:before {
+  content: 'headline toggle button sample demo';
+}
+
+.headlinebutton-red {
+  background: #d90000;
+}
+
+.headlinebutton-blue {
+  background: #0d3cff;
+}
+
+.headlinebutton-green {
+  background: #76bd00;
+}
+
+.headlinebutton-orange {
+  background: #e8730c;
+}
+
+/*doc
+
+---
+
+  title: headline toggle button
+  name: headline toggle button
+  category: Smartphone
+
+---
+
+<div class="headlinebutton-red"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+<div class="headlinebutton-blue"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+<div class="headlinebutton-green"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+<div class="headlinebutton-orange"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+
+*/
+.listmenu-button-group {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-color: #eee;
+  border-width: 1px 1px 0;
+  border-style: solid;
+}
+
+.listmenu-button-group li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.listmenu-button-group li .listmenu-button-wrap {
+  margin: 0;
+  padding: .2rem .4rem;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  border-bottom: solid 1px #eee;
+}
+.listmenu-button-group li .listmenu-button-wrap .list-button {
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%;
+}
+.listmenu-button-group li .listmenu-button-wrap .list-button .text, .listmenu-button-group li .listmenu-button-wrap .list-button .arrow {
+  display: table-cell;
+}
+.listmenu-button-group li .listmenu-button-wrap .list-button .text.sample-demo:before {
+  content: 'list menu sample demo';
+}
+.listmenu-button-group li .listmenu-button-wrap .list-button .arrow {
+  width: 1rem;
+  color: #d90000;
+}
+
+/*doc
+
+---
+
+  title: list menu button
+  name: list menu button
+  category: Smartphone
+
+---
+``` html_example
+
+<nav>
+  <ul class="listmenu-button-group">
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+  </ul>
+</nav>
+```
+*/
+.global-footer {
+  font-size: 10px;
+  font-size: 0.71429rem;
+  background: #eee;
+}
+.global-footer .footer-menu {
+  border-bottom: solid 1px #e6e6e6;
+}
+.global-footer .footer-menu ul {
+  margin: 0;
+  padding: .8rem 0;
+}
+.global-footer .footer-menu a {
+  color: #333;
+  text-decoration: underline;
+}
+.global-footer .lisence {
+  margin: 0;
+  padding: .3rem .2rem;
+  text-align: center;
+  background: #bbbbbb;
+}
+.global-footer .copyright {
+  margin: 0;
+  padding: .3rem .2rem;
+  text-align: center;
+}
+
+/*doc
+---
+  title: global footer
+  name: global footer
+  category: Smartphone
+---
+
+``` html_example
+<footer class="global-footer">
+  <div class="footer-menu">
+    <nav>
+      <ul class="t_center">
+        <li class="d_inline_block"><a href="#">会社案内</a></li>
+        <li class="d_inline_block"><a hred="#">ヘルプ</a></li>
+        <li class="d_inline_block"><a href="#">パートナー紹介</a></li>
+        <li class="d_inline_block"><a href="#">利用規約</a></li>
+        <li class="d_inline_block"><a hred="#">個人情報保護方針</a></li>
+        <li class="d_inline_block"><a href="#">お祝い金について</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="lisence">厚生労働大臣許可：13-ユ-305190</p>
+  <p class="copyright">&copy; ZIGExN ALL RIGHTS RESERVED.</p>
+</footer>
+```
+
+
+*/
+.container-red {
+  margin: 0;
+  padding: 0;
+  border-top: solid 4px #d90000;
+  background: #fff;
+  box-shadow: 0 0 3px #333;
+}
+
+.container-blue {
+  margin: 0;
+  padding: 0;
+  border-top: solid 4px #0d3cff;
+  background: #fff;
+  box-shadow: 0 0 3px #333;
+}
+
+.container-green {
+  margin: 0;
+  padding: 0;
+  border-top: solid 4px #76bd00;
+  background: #fff;
+  box-shadow: 0 0 3px #333;
+}
+
+.container-orange {
+  margin: 0;
+  padding: 0;
+  border-top: solid 4px #e8730c;
+  background: #fff;
+  box-shadow: 0 0 3px #333;
+}
+
+.container-demo {
+  height: 200px;
+}
+
+.container-demo:before {
+  content: 'ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。';
+}
+
+/*doc
+
+---
+title: container style
+name: container style
+category: Smartphone
+---
+
+``` html_example
+
+<div class="mb_20 container-red container-demo"></div>
+<div class="mb_20 container-blue container-demo"></div>
+<div class="mb_20 container-green container-demo"></div>
+<div class="mb_20 container-orange container-demo"></div>
+```
+
+*/
+.headlinetype-mt-001, [class^="headlinetype-"] {
+  margin: 0;
+  padding: .2rem .4rem;
+  font-size: 18px;
+  font-size: 1.28571rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+[class^="headlinetype-"].sample-demo:before {
+  content: 'headline sample demo';
+}
+
+.headlinetype-red {
+  background: #d90000;
+}
+
+.headlinetype-blue {
+  background: #0d3cff;
+}
+
+.headlinetype-green {
+  background: #76bd00;
+}
+
+.headlinetype-orange {
+  background: #e8730c;
+}
+
+.headlinetype-chacolegray {
+  background: #333;
+}
+
+.headlinetype-smokeygray {
+  color: #333;
+  text-shadow: 0 1px 0 #fff;
+  background: #eee;
+}
+
+/*doc
+---
+title: headline style
+name: headline style
+category: Smartphone
+---
+
+```html_example
+<div class="headlinetype-red sample-demo"></div>
+<div class="headlinetype-blue sample-demo"></div>
+<div class="headlinetype-green sample-demo"></div>
+<div class="headlinetype-orange sample-demo"></div>
+<div class="headlinetype-chacolegray sample-demo"></div>
+<div class="headlinetype-smokeygray sample-demo"></div>
+```
+
+*/

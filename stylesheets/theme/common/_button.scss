@@ -23,6 +23,7 @@
 
 // ボタンの基本設定
 %btn{
+  display: inline-block;
   padding: .8rem 1.5rem;
   background: transparent;
   color: $z_color_white;
