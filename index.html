@@ -1,127 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="dist/stylesheets/theme/common/master.css">
-  <meta name="viewport" content="width=device-width">
-  <title>デザインパターン</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="robots" content="index,follow">
+  <meta name="discription" content="ほげほげ">
+  <link rel="stylesheet" href="./dist/stylesheets/theme/sp/master.css" media="all">
+  
+  <title>求人EX - Smartphone design</title>
 </head>
 <body>
-  <div class="wrapper">
-    <h1>レイアウト</h1>
-    <p>Responsive grid with Flexbox</p>
-    <h1>Basic flexgrid</h1>
-    <p></p>
-    <div class="flexgrid flexgrid--full u-text-center">
-      <div class="flexgrid-cell"><div class="demo content-1of1"></div></div>
+  <header class="global-header">
+    <p>求人EX</p>
+    <nav class="site-navi">
+      <ul>
+        <li><a href=""><span class="icon-attach"></span><span class="nav-name">気になる</span></a></li>
+        <li><a href=""><span class="icon-clock"></span><span class="nav-name">閲覧履歴</span></a></li>
+        <li><a href=""><span class="icon-search"></span><span class="nav-name">検索</span></a></li>
+        <li><a href=""><span class="icon-login"></span><span class="nav-name">ログイン</span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="top-registerarea">
+      <a class="btn-apricot-orange btn-medium" href="#">かんたん1分会員登録（無料）</a>
     </div>
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-2 u-text-center">
-      <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+    <div class="top-read">
+      <h1>豊富な転職・求人情報であなたを応援<br>
+      転職サイトの決定版「転職EX」</h1>
     </div>
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-3 u-text-center">
-      <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+    <div class="top-counter">
+      <p>
+        <small>求人数</small>
+        <span class="count-num">999,999</span>
+        <small>件</small>
+      </p>
     </div>
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-4 u-text-center">
-      <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
-    </div>
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-6 u-text-center">
-      <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
-    </div>
-
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-12 u-text-center">
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-      <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
-    </div>  
-    <hr />  
-
-    <h1>Sidebar and main content</h1>
-    <div class="flexgrid flexgrid--gutters flexgrid--1of6">
-      <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
-      <div class="flexgrid-cell"><div class="demo">auto</div></div>
-    </div>
-    <div class="flexgrid flexgrid--gutters flexgrid--1of4">
-      <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
-      <div class="flexgrid-cell"><div class="demo">auto</div></div>
-    </div>
-    <div class="flexgrid flexgrid--gutters flexgrid--1of3">
-      <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
-      <div class="flexgrid-cell"><div class="demo">auto</div></div>
-    </div> 
-    <hr /> 
-
-    <h1>Left / Center / Right content alignment</h1>
-    <div class="flexgrid flexgrid--gutters flexgrid--1of2">
-      <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
-    </div>
-
-    <div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--center">
-      <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
-    </div>
-
-    <div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--right">
-      <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
-    </div>
-    <hr />   
-
-    <h1>Nesting</h1>
-    <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
-      <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
-      <div class="flexgrid-cell"><div class="demo">     
-          <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
-            <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
-            <div class="flexgrid-cell"><div class="demo">
-                <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
-                  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
-                  <div class="flexgrid-cell"><div class="demo">auto</div></div>
-                </div>        
-            </div></div>
-          </div>      
+    <div class="top-searcharea form">
+      <section>
+        <h2 class="headlinetype-red"><span class="icon-search"></span>かんたん検索</h2>
+        <div class="t_center p_5">
+          <input id="" type="text" name="" class="text-field-long" placeholder="勤務地"><br>
+          <span class="d_block">×</span>
+          <input id="" type="text" name="" class="text-field-long" placeholder="職種">
+          <div class="mt_5">
+            <button class="btn-cherry-red btn-block"><span class="icon-search"></span>この条件で検索</button>
+          </div>
         </div>
-      </div>
+      </section>
+      <section>
+        <h2 class="headlinetype-red"><span class="icon-search"></span>キーワード検索</h2>
+        <div class="p_5">
+          <div class="flexgrid flexgrid--gutters flexgrid--1of6">
+            <div class="flexgrid-cell"><input type="search" value="" class="text-field-long" placeholder="キーワード"></div>
+            <div class="flexgrid-cell"><button class="btn-cherry-red"><span class="icon-search"></span>検索</button></div>
+          </div>
+        </div>
+      </section>
     </div>
-    <hr /> 
-
-    <h1>Vertical alignment</h1>
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--top">
-      <div class="flexgrid-cell"><div class="demo">This cell should be <strong>top-aligned</strong>.</div></div>
-      <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
-      <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+  </main>
+  <footer class="global-footer">
+    <div class="footer-menu">
+      <nav>
+        <ul class="t_center">
+          <li class="d_inline_block"><a href="#">会社案内</a></li>
+          <li class="d_inline_block"><a href="#">ヘルプ</a></li>
+          <li class="d_inline_block"><a href="#">パートナー紹介</a></li>
+          <li class="d_inline_block"><a href="#">利用規約</a></li>
+          <li class="d_inline_block"><a href="#">個人情報保護方針</a></li>
+          <li class="d_inline_block"><a href="#">お祝い金について</a></li>
+        </ul>
+      </nav>
     </div>
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--center">
-      <div class="flexgrid-cell"><div class="demo">This cell should be <strong>center-aligned</strong>.</div></div>
-      <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
-      <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
-    </div>
-
-    <div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--bottom">
-      <div class="flexgrid-cell"><div class="demo">This cell should be <strong>bottom-aligned</strong>.</div></div>
-      <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
-      <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
-    </div>
-    <h1>カラーパターン</h1>
-    <h1>見出し</h1>
-    <h1>ボタンパターン</h1>
-  </div>
+    <p class="lisence">厚生労働大臣許可：13-ユ-305190</p>
+    <p class="copyright">&copy; ZIGExN ALL RIGHTS RESERVED.</p>
+  </footer>
 </body>
 </html>

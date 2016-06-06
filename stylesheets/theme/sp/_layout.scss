@@ -12,12 +12,15 @@
 //=========================================
 // section container setting
 //=========================================
+%box-shadow-black{
+  box-shadow: 0 0 3px $chacole-gray;
+}
 @mixin section-default-style($border-color){
   margin: 0;
   padding: 0;
   border-top: solid 4px $border-color;
   background: $z_color_white;
-  box-shadow: 0 0 3px $chacole-gray;
+  @extend %box-shadow-black;
 }
 .container-red{
   @include section-default-style($cherry-red);
@@ -39,8 +42,49 @@
   content: 'ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。';
 }
 
-/*doc
+//=========================================
+// site home layout setting
+//=========================================
+.top-registerarea,
+.top-read,
+.top-counter{
+//  margin: 5px;
+//  padding: 5px;
+  background: $z_color_white;
+}
 
+.top-registerarea,
+.top-read,
+.top-counter{
+   text-align: center;
+}
+.top-read{
+  margin: 5px 0 0;
+  padding: 5px;
+  background: $smokey-gray;
+  h1{
+    @include font-size(14);
+    margin-bottom: 0;
+  }
+}
+.top-counter{
+  p{
+    margin-bottom: 0;
+    .count-num{
+      color: $cherry-red;
+      font-weight: bold;
+      @include font-size(18);
+    }
+  }
+}
+.top-searcharea{
+  margin: 5px;
+  @extend %box-shadow-black;
+  background: $z_color_white;
+  section{
+  }
+}
+/*doc
 ---
 title: container style
 name: container style
@@ -48,7 +92,6 @@ category: Smartphone
 ---
 
 ``` html_example
-
 <div class="mb_20 container-red container-demo"></div>
 <div class="mb_20 container-blue container-demo"></div>
 <div class="mb_20 container-green container-demo"></div>
@@ -56,4 +99,3 @@ category: Smartphone
 ```
 
 */
-
