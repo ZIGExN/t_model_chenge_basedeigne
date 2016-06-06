@@ -24,7 +24,7 @@
 // ボタンの基本設定
 %btn{
   display: inline-block;
-  padding: .8rem 1.5rem;
+  padding: .2rem .4rem;
   background: transparent;
   color: $z_color_white;
   text-decoration: none;
@@ -72,15 +72,14 @@
 //button sizing
 .btn-medium{
   @include font-size(14);
-  padding: .8rem 1.5rem;
 }
 .btn-small{
   @include font-size(9);
-  padding: .5rem .8rem;
+  padding: .1rem .2rem;
 }
 .btn-large{
   @include font-size(26);
-  padding: 1.2rem 2rem;
+  padding: .8rem 1.6rem;
 }
 
 // button styling
