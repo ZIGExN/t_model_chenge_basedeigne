@@ -28,6 +28,7 @@
   background: transparent;
   color: $z_color_white;
   text-decoration: none;
+  box-sizing: border-box;
   @include textshadow-black;
   cursor: pointer;
   &:hover{

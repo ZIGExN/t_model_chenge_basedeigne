@@ -195,14 +195,15 @@ category: layout
 }
 .flexgrid-cell{
   flex: 1;
+  box-sizing: border-box;
 }
 
 // gutter setting
-$gutter: 1em;
+$gutter: 1rem;
 .flexgrid--gutters{
   margin-left: -$gutter;
   .flexgrid-cell{
-    padding-left: $gutter; 
+    margin-left: $gutter; 
   }
   .flexgrid--nested{
     .flexgrid-cell{
@@ -286,7 +287,7 @@ $gutter: 1em;
 }
 
 // layout for tablet
-@media (min-width: 30em) {
+@media (max-width: (768 / 14)*1rem) {
   .flexgrid--cols-4 > .flexgrid-cell {
     flex: 0 0 calc(50% - #{$gutter});
   }
@@ -310,7 +311,7 @@ $gutter: 1em;
   }
 }
 
-@media (min-width: 48em) {
+@media (max-width: (376 / 14)*1rem) {
   .flexgrid--cols-2 > .flexgrid-cell,
   .flexgrid--cols-3 > .flexgrid-cell,
   .flexgrid--cols-4 > .flexgrid-cell,
