@@ -310,7 +310,7 @@ $gutter: 1rem;
     flex: 0 0 100%;
   }
 }
-
+//screen for smartphone
 @media (max-width: (376 / 14)*1rem) {
   .flexgrid--cols-2 > .flexgrid-cell,
   .flexgrid--cols-3 > .flexgrid-cell,

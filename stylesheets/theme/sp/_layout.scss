@@ -111,13 +111,113 @@ category: Smartphone
 */
 
 .list-nav-style{
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
   border-top: solid 1px $smokey-gray;
   border-left: solid 1px $smokey-gray;
+  top: (55 / 14) * 1rem;
   .list-nav-cols{
+    position: relative;
+    flex: 0 1 50%;
     border-right: solid 1px $smokey-gray;
     border-bottom: solid 1px $smokey-gray;
-    a{
+    box-sizing: border-box;
+  }
+  .list-nav-cols-full{
+    position: relative;
+    flex: 0 0 100%;
+    border-bottom: solid 1px $smokey-gray;
+    box-sizing: border-box;
+  }
+  .list-nav-button-arrow{
+    display: block;
+    padding: .4rem .8rem;
+    color: $chacole-gray;
+    text-decoration: none;
+  }
+  .list-nav-button-arrow:after{
+    position: absolute;
+    content: "";
+    display: block;
+    width: .5rem;
+    height: .5rem;
+    border-color: $cherry-red;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    transform: rotate(-45deg);
+    right: (8/14)*1rem;
+    top: (12/14)*1rem;
+  }
+  .slidedown-button{
+    position: relative;
+    padding: .4rem .8rem;
+    font-weight: bold;
+    &:after{
+      position: absolute;
+      content: "";
       display: block;
+      width: .5rem;
+      height: .5rem;
+      border-color: $chacole-gray;
+      border-width: 0 1px 1px 0;
+      border-style: solid;
+      transform: rotate(45deg);
+      right: (8/14)*1rem;
+      top: (8/14)*1rem;
+    }
+  }
+}
+.top-refinesearch{
+  position: relative;
+  padding-bottom: (55 / 14) * 1rem;
+  .tab-inner{
+    position: relative;
+    margin: (5 / 14) * 1rem;
+    .tab-nav{
+      position: absolute;
+      width: (100 / 3) * 1%;
+      height: (50 / 14) * 1rem;
+      padding: .2rem .4rem;
+      border-radius: 4px 4px 0 0;
+      box-sizing: border-box;
+      top: (5 / 14) * 1rem;
+      &.current{
+        border: solid 1px darken($cherry-red, 7%);
+        background: $cherry-red;
+        color: $z_color_white;
+        @include textshadow-black;
+      }
+      &.disable{
+        background: $smokey-gray;
+        color: $chacole-gray;
+        @include textshadow-white;
+      }
+      span{
+        display: block;
+        text-align: center;
+      }
+      [class^='icon-']{
+        font-size: (16 /14) * 1rem;
+      }
+      .nav-name{
+        font-size: (8 / 14) * 1rem;
+      }
+    }
+    .area{
+      .tab-nav{
+        left: 0;
+      }
+    }
+    .occupation{
+      .tab-nav{
+        left: (100 / 3) * 1%;
+      }
+    }
+    .feature{
+      .tab-nav{
+        left: (100 / 3) * 2 *1%
+      }
     }
   }
 }
