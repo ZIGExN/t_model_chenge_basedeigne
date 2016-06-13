@@ -28,6 +28,7 @@
   background: transparent;
   color: $z_color_white;
   text-decoration: none;
+  text-align: center;
   box-sizing: border-box;
   @include textshadow-black;
   cursor: pointer;
@@ -35,6 +36,13 @@
     color: $z_color_white;
     text-decoration: none;
     opacity: .8;
+  }
+  &.disable{
+    @include btn-border-style(4px, $smokey-gray);
+    color: rgba($chacole-gray, .5);
+    @include textshadow-white;
+    background: $smokey-gray;
+    cursor: default;
   }
 }
 
