@@ -222,65 +222,61 @@ category: Smartphone
 // list nav style setting
 //=========================================
 .list-nav-style{
-  position: relative;
-  display: flex;
-  flex-flow: row wrap;
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
   padding-left: 0;
-  border-top: solid 1px $smokey-gray;
-  border-left: solid 1px $smokey-gray;
+  font-size: (12 /14) *1rem;
   li{
     list-style: none;
   }
+  .list-nav-indent{
+    padding-left: 0;
+  }
   .list-nav-cols{
-    position: relative;
-    flex: 0 1 50%;
-    border-right: solid 1px $smokey-gray;
-    border-bottom: solid 1px $smokey-gray;
-    box-sizing: border-box;
   }
   .list-nav-cols-full{
-    position: relative;
-    flex: 0 0 100%;
+    padding-left: 0;
     border-bottom: solid 1px $smokey-gray;
-    box-sizing: border-box;
+    &:last-child{
+      border-bottom: none;
+    }
   }
   .list-nav-button-arrow{
-    display: block;
-    padding: .4rem .8rem;
-    color: $chacole-gray;
-    text-decoration: none;
-  }
-  .list-nav-button-arrow:after{
-    position: absolute;
-    content: "";
-    display: block;
-    width: .5rem;
-    height: .5rem;
-    border-color: $cherry-red;
-    border-width: 0 1px 1px 0;
-    border-style: solid;
-    transform: rotate(-45deg);
-    right: (8/14)*1rem;
-    top: (12/14)*1rem;
-  }
-  .slidedown-button{
     position: relative;
-    padding: .4rem .8rem;
-    font-weight: bold;
+    display: block;
+    padding: .8rem .6rem;
+    color: $chacole-gray;
     &:after{
       position: absolute;
-      content: "";
+      content: '';
       display: block;
-      width: .5rem;
-      height: .5rem;
-      border-color: $chacole-gray;
-      border-width: 0 1px 1px 0;
-      border-style: solid;
+      width: (8 / 14) * 1rem;
+      height: (8 / 14) * 1rem;
+      line-height: 0;
+      border-top: solid 1px $cherry-red;
+      border-right: solid 1px $cherry-red;
+      border-bottom: solid 1px transparent;
+      border-left: solid 1px transparent;
       transform: rotate(45deg);
-      right: (8/14)*1rem;
-      top: (8/14)*1rem;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  .slidedown-button{
+    padding: .2rem .4rem;
+    background: $smokey-gray;
+    font-weight: bold;
+    .icon-arrow-down.open{
+      display: inline-block;
+      width: 0;
+      height: 0;
+      line-height: 0;
+      border-top: solid 5px transparent;
+      border-right: solid 5px transparent;
+      border-bottom: solid 5px $chacole-gray;
+      border-left: solid 5px transparent;
+
+    }
+    &:after{
     }
   }
 }
