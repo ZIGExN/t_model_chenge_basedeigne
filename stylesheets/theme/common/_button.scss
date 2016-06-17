@@ -47,7 +47,7 @@
 }
 
 // botton coloring
-.btn-smokygray{
+.btn-smokeygray{
   @extend %btn;
   @include btn-border-style(4px,$smokey-gray);
   color: $chacole-gray;
