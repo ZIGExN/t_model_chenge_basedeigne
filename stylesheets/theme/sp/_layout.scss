@@ -262,24 +262,46 @@ category: Smartphone
     }
   }
   .slidedown-button{
+    position: relative;
     padding: .2rem .4rem;
     background: $smokey-gray;
     font-weight: bold;
-    .icon-arrow-down.open{
+    .icon-arrow-down{
+      position: absolute;
       display: inline-block;
       width: 0;
       height: 0;
+      top: .4rem;
+      right: .8rem;
       line-height: 0;
-      border-top: solid 5px transparent;
-      border-right: solid 5px transparent;
-      border-bottom: solid 5px $chacole-gray;
-      border-left: solid 5px transparent;
-
-    }
-    &:after{
+      &.open{
+        border-top: solid 5px transparent;
+        border-right: solid 5px transparent;
+        border-bottom: solid 5px $chacole-gray;
+        border-left: solid 5px transparent;
+      }
+      &.close{
+        border-top: solid 5px $chacole-gray;
+        border-right: solid 5px transparent;
+        border-bottom: solid 5px transparent;
+        border-left: solid 5px transparent;
+      }
     }
   }
 }
+
+//=========================================
+// qa-contents  layout setting
+//=========================================
+.qa-contents{
+  .question{
+    font-size: (12 / 14) * 1rem;
+  }
+  .answer{
+    font-size: (10 / 14) * 1rem;
+  }
+}
+
 
 //=========================================
 // site home layout setting

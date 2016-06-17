@@ -10,12 +10,16 @@
 
 .global-footer{
   @include font-size(10);
+  margin-top: (20 / 14) * 1rem;
   background: $smokey-gray;
   .footer-menu{
     border-bottom: solid 1px lighten($chacole-gray, 70%);
     ul{
       margin: 0;
       padding: .8rem 0;
+      li{
+        padding: .2rem .6rem;
+      }
     }
     a{
       color: $chacole-gray;
