@@ -81,6 +81,80 @@ category: Smartphone
   }
 }
 
+
+//=========================================
+//求人詳細
+//=========================================
+.screen-jobdetails{
+  padding-bottom: 50px;
+}
+.jobdetails{
+  padding: 5px;
+  font-size: (12 / 14) * 1rem;
+  .jobdetails-header{
+    .jobdetails-label-group{
+      [class^='label-']{
+        margin-bottom: (5 / 14) * 1rem;
+        margin-right: (5 / 14) * 1rem;
+      }
+    }
+    .jobdetails-header-inner-group{
+      display: table;
+      width: 100%;
+      .jobdetails-title,
+      .jobdetails-photo{
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .jobdetails-title{
+        .company-name{
+          margin-bottom: 0;
+          font-size: (10 / 14) * 1rem;
+        }
+        .title-name{
+          font-size: 1rem;
+        }
+      }
+      .jobdetails-photo{
+        figure{
+          margin: 0;
+          padding-left: 5px;
+        }
+      }
+    }
+    .jobdetails-partner{
+      dl{
+        display: table;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        vertical-align: middle;
+        dt,dd{
+          display: table-cell;
+        }
+        dt{
+          width: 5rem;
+        }
+        dd{
+          img{
+            width: 85px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  .sendmail-jobdetails{
+    margin-top: 10px;
+  }
+  .action-button-set{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    background: rgba($chacole-gray, .8);
+  }
+}
 //=========================================
 //求人リスト (新着・レコメンド用）
 //=========================================
