@@ -149,9 +149,11 @@ category: Smartphone
   }
   .action-button-set{
     position: fixed;
+    right:0;
     bottom: 0;
     left: 0;
     z-index: 99999;
+    padding: .8rem .5rem;
     background: rgba($chacole-gray, .8);
   }
 }
@@ -271,27 +273,32 @@ category: Smartphone
         font-size: (10 /14) * 1rem;
       }
     }
-    .action-button-set{
-      nav{
-        display: table;
-        width: 100%;
-        .detail-button,
-        .favorite-button{
-          display: table-cell;
-          width: 50%;
-          box-sizing: border-box;
-        }
-        .detail-button{
-          padding-right: .2rem;
-        }
-        .favorite-button{
-          padding-left: .2rem;
-        }
-      }
-    }
   }
 }
 
+//=========================================
+// action button setting
+//==uiii===================================
+.action-button-set{
+  nav{
+    display: table;
+    width: 100%;
+    .detail-button,
+    .favorite-button,
+    .entry-button{
+      display: table-cell;
+      width: 50%;
+      box-sizing: border-box;
+    }
+    .detail-button,
+    .entry-button{
+      padding-right: .2rem;
+    }
+    .favorite-button{
+      padding-left: .2rem;
+    }
+  }
+}
 //=========================================
 // list nav style setting
 //=========================================
@@ -419,62 +426,65 @@ category: Smartphone
 
 
 .top-refinesearch{
-  position: relative;
-  padding-bottom: (55 / 14) * 1rem;
-  .list-nav-style{
-    top: (55 / 14) * 1rem;
-  }
-  h3{
-   margin: 0;
-  }
-  .tab-inner{
-    position: relative;
-    margin: (5 / 14) * 1rem;
-    .tab-nav{
-      position: absolute;
-      width: (100 / 3) * 1%;
-      height: (50 / 14) * 1rem;
-      padding: .2rem .4rem;
-      border-radius: 4px 4px 0 0;
-      box-sizing: border-box;
-      top: (5 / 14) * 1rem;
-      &.current{
-        border: solid 1px darken($cherry-red, 7%);
-        background: $cherry-red;
-        color: $z_color_white;
-        @include textshadow-black;
-      }
-      &.disable{
-        background: $smokey-gray;
-        color: $chacole-gray;
-        @include textshadow-white;
-      }
-      span{
-        display: block;
+  .tab-nab{
+    ul{
+      margin: 0;
+      padding-left: 0;
+      display: table;
+      width: 100%;
+      white-space: nowrap;
+      li{
+        display: table-cell;
+        width: (100 / 3) * 1%;
         text-align: center;
-      }
-      [class^='icon-']{
-        font-size: (16 /14) * 1rem;
-      }
-      .nav-name{
-        font-size: (8 / 14) * 1rem;
+        a{
+          display: block;
+          @extend %btn;
+          @include btn-border-style(4px, $cherry-red);
+          border-radius: 4px 4px 0 0;
+          background: $cherry-red;
+          box-sizing: border-box;
+          color: $z_color_white;
+          text-decoration: none;
+          &.disable{
+            @include btn-border-style(4px, $smokey-gray);
+            border-radius: 4px 4px 0 0;
+            color: rgba($chacole-gray, .5);
+            @include textshadow-white;
+            background: $smokey-gray;
+            cursor: default;
+          }
+          [class^='icon-']{
+            display: block;
+          }
+          .nav-name{
+            font-size: (8 /14) * 1rem;
+          }
+        }
       }
     }
-    .area{
-      .tab-nav{
-        left: 0;
+  }
+  .menu-area{
+    .list-nav-style{
+      .list-nav-cols{
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box;
+        border-bottom: solid 1px $smokey-gray;
+        &:nth-child(odd){
+          border-right: solid 1px $smokey-gray;
+        }
+        &:nth-child(even){
+          margin-left: -5px;
+        }
       }
     }
-    .occupation{
-      .tab-nav{
-        left: (100 / 3) * 1%;
-      }
-    }
-    .feature{
-      .tab-nav{
-        left: (100 / 3) * 2 *1%
-      }
-    }
+  }
+  .menu-occupation{
+  
+  }
+  .menu-feature{
+  
   }
 }
 .newer-recruit{
