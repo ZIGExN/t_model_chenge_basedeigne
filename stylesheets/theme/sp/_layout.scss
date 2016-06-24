@@ -34,6 +34,9 @@
 .container-orange{
   @include section-default-style($apricot-orange);
 }
+.container-gray{
+  @include section-default-style($chacole-gray);
+}
 
 .container-demo{
   height: 200px;
@@ -80,8 +83,84 @@ category: Smartphone
     padding-left: .2rem;
   }
 }
+//=========================================
+// favorite list setting
+//=========================================
+.favorite-read{
+  margin: 5px;
+  padding: 5px;
+  background: rgba($smokey-gray, .5);
+  font-size: (12 / 14) *1rem;
+}
+.integrate-entry-button{
+  margin: 5px;
+  text-align: center;
+}
+.integrat-entry-check{
+  margin-bottom: 5px;
+  padding: 5px;
+  background: rgba($apricot-orange, .2);
+  label{
+    display: block;
+  }
+}
 
-
+//=========================================
+// search formn setting
+//=========================================
+.search-form-body{
+  padding-bottom: 50px;
+  h1{
+    font-size: (16 / 14) * 1rem;
+    margin-bottom: .4rem;
+    margin-left: 5px;
+  }
+  h2{
+    font-size: (14 / 14) *1rem;
+  }
+  h3{
+    font-size: (12 / 14 ) * 1rem;
+  }
+}
+.form{
+  .form-check-list{
+    margin: 5px;
+    padding-left: 0;
+    border-top: solid 1px $smokey-gray;
+    border-left: solid 1px $smokey-gray;
+    li{
+      border-right: solid 1px $smokey-gray;
+      border-bottom: solid 1px $smokey-gray;
+      label{
+        display: block;
+        padding: .6rem .4rem;
+      }
+    }
+  }
+  .search-form-sendbutton{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px;
+    background: rgba($chacole-gray, .8);
+    text-align: center;
+  }
+  .form-check-list{
+    margin: 5px;
+    padding-left: 0;
+    border-top: solid 1px $smokey-gray;
+    border-left: solid 1px $smokey-gray;
+    li{
+      border-right: solid 1px $smokey-gray;
+      border-bottom: solid 1px $smokey-gray;
+      label{
+        display: block;
+        padding: .6rem .4rem;
+      }
+    }
+  }
+}
 //=========================================
 //求人詳細
 //=========================================
@@ -226,6 +305,11 @@ category: Smartphone
 //=========================================
 .results-joblists{
   .jobinfo-content{
+    margin: 5px 5px 20px;
+    padding: 5px;
+    &:last-child{
+      margin-bottom: 10px;
+    }
     .jobinfo-label{
       margin: 0 0 (5 / 14) * 1rem;
       padding-left: 0;

@@ -23,6 +23,7 @@
   input[type='date'],
   input[type='week'],
   input[type='month'],
+  select,
   textarea{
     padding: .2rem .4rem;
     border-radius: 4px;
@@ -49,6 +50,58 @@
   }
   .textarea-large{
     width: 100%;
+  }
+  .select-button{
+    position: relative;
+    display: block;
+    .select-button-wrap{
+      appearance:none;
+      overflow: hidden;
+      z-index: 2;
+      display: block;
+      margin: 0;
+      background: transparent;
+      border: none;
+      outline: none;
+      &.arrow-down:before{
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        right: 1rem;
+        margin-right: -6px;
+        width: 0;
+        height: 0;
+        content: "";
+        display: inline-block;
+        border-style: solid;
+        border-width: 5px;
+        border-color: transparent;
+        border-top-color: $chacole-gray;
+      }
+    }
+  }
+  .form-check-list{
+    margin: 5px;
+    padding-left: 0;
+    border-top: solid 1px $smokey-gray;
+    border-left: solid 1px $smokey-gray;
+    li{
+      border-right: solid 1px $smokey-gray;
+      border-bottom: solid 1px $smokey-gray;
+      label{
+        display: block;
+        padding: .6rem .4rem;
+      }
+    }
+  }
+  .search-form-sendbutton{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px;
+    background: rgba($chacole-gray, .8);
+    text-align: center;
   }
 }
 
