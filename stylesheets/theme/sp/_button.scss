@@ -144,5 +144,41 @@
 </nav>
 ```
 */
-
-
+.radio-checkbutton-set{
+  display: table;
+  width: 100%;
+  .check-cell{
+    display: table-cell;
+    box-sizing: border-box;
+    input[type="radio"]{/*ラジオボタンを非表示*/
+      display: none;
+      &:checked + .btn-check-label{
+        display: block;
+        @extend %btn;
+        border-color: darken($sky-blue, .7%);
+        border-width: 1px;
+        border-bottom-width: 3px;
+        background: $sky-blue;
+      }
+    }
+    .btn-check-label{
+      display: block;
+      @extend %btn;
+      @include btn-border-style(4px, $smokey-gray);
+      color: rgba($chacole-gray, .5);
+      @include textshadow-white;
+      background: $smokey-gray;
+    }
+    &:first-child .btn-check-label{
+      border-radius: 4px 0px 0px 4px;
+      border-right: none;
+    }
+    &:last-child .btn-check-label{
+      border-radius: 0px 4px 4px 0px;
+      border-right-width: 1px;
+    }
+    &.two-col{
+      width: 50%;
+    }
+  }
+}
