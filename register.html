@@ -6,7 +6,6 @@
   <meta name="robots" content="index,follow">
   <meta name="discription" content="ほげほげ">
   <link rel="stylesheet" href="./dist/stylesheets/theme/sp/master.css" media="all">
-  
   <title>求人EX - Smartphone design</title>
 </head>
 <body class="search-form-body">
@@ -28,7 +27,7 @@
           <h1 class="mt_10">新規会員登録</h1>
           <div class="navigate-flow">
             <ul>
-              <li>基本情報の<br>入力・確認</li>
+              <li class="current">基本情報の<br>入力・確認</li>
               <li>経歴情報の<br>入力</li>
               <li>登録内容の<br>確認</li>
               <li>登録完了</li>
@@ -196,13 +195,13 @@
               <section>
                 <h3 class="headlinetype-smokeygray"><span class="label-new">必須</span>パスワード</h3>
                 <div class="p_5">
-                  <p class="txt_size_small">
-                     ＊ハイフン[ - ]やアンダーバー[ _ ]などの記号は使えません<br>
-                     ＊メールアドレスの@以前と同じパスワードは設定できません。<br>
-                     ＊生年月日と同じパスワードは設定できません。<br>
-                     ＊8文字以上の異なる英数字4種類以上を組み合わせてください。<br>
-                     ＊<strong class="marker-red">英字・数字のどちらも必ず使用してください</strong>。
-                  </p> 
+                  <ul class="fz10px">
+                    <li>ハイフン[ - ]やアンダーバー[ _ ]などの記号は使えません。</li>
+                    <li>メールアドレスの@以前と同じパスワードは設定できません。</li>
+                    <li>生年月日と同じパスワードは設定できません。</li>
+                    <li>8文字以上の異なる英数字4種類以上を組み合わせてください。</li>
+                    <li><strong class="marker-red">英字・数字のどちらも必ず使用してください</strong>。</li>
+                  </ul>
                 </div>
                 <div class="p_5">
                   <input class="text-field-long" id="" type="password" placeholder="example@email.com" name="">
@@ -221,12 +220,12 @@
                 <h3 class="headlinetype-smokeygray"><span class="label-new">必須</span>住所</h3>
                 <div class="d_table p_5">
                   <div class="d_table_cell">郵便番号</div>
-                  <div class="d_table_cell"><input id="" type="text" name=""></div>
+                  <div class="d_table_cell"><input class="text-field-medium" id="" type="text" name=""></div>
                 </div>
                 <div class="d_table p_5">
                   <div class="d_table_cell">都道府県</div>
                   <div class="d_table_cell">
-                    <select class="form_size_full" id="user_prefecture_code" name="user[prefecture_code]" onfocus="ga('send', 'event', 'FormActive', '住所(都道府県)', undefined, {'nonInteraction': 1});">
+                    <select class="text-field-long" id="user_prefecture_code" name="user[prefecture_code]" onfocus="ga('send', 'event', 'FormActive', '住所(都道府県)', undefined, {'nonInteraction': 1});">
                       <option value="">選択してください</option>
                       <option value="01">北海道</option>
                       <option value="02">青森県</option>
@@ -281,7 +280,7 @@
                 <div class="d_table p_5">
                   <div class="d_table_cell">市区町村</div>
                   <div class="d_table_cell">
-                    <select class="form_size_full" id="user_city_code" name="user[city_code]" onfocus="ga('send', 'event', 'FormActive', '住所(市区町村)', undefined, {'nonInteraction': 1});">
+                    <select class="text-field-long" id="user_city_code" name="user[city_code]" onfocus="ga('send', 'event', 'FormActive', '住所(市区町村)', undefined, {'nonInteraction': 1});">
                       <option value="">選択してください</option>
                       <option value="01101">札幌市中央区</option>
                       <option value="01102">札幌市北区</option>
@@ -362,7 +361,7 @@
                 </div>
               </section>
               <section>
-                <h3 class="headlinetype-smokeygray"><span class="label-new">必須</span>現在の勤務状況</h3>
+                <h3 class="headlinetype-smokeygray"><span class="label-new">必須</span>直近の経験職種</h3>
                 <div class="d_table p_5">
                   <div class="d_table_cell">大分類</div>
                   <div class="d_table_cell">
@@ -498,7 +497,7 @@
             <section>
               <h2 class="headlinetype-chacolegray">メール配信</h2>
               <section>
-                <h3 class="headlinetype-smokeygray">メールマガジン</h3>
+                <h3 class="headlinetype-smokeygray"><span class="label-type">任意</span>メールマガジン</h3>
                 <div class="p_5">
                   <div class="radio-checkbutton-set">
                     <div class="check-cell">
@@ -513,7 +512,7 @@
                 </div>
               </section>
               <section>
-                <h3 class="headlinetype-smokeygray">アラートメール</h3>
+                <h3 class="headlinetype-smokeygray"><span class="label-type">任意</span>アラートメール</h3>
                 <div class="p_5">
                   <div class="radio-checkbutton-set">
                     <div class="check-cell">
@@ -529,7 +528,7 @@
               </section>
             </section>
           </div>
-          <p class="m_5">
+          <p class="m_5 fz8px">
           上記の登録フォーム内容を送信することにより、<a href="https://tenshoku-ex.jp/statics/rules" class="txt_link" target="_blank">利用規約</a>と<a href="http://zigexn.co.jp/privacy/treatment/jex" class="txt_link" target="_blank">個人情報の取扱いについて</a>に同意したこととなります。ご登録の際には、個人情報保護方針、サービスガイドライン、その他利用規約の各条項をよくお読みください。</p>
         </section>
       </form>

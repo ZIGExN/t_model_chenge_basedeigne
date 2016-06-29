@@ -149,6 +149,7 @@
   width: 100%;
   .check-cell{
     display: table-cell;
+    width: 50%;
     box-sizing: border-box;
     input[type="radio"]{/*ラジオボタンを非表示*/
       display: none;

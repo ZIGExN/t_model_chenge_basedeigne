@@ -41,3 +41,20 @@ $font_size_list: 62%, 70%, 77%, 85%, 93%, 100%, 108%, 116%, 124%, 131%, 139%, 14
 //    width: 1px * $width_value;
 //  }
 //}
+
+//====================================
+//
+//font size helper
+//
+//====================================
+@for $font-size-value from 8 through 32{
+  .fz#{$font-size-value}px{
+     font-size: ($font-size-value / 14) * 1rem;
+  }
+}
+
+
+
+
+
+
