@@ -18,26 +18,13 @@
 
 //
 .table-style{
-  tr{
-  }
   th{
+    white-space: nowrap;
   }
   th,td{
     padding: .2rem .4rem;
     border: none; //z_templateのスタイルをリセット
     border-right: solid 1px lighten($chacole-gray, 50%);
-  }
-  td{
-  }
-  &.border-horizontal{
-    tr{
-    }
-    tr:last-child{
-    }
-    th{
-    }
-    th,td{
-    }
   }
 }
 

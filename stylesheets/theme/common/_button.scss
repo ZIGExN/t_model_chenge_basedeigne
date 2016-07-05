@@ -85,6 +85,8 @@
 .btn-small{
   @include font-size(9);
   padding: .1rem .2rem;
+  border-radius: 2px;
+  border-bottom-width: 2px;
 }
 .btn-large{
   @include font-size(26);

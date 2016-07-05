@@ -85,10 +85,82 @@ category: Smartphone
 }
 
 //=========================================
+// フローナビゲーション
+//=========================================
+.navigate-flow{
+  padding: 5px;
+  ul{
+    margin: 0;
+    padding-left: 0;
+    display: table;
+    width: 100%;
+    li{
+      display: table-cell;
+      padding: .2rem;
+      font-size: (8 / 14) * 1rem;
+      text-align: center;
+      vertical-align: middle;
+      background: $smokey-gray;
+      box-sizing: border-box;
+      &.current{
+        background: $reaf-green;
+        color: $z_color_white;
+        text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+      }
+    }
+  }
+}
+//=========================================
 // 応募
 //=========================================
 .entry-form{
-  
+  font-size: (10 / 14 ) * 1rem;
+  .navigate-flow{
+    ul{
+      li{
+        width: 50%;
+        font-size: (10 / 14) * 1rem;
+      }
+    }
+  }
+  .bulk-entry{
+    margin: 5px;
+    .bulk-entry-job-list{
+      display: table;
+      border: 1px solid $smokey-gray;
+      .bulk-entry-check,
+      .bulk-entry-jobinfo{
+        display: table-cell;
+      }
+      .bulk-entry-check{
+        padding: .4rem;
+        background: $smokey-gray;
+        vertical-align: middle;
+      }
+      .bulk-entry-jobinfo{
+        padding: 5px;
+        .jobinfo-label{
+          padding-left: 0;
+        }
+        .jobinfo-header{
+          display: table;
+          margin-top: 5px;
+          .result-jobinfo-title,
+          .result-jobinfo-photo{
+            display: table-cell;
+            vertical-align: middle;
+          }
+          .result-jobinfo-photo{
+            margin: 0;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.headline-button{
+  float: right;
 }
 
 //=========================================
@@ -107,32 +179,23 @@ category: Smartphone
       padding-right: 5px;
     }
   }
-  .navigate-flow{
-    padding: 5px;
-    ul{
-      margin: 0;
-      padding-left: 0;
-      display: table;
-      width: 100%;
-      li{
-        display: table-cell;
-        padding: .2rem;
-        font-size: (8 / 14) * 1rem;
-        text-align: center;
-        vertical-align: middle;
-        background: $smokey-gray;
-        box-sizing: border-box;
-        &.current{
-          background: $reaf-green;
-          color: $z_color_white;
-          text-shadow: 0 -1px 0 rgba($z_color_black, .5);
-        }
-      }
-
-    }
-  }
 }
 
+//=========================================
+// エラー
+//=========================================
+.error{
+  color: $cherry-red;
+  font-weight: bold;
+  font-size: (12 /14)*1rem;
+  text-align: center;
+  .messege-box{
+    padding: .4rem .2rem;
+    border-radius: 4px;
+    border: 1px solid $cherry-red;
+    background: rgba($cherry-red, .05);
+  }
+}
 //=========================================
 // マイページ周り
 //=========================================
@@ -165,7 +228,7 @@ category: Smartphone
 //=========================================
 // search formn setting
 //=========================================
-.search-form-body{
+.form-body{
   padding-bottom: 50px;
   h1{
     font-size: (16 / 14) * 1rem;
