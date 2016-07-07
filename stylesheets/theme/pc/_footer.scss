@@ -1,0 +1,67 @@
+@charset 'utf-8';
+//=========================================
+//
+// tenshoku-ex v3 tenshoku-ex smartphone footer design.
+//    date: 2016.05.23.
+//  author: vancho
+// version: 0.0.1
+//
+//=========================================
+
+.global-footer{
+  @include font-size(10);
+  margin-top: (20 / 14) * 1rem;
+  background: $smokey-gray;
+  .footer-menu{
+    border-bottom: solid 1px lighten($chacole-gray, 70%);
+    ul{
+      margin: 0;
+      padding: .8rem 0;
+      li{
+        padding: .2rem .6rem;
+      }
+    }
+    a{
+      color: $chacole-gray;
+      text-decoration: underline;
+    }
+  }
+  .lisence{
+    margin: 0;
+    padding: .3rem .2rem;
+    text-align: center;
+    background: darken($smokey-gray, 20%);
+  }
+  .copyright{
+    margin: 0;
+    padding: .3rem .2rem;
+    text-align: center;
+  }
+}
+
+/*doc
+---
+  title: global footer
+  name: global footer
+  category: Smartphone
+---
+
+``` html_example
+<footer class="global-footer">
+  <div class="footer-menu">
+    <nav>
+      <ul class="t_center">
+        <li class="d_inline_block"><a href="#">会社案内</a></li>
+        <li class="d_inline_block"><a hred="#">ヘルプ</a></li>
+        <li class="d_inline_block"><a href="#">パートナー紹介</a></li>
+        <li class="d_inline_block"><a href="#">利用規約</a></li>
+        <li class="d_inline_block"><a hred="#">個人情報保護方針</a></li>
+        <li class="d_inline_block"><a href="#">お祝い金について</a></li>
+      </ul>
+    </nav>
+  </div>
+  <p class="lisence">厚生労働大臣許可：13-ユ-305190</p>
+  <p class="copyright">&copy; ZIGExN ALL RIGHTS RESERVED.</p>
+</footer>
+```
+*/
