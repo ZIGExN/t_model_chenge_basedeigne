@@ -155,6 +155,23 @@ category: Smartphone
             padding-left: 5px;
           }
         }
+        .jobinfo-partner{
+          margin: 0;
+          padding-left: 0;
+          .partner-name,
+          .partner-logo{
+            display: inline-block;
+            margin-left: 0;
+            padding-left: 0;
+            vertical-align: top;
+          }
+          .partner-name{
+            font-size: (10 / 14) * 1rem;
+          }
+          .partner-logo{
+            width: 80px;
+          }
+        }
       }
     }
   }
