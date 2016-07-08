@@ -13,10 +13,10 @@
 $responsive : false;
 
 //max width setting
-.wrapper{
+.container{
   margin: 0 auto;
-  padding: 0 1rem;
-  max-width: 1200px;
+  padding: 0;
+  max-width: 960px;
   box-sizing: border-box;
 }
 

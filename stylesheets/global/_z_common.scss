@@ -6,89 +6,44 @@
   * author: vancho(kasumi suzuki)
   * version 0.0.2
   ---------------------------------------------------*/
-
+//====================================================
 // imageを読み込んでいる箇所があります
 // railsに載せる際はimageのpathを変更してください。
 // 例 <%= asset_path('logo.png') %>
-
-.zigenx-footer {
-  padding: 25px 30px;
-  background: $z_color_gray_150;
-  font-size: 14px;
-  color: $z_color_gray_90;
-  text-shadow: 1px 1px 0 $z_color_white;
-  overflow: hidden;
-  a {
-    color: $z_color_black;
+//====================================================
+.zigexn-footer{
+  margin-top: 1rem;
+  padding: 1rem 0 2rem;
+  border-top: 3px solid $z_color_gray_130;
+  background: #e3e3e3;
+  a{
+    color: $z_color_gray_70;
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
-    }
   }
-  .floatLeft {
-    float: left;
-    margin-top: 1.3em;
-    width: 400px;
-  }
-  .floatRight {
-    float: right;
-    width: 380px;
-  }
-  .zigexnLogo {
-    float: left;
-    box-shadow: 1px 0 0 0 $z_color_white;
-    margin-right: .8em;
-    padding-right: .8em;
-    border-right: 1px solid $z_color_gray_130;
-    width: 91px;
-    height: 31px;
-    background: url(images/zigexnLogo.png) no-repeat top left;
-  } 
-  ul {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    list-style: none;
-    li {
-      position: relative;
-      float: left;
-      margin-right: 1.5em;
-      width: 8em;
-      a:before {
-        content: "";
-        display: block;
-        float: left;
-        margin-top: 6px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: transparent;
-        border-left-color: $z_color_gray_90;
-        border-width: 3px;
+  .inner{
+    margin-right: auto;
+    margin-left: auto;
+    width: (960 / 16) * 1rem; //14のところにサイトのデフォルトフォントサイズを指定。
+    ul{
+      margin: 0;
+      padding-left: 0;
+      li{
+        list-style: none;
       }
     }
-  }
-  p {
-    margin: 0;
-    padding: 0;
-  }
-  .copyright {
-    font-size: 10px;
-    font-family: Arial,Helvetica,sans-serif;
-    color: $z_color_gray_110;
-  }
-  .pmark {
-    float: left;
-    width: 55px;
-    height: 55px;
-  }
-  .privacy {
-    margin-left: 70px;
-    padding: 1em 0;
-    font-size: 12px;
-    span {
+    .zigexn-logo{
       display: block;
-      font-weight: bold;
+      width: (91 / 16) * 1rem;
+      height: (31 / 16) * 1rem;
+      background: url(../../../../../images/zigexnLogo.png);
+    }
+    .zigexn-policy{
+      .privacy-mark{
+        display: block;
+        width: (55 / 16) * 1rem;
+        height: (55 / 16) * 1rem;
+        background-image: url(../../../../images/privacy.png);
+      }
     }
   }
 }
