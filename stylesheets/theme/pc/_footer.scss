@@ -10,33 +10,33 @@
 
 .global-footer{
   @include font-size(10);
+  text-shadow: 1px 1px 0 $z_color_white;
   margin-top: (20 / 14) * 1rem;
-  background: $smokey-gray;
-  .footer-nav{
-    
-    ul{
-      margin: 0;
-      padding: .8rem 0;
-      width: 360px;
-      overflow: hidden;
-      li{
-        float: left;
-        display: inline-block;
-        width: 120px;
-        box-sizing: border-box;
-        a{
-          color: $chacole-gray;
-          text-decoration: underline;
+  .footer-nav-area{
+    padding: 1rem 0;
+    background: $smokey-gray;
+    .footer-nav{
+      ul{
+        margin: 0;
+        padding: .8rem 0;
+        width: 360px;
+        overflow: hidden;
+        li{
+          float: left;
+          display: inline-block;
+          width: 120px;
+          box-sizing: border-box;
+          a{
+            color: $chacole-gray;
+            text-decoration: underline;
+          }
         }
       }
     }
-
   }
-  .lisence{
+  .licence {
     margin: 0;
-    padding: .3rem .2rem;
-    text-align: center;
-    background: darken($smokey-gray, 20%);
+    text-align: right;
   }
   .copyright{
     margin: 0;
