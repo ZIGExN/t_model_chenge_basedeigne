@@ -12,6 +12,22 @@
   @include font-size(10);
   text-shadow: 1px 1px 0 $z_color_white;
   margin-top: (20 / 14) * 1rem;
+  .clients-logo-area{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 1rem 0;
+    width: (960 / 16) * 1rem;
+    ul{
+      padding-left: 0;
+      text-align: center;
+      li{
+        display: inline-block;
+        margin-right: 1rem;
+        list-style: none;
+        vertical-align: middle;
+      }
+    }
+  }
   .footer-nav-area{
     padding: 1rem 0;
     background: $smokey-gray;
