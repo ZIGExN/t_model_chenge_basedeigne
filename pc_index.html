@@ -5,42 +5,48 @@
   <meta name="robots" content="index,follow">
   <meta name="discription" content="ほげほげ">
   <link rel="stylesheet" href="./dist/stylesheets/theme/pc/master.css" media="all">
-  <title>求人EX - Smartphone design</title>
+  <title>求人EX - PC版</title>
 </head>
 <body>
   <header class="global-header">
-    <div class="header-inner">
-      <div class="container">
-        <p class="site-logo"><img src="images/tenshoku-ex.svg" width="110" alt="転職EX"></p>
-        <p class="counter-text">求人数<strong>999､999件</strong>（2016年7月現在）</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <p class="tenshoku-logo"><img src="images/tenshoku-ex.svg" width="110" alt="転職EX"></p>
+        </div>
+        <div class="col-xs-6">
+          <p class="counter-text">求人数<strong class="count-num">999,999</strong>件</p>
+        </div>
       </div>
     </div>
-    <nav class="site-navi">
+    <div class="header-nav-group">
       <div class="container">
         <div class="row">
           <div class="col-xs-6">
-            <div class="box search-nav-group">
-              <p class="search-nav"><span class="icon-search"></span>求人を探す</p>
-              <ul class="search-nav-list">
-                <li><a href="">詳しい条件から探す</a></li>
-                <li><a href="">紹介会社から探す</a></li>
-                <li><a href="">新着求人から探す</a></li>
-              </ul>
-            </div>
+            <nav>
+              <p class="search-nav-button"><span class="icon-search"></span>求人を探す</p>
+              <div class="search-nav">
+                <ul class="search-nav-list">
+                  <li class="search-nav-list-button"><a href="">詳しい条件で探す</a></li>
+                  <li class="search-nav-list-button"><a href="">紹介会社から探す</a></li>
+                  <li class="search-nav-list-button"><a href="">新着求人から探す</a></li>
+                </ul>
+              </div>
+            </nav>
           </div>
           <div class="col-xs-6">
-            <div class="box">
-              <ul class="utillity-nav">
-                <li class="header-nav-favorite"><a href=""><span class="icon-attach"></span><span class="nav-name">気になる</span></a></li>
-                <li class="header-nav-history"><a href=""><span class="icon-clock"></span><span class="nav-name">閲覧履歴</span></a></li>
-                <li class="header-nav-login"><a href=""><span class="icon-login"></span>ログイン</a></li>
-                <li class="header-nav-register"><a href="">新規会員登録</a></li>
+            <nav>
+              <ul class="utility-nav-list">
+                <li class="utility-nav-list-button"><a href=""><span class="icon-attach"></span>気になるリスト</a></li>
+                <li class="utility-nav-list-button"><a href=""><span class="icon-clock"></span>閲覧履歴</a></li>
+                <li class="utility-nav-list-button"><a href=""><span class="icon-login"></span>ログイン</a></li>
+                <li class="utility-nav-list-button"><a href=""><span class="icon-pencil"></span>新規会員登録</a></li>
               </ul>
-            </div>
+            </nav>
           </div>
         </div>
       </div>
-    </nav>
+    </div>
   </header>
   <main>
   </main>
