@@ -65,23 +65,35 @@ category: Smartphone
 // pagination
 //=========================================
 .pagination{
-  .page-count{
-    margin-bottom: (10 / 14) * 1rem;
-  }
+  margin-bottom: 2rem;
   nav{
-    display: table;
-    width: 100%;
+    ul{
+      display: table;
+      padding-left: 0;
+      li{
+        display: table-cell;
+        border-width: 1px 0 1px 1px;
+        border-style: solid;
+        border-color: darken($smokey-gray, 10%);
+        background: $smokey-gray;
+        font-size: (12 / 14) * 1rem;
+        list-style: none;
+        &:first-child{
+          border-radius: 4px 0 0 4px;
+        }
+        &:last-child{
+          border-radius: 0 4px 4px 0;
+          border-right-width: 1px;
+        }
+        a,
+        .no-link{
+          display: inline-block;
+          padding: .6rem;
+        }
+      }
+    }
   }
-  .prev,.next{
-    display: table-cell;
-    width: 50%;
-  }
-  .prev{
-    padding-right: .2rem;
-  }
-  .next{
-    padding-left: .2rem;
-  }
+
 }
 
 //=========================================
@@ -114,7 +126,6 @@ category: Smartphone
 // 応募
 //=========================================
 .entry-form{
-  font-size: (10 / 14 ) * 1rem;
   .navigate-flow{
     ul{
       li{
@@ -122,6 +133,36 @@ category: Smartphone
         font-size: (10 / 14) * 1rem;
       }
     }
+  }
+  .entry-partner-logo{
+    text-align: center;
+    figure{
+      margin: 0;
+    }
+    img{
+      vertical-align: middle;
+    }
+  }
+  .table-style{
+    th{
+      padding-left: 1rem;
+      width: 14rem;
+      text-align: left;
+    }
+  }
+  .form-section{
+    margin-bottom: 2rem;
+    border: 10px solid $smokey-gray;
+    border-radius: .5rem;
+    .section-header{
+      padding: 0 0 .4rem;
+      background: $smokey-gray;
+      overflow: hidden;
+      [class*='btn-']{
+        font-size: .75rem;
+      }
+    }
+    
   }
   .bulk-entry{
     margin: 5px;
@@ -260,43 +301,6 @@ category: Smartphone
   }
 }
 .form{
-  .form-check-list{
-    margin: 5px;
-    padding-left: 0;
-    border-top: solid 1px $smokey-gray;
-    border-left: solid 1px $smokey-gray;
-    li{
-      border-right: solid 1px $smokey-gray;
-      border-bottom: solid 1px $smokey-gray;
-      label{
-        display: block;
-        padding: .6rem .4rem;
-      }
-    }
-  }
-  .search-form-sendbutton{
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    padding: 5px;
-    background: rgba($chacole-gray, .8);
-    text-align: center;
-  }
-  .form-check-list{
-    margin: 5px;
-    padding-left: 0;
-    border-top: solid 1px $smokey-gray;
-    border-left: solid 1px $smokey-gray;
-    li{
-      border-right: solid 1px $smokey-gray;
-      border-bottom: solid 1px $smokey-gray;
-      label{
-        display: block;
-        padding: .6rem .4rem;
-      }
-    }
-  }
 }
 //=========================================
 //求人詳細
