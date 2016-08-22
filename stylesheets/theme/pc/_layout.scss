@@ -446,56 +446,119 @@ category: Smartphone
 //=========================================
 .results-joblists{
   .jobinfo-content{
-    margin: 5px 5px 20px;
-    padding: 5px;
+    margin-bottom: 2rem;
+    border: 10px solid lighten($cherry-red, 50%);
+    border-radius: .5rem;;
     &:last-child{
       margin-bottom: 10px;
     }
-    .jobinfo-label{
-      margin: 0 0 (5 / 14) * 1rem;
-      padding-left: 0;
-    }
-    .jobinfo-partner{
-      margin: 0;
-      padding-left: 0;
-      .partner-name,
-      .partner-logo{
-        display: inline-block;
-        margin-left: 0;
-        padding-left: 0;
-        vertical-align: top;
-      }
-      .partner-name{
-        font-size: (10 / 14) * 1rem;
-      }
-      .partner-logo{
-        width: 80px;
-      }
-    }
     .jobinfo-header{
-      display: table;
-      .result-jobinfo-title,
-      .result-jobinfo-photo{
-        display: table-cell;
-        vertical-align: middle;
-      }
-      .result-jobinfo-title{
-        font-size: (14 / 14) * 1rem;
-        .title-link{
-          display: block;
+      .header-label-group{
+        display: table;
+        width: 100%;
+        margin: 0 0 (5 / 14) * 1rem;
+        padding: (5 / 14) * 1rem;
+        border-bottom: 1px solid $smokey-gray;
+        box-sizing: border-box;
+        .jobinfo-label{
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .jobinfo-partner{
+          display: table-cell;
+          width: 80px;
+          margin: 0;
+          padding-left: 0;
+          vertical-align: middle;
         }
       }
-      .result-jobinfo-photo{
-        width: (80 / 14) * 1rem;
-        text-align: center;
+      .jobinfo-link{
+        display: block;
+        padding: (5 / 14) * 1rem;
+        text-decoration: none;
+        border-bottom: 1px solid $smokey-gray;
+        .result-jobinfo-company-name{
+          color: $chacole-gray;
+          font-size: (12 / 14) * 1rem;
+          .job-id{
+            display: inline-block;
+            float: right;
+            padding: .15rem .4rem;
+            background: $smokey-gray;
+            font-size: (10 /14) * 1rem;
+          }
+        }
+        .result-jobinfo-title{
+          margin-bottom: 0;
+          text-decoration: underline;
+          font-size: (16 / 14) *1rem;
+        }
+      }
+      .jobinfo-pr{
+        display: table;
+        width: 100%;
+        padding: (5 / 14) * 1rem;
+        margin-bottom: 0;
+        box-sizing: border-box;
+        .title{
+          display: table-cell;
+          padding: (5 / 14) * 1rem;
+          width: 4rem;
+          background: $smokey-gray;
+          font-size: (10 / 14) *1rem;
+          text-align: center;
+        }
+        .label-group{
+          display: table-cell;
+          padding-left: (5 / 14) *1rem;
+        }
       }
     }
-    .jobinfo-details{
-      th{
-        white-space: nowrap;
+    .jobinfo-body{
+      font-size: (12 / 14) * 1rem;
+      .photo{
+        figure{
+          margin: 0;
+          text-align: center;
+          img{
+            padding: 5px;
+            border: 1px solid $smokey-gray;
+          }
+        }
+        figcaption{
+          font-size: (10 / 14) * 1rem;
+          text-align: center;
+        }
       }
-      th,td{
-        font-size: (10 /14) * 1rem;
+      .pickup{
+        border: 1px solid $smokey-gray;
+        &:before{
+          display: inline-block;
+          padding: .1rem .3rem;
+          content: 'Pick up';
+          background: $chacole-gray;
+          color: $z_color_white;
+          font-size: (10 / 14) * 1rem;
+        }
+        p{
+          padding: .1rem .4rem;
+          font-size: (10 / 14) * 1rem;
+        }
+      }
+    }
+    .action-button-set{
+      padding: 1rem;
+      background: lighten($smokey-gray, 5%);
+      nav{
+        margin: 0 auto;
+        .detail-button,
+        .favorite-button{
+          a{
+            width: 16rem;
+            font-size: (16 / 14) * 1rem;
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -507,12 +570,10 @@ category: Smartphone
 .action-button-set{
   nav{
     display: table;
-    width: 100%;
     .detail-button,
     .favorite-button,
     .entry-button{
       display: table-cell;
-      width: 50%;
       box-sizing: border-box;
     }
     .detail-button,
