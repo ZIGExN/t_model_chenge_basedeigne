@@ -5,6 +5,8 @@
   <meta name="robots" content="index,follow">
   <meta name="discription" content="ほげほげ">
   <link rel="stylesheet" href="./dist/stylesheets/theme/pc/master.css" media="all">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="javascripts/jquery.fixed.js"></script>
   <title>求人EX - PC版</title>
 </head>
 <body>
@@ -21,347 +23,348 @@
     </div>
   </header>
   <main>
-    <div class="header-nav-group">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-6">
-            <nav>
-              <p class="search-nav-button"><span class="icon-search"></span>求人を探す</p>
-              <div class="search-nav d_none">
-                <ul class="search-nav-list">
-                  <li class="search-nav-list-button"><a href="">詳しい条件で探す</a></li>
-                  <li class="search-nav-list-button"><a href="">紹介会社から探す</a></li>
-                  <li class="search-nav-list-button"><a href="">新着求人から探す</a></li>
+    <div class="js_fixed_wrapper">
+      <div class="js_fixed_bar header-nav-group">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <nav>
+                <p class="search-nav-button"><span class="icon-search"></span>求人を探す</p>
+                <div class="search-nav d_none">
+                  <ul class="search-nav-list">
+                    <li class="search-nav-list-button"><a href="">詳しい条件で探す</a></li>
+                    <li class="search-nav-list-button"><a href="">紹介会社から探す</a></li>
+                    <li class="search-nav-list-button"><a href="">新着求人から探す</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+            <div class="col-xs-6">
+              <nav>
+                <ul class="utility-nav-list">
+                  <li class="utility-nav-list-button"><a href=""><span class="icon-attach"></span>気になるリスト&nbsp;<span class="label-type">99</span></a></li>
+                  <li class="utility-nav-list-button"><a href=""><span class="icon-clock"></span>閲覧履歴</a></li>
+                  <li class="utility-nav-list-button"><a href=""><span class="icon-login"></span>ログイン</a></li>
+                  <li class="utility-nav-list-button"><a href=""><span class="icon-pencil"></span>新規会員登録</a></li>
                 </ul>
-              </div>
-            </nav>
-          </div>
-          <div class="col-xs-6">
-            <nav>
-              <ul class="utility-nav-list">
-                <li class="utility-nav-list-button"><a href=""><span class="icon-attach"></span>気になるリスト&nbsp;<span class="label-type">99</span></a></li>
-                <li class="utility-nav-list-button"><a href=""><span class="icon-clock"></span>閲覧履歴</a></li>
-                <li class="utility-nav-list-button"><a href=""><span class="icon-login"></span>ログイン</a></li>
-                <li class="utility-nav-list-button"><a href=""><span class="icon-pencil"></span>新規会員登録</a></li>
-              </ul>
-            </nav>
+              </nav>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="breadcrumb">
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="">トップページ</a></li>
-            <li><a href="">応募フォーム</a></li>
-            <li class="current"><a href="">応募完了ページ</a></li>
-          </ul>
-        </nav>
+      <div class="breadcrumb">
+        <div class="container">
+          <nav>
+            <ul>
+              <li><a href="">トップページ</a></li>
+              <li><a href="">応募フォーム</a></li>
+              <li class="current"><a href="">応募完了ページ</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </div>
-
-    <div class="container">
-      <div class="form entry-form">
-        <form action="">
-          <h1>関東の転職・求人情報</h1>
-          <div class="form-section fz12px">
+      
+      <div class="container">
+        <div class="form entry-form">
+          <form action="">
+            <h1>関東の転職・求人情報</h1>
+            <div class="form-section fz12px">
+              <section>
+                <h2 class="headlinetype-border-red">検索条件</h2>
+                <table class="table-style style-default">
+                  <tr>
+                    <th>勤務地</th>
+                    <td>株式会社じげん</td>
+                  </tr>
+                  <tr>
+                    <th>職種</th>
+                    <td><a href="">フロントエンドエンジニア／ユニットマネージャー</a></td>
+                  </tr>
+                  <tr>
+                    <th>業種</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>雇用形態</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>希望年収</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>会社名</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>キーワード</th>
+                    <td></td>
+                  </tr>
+                </table>
+              </section>
+              <div class="search-action-button p_5">
+                <div class="row end-xs">
+                  <div class="col-xs-4">
+                    <div class="box t_center">
+                      <button class="btn-sky-blue">この条件で検索<small>（999,999件）</small></button>
+                    </div>
+                  </div>
+                  <div class="col-xs-4">
+                    <div class="box t_right">
+                      <button class="btn-smokeygray">＋詳しい条件を追加</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="pagination">
+          <div class="row">
+            <div class="col-xs">
+              <div class="box">
+                <p><strong class="fz16px textcolor-orange">130987</strong>件中 <strong class="textcolor-orange">1～20</strong>件目を表示中</p>
+              </div>
+            </div>
+            <div class="col-xs">
+              <div class="box">
+                <nav>
+                  <ul class="f_right">
+                    <li><span class="no-link">前</span></li>
+                    <li><span class="no-link">１</span></li>
+                    <li><a href="">２</a></li>
+                    <li><a href="">３</a></li>
+                    <li><a href="">４</a></li>
+                    <li><a href="">５</a></li>
+                    <li><span class="no-link">…</span></li>
+                    <li><span class="no-link">次</span></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="results-joblists">
+          <div class="jobinfo-content">
             <section>
-              <h2 class="headlinetype-border-red">検索条件</h2>
-              <table class="table-style style-default">
-                <tr>
-                  <th>勤務地</th>
-                  <td>株式会社じげん</td>
-                </tr>
-                <tr>
-                  <th>職種</th>
-                  <td><a href="">フロントエンドエンジニア／ユニットマネージャー</a></td>
-                </tr>
-                <tr>
-                  <th>業種</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>雇用形態</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>希望年収</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>会社名</th>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th>キーワード</th>
-                  <td></td>
-                </tr>
-              </table>
+              <div class="jobinfo-header">
+                <div class="header-label-group">
+                  <div class="jobinfo-label">
+                    <span class="label-new">NEW</span>
+                    <span class="label-type">正社員</span>
+                    <span class="label-type">派遣社員</span>
+                    <span class="label-type">契約社員</span>
+                  </div>
+                  <div class="jobinfo-partner">
+                    <img src="images/partner/green.svg" alt="">
+                  </div>
+                </div>
+                <a class="jobinfo-link" href="">
+                  <div class="result-jobinfo-company-name">株式会社じげん<span class="job-id">求人ID：15232835</span></div>
+                  <h2 class="result-jobinfo-title">【急募】WEBデザイナー／ユニットマネージャー</h2>
+                </a>
+                <dl class="jobinfo-pr">
+                  <dt class="title">求人の特徴</dt>
+                  <dd class="label-group">
+                    <span class="label-pr">定時退勤奨励</span>
+                    <span class="label-pr">残業少ない</span>
+                    <span class="label-pr">福利厚生充実</span>
+                    <span class="label-pr">各種保険完備</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class="jobinfo-body row">
+                <div class="jobinfo-body-left col-xs-9">
+                  <div class="box p_5">
+                    <table class="table-style border-horizontal style-default">
+                      <tr>
+                        <th>仕事内容</th>
+                        <td>遊技機演出（予告、リーチ等）のコンテ制作。 また企画段階から参加し、企画・演出の提案、制作も行います。 【具体的には】 企画演出打ち合わせに参加し、演出詳細を把握してコンテに起こします。 絵コンテは、飽きのこないカメラワーク、テンポの良いカットつなぎ、高いアクション性、尺に合った演出、明確なゲーム要素、演出の肝となる煽りを大事に描いていきます。 絵コンテを見ながら演出の会議を行い、修正、変更、練り直し等のブラ...
+                        応募資格</td>
+                      </tr>
+                      <tr>
+                        <th>応募資格</th>
+                        <td>【必須スキル】 ■絵コンテ制作 ■遊技機が好きな人（自身が遊技者である人） 【歓迎スキル】 ■遊技機の絵コンテ制作経験 ■パチンコ、パチスロ知識 【あると望ましいスキル】 ■遊技機業界経験 ■伝達＆表現能力、コミュニケーション能力がある人</td>
+                      </tr>
+                      <tr>
+                        <th>給与</th>
+                        <td><strong class="textcolor-orange">年収：320万円 - 550万円 ※希望、経験、能力を考慮のうえ、当社規定により優遇いたしま...</strong></td>
+                      </tr>
+                      <tr>
+                        <th>勤務地</th>
+                        <td>川崎市川崎区砂子2-4-10　ヒューリック川崎ビル5F</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="jobinfo-body-right col-xs-3">
+                  <div class="photo box p_5">
+                    <figure><img src="https://tenshoku-ex.jp/job_image/1523/2835/2158_101766.jpg?type=resize&height=120&width=160" alt=""></figure>
+                    <figcaption>キャプションテキスト</figcaption>
+                  </div>
+                  <div class="pickup m_5"><p>少数精鋭での運営に加え、フラットな環境もある当社でなら、入社後もすぐに馴染めるはずです！</p></div>
+                </div>
+              </div>
+              <div class="action-button-set">
+                <nav>
+                  <div class="detail-button">
+                    <a class="btn-reaf-green" href="">この求人の詳細を見る</a>
+                  </div>
+                  <div class="favorite-button">
+                    <a class="btn-smokeygray" href=""><span class="icon-attach"></span>気になる！</a>
+                  </div>
+                </nav>
+              </div>
             </section>
-            <div class="search-action-button p_5">
-              <div class="row end-xs">
-                <div class="col-xs-4">
-                  <div class="box t_center">
-                    <button class="btn-sky-blue">この条件で検索<small>（999,999件）</small></button>
+          </div>
+          <div class="jobinfo-content">
+            <section>
+              <div class="jobinfo-header">
+                <div class="header-label-group">
+                  <div class="jobinfo-label">
+                    <span class="label-new">NEW</span>
+                    <span class="label-type">正社員</span>
+                    <span class="label-type">派遣社員</span>
+                    <span class="label-type">契約社員</span>
+                  </div>
+                  <div class="jobinfo-partner">
+                    <img src="images/partner/green.svg" alt="">
                   </div>
                 </div>
-                <div class="col-xs-4">
-                  <div class="box t_right">
-                    <button class="btn-smokeygray">＋詳しい条件を追加</button>
+                <a class="jobinfo-link" href="">
+                  <div class="result-jobinfo-company-name">株式会社じげん<span class="job-id">求人ID：15232835</span></div>
+                  <h2 class="result-jobinfo-title">【急募】WEBデザイナー／ユニットマネージャー</h2>
+                </a>
+                <dl class="jobinfo-pr">
+                  <dt class="title">求人の特徴</dt>
+                  <dd class="label-group">
+                    <span class="label-pr">定時退勤奨励</span>
+                    <span class="label-pr">残業少ない</span>
+                    <span class="label-pr">福利厚生充実</span>
+                    <span class="label-pr">各種保険完備</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class="jobinfo-body row">
+                <div class="jobinfo-body-left col-xs-9">
+                  <div class="box p_5">
+                    <table class="table-style border-horizontal style-default">
+                      <tr>
+                        <th>仕事内容</th>
+                        <td>遊技機演出（予告、リーチ等）のコンテ制作。 また企画段階から参加し、企画・演出の提案、制作も行います。 【具体的には】 企画演出打ち合わせに参加し、演出詳細を把握してコンテに起こします。 絵コンテは、飽きのこないカメラワーク、テンポの良いカットつなぎ、高いアクション性、尺に合った演出、明確なゲーム要素、演出の肝となる煽りを大事に描いていきます。 絵コンテを見ながら演出の会議を行い、修正、変更、練り直し等のブラ...
+                        応募資格</td>
+                      </tr>
+                      <tr>
+                        <th>応募資格</th>
+                        <td>【必須スキル】 ■絵コンテ制作 ■遊技機が好きな人（自身が遊技者である人） 【歓迎スキル】 ■遊技機の絵コンテ制作経験 ■パチンコ、パチスロ知識 【あると望ましいスキル】 ■遊技機業界経験 ■伝達＆表現能力、コミュニケーション能力がある人</td>
+                      </tr>
+                      <tr>
+                        <th>給与</th>
+                        <td><strong class="textcolor-orange">年収：320万円 - 550万円 ※希望、経験、能力を考慮のうえ、当社規定により優遇いたしま...</strong></td>
+                      </tr>
+                      <tr>
+                        <th>勤務地</th>
+                        <td>川崎市川崎区砂子2-4-10　ヒューリック川崎ビル5F</td>
+                      </tr>
+                    </table>
                   </div>
                 </div>
+                <div class="jobinfo-body-right col-xs-3">
+                  <div class="photo box p_5">
+                    <figure><img src="https://tenshoku-ex.jp/job_image/1523/2835/2158_101766.jpg?type=resize&height=120&width=160" alt=""></figure>
+                    <figcaption>キャプションテキスト</figcaption>
+                  </div>
+                  <div class="pickup m_5"><p>少数精鋭での運営に加え、フラットな環境もある当社でなら、入社後もすぐに馴染めるはずです！</p></div>
+                </div>
               </div>
-            </div>
+              <div class="action-button-set">
+                <nav>
+                  <div class="detail-button">
+                    <a class="btn-reaf-green" href="">この求人の詳細を見る</a>
+                  </div>
+                  <div class="favorite-button">
+                    <a class="btn-smokeygray" href=""><span class="icon-attach"></span>気になる！</a>
+                  </div>
+                </nav>
+              </div>
+            </section>
           </div>
-        </form>
-      </div>
-      <div class="pagination">
-        <div class="row">
-          <div class="col-xs">
-            <div class="box">
-              <p><strong class="fz16px textcolor-orange">130987</strong>件中 <strong class="textcolor-orange">1～20</strong>件目を表示中</p>
-            </div>
+          <div class="jobinfo-content">
+            <section>
+              <div class="jobinfo-header">
+                <div class="header-label-group">
+                  <div class="jobinfo-label">
+                    <span class="label-new">NEW</span>
+                    <span class="label-type">正社員</span>
+                    <span class="label-type">派遣社員</span>
+                    <span class="label-type">契約社員</span>
+                  </div>
+                  <div class="jobinfo-partner">
+                    <img src="images/partner/green.svg" alt="">
+                  </div>
+                </div>
+                <a class="jobinfo-link" href="">
+                  <div class="result-jobinfo-company-name">株式会社じげん<span class="job-id">求人ID：15232835</span></div>
+                  <h2 class="result-jobinfo-title">【急募】WEBデザイナー／ユニットマネージャー</h2>
+                </a>
+                <dl class="jobinfo-pr">
+                  <dt class="title">求人の特徴</dt>
+                  <dd class="label-group">
+                    <span class="label-pr">定時退勤奨励</span>
+                    <span class="label-pr">残業少ない</span>
+                    <span class="label-pr">福利厚生充実</span>
+                    <span class="label-pr">各種保険完備</span>
+                  </dd>
+                </dl>
+              </div>
+              <div class="jobinfo-body row">
+                <div class="jobinfo-body-left col-xs-9">
+                  <div class="box p_5">
+                    <table class="table-style border-horizontal style-default">
+                      <tr>
+                        <th>仕事内容</th>
+                        <td>遊技機演出（予告、リーチ等）のコンテ制作。 また企画段階から参加し、企画・演出の提案、制作も行います。 【具体的には】 企画演出打ち合わせに参加し、演出詳細を把握してコンテに起こします。 絵コンテは、飽きのこないカメラワーク、テンポの良いカットつなぎ、高いアクション性、尺に合った演出、明確なゲーム要素、演出の肝となる煽りを大事に描いていきます。 絵コンテを見ながら演出の会議を行い、修正、変更、練り直し等のブラ...
+                        応募資格</td>
+                      </tr>
+                      <tr>
+                        <th>応募資格</th>
+                        <td>【必須スキル】 ■絵コンテ制作 ■遊技機が好きな人（自身が遊技者である人） 【歓迎スキル】 ■遊技機の絵コンテ制作経験 ■パチンコ、パチスロ知識 【あると望ましいスキル】 ■遊技機業界経験 ■伝達＆表現能力、コミュニケーション能力がある人</td>
+                      </tr>
+                      <tr>
+                        <th>給与</th>
+                        <td><strong class="textcolor-orange">年収：320万円 - 550万円 ※希望、経験、能力を考慮のうえ、当社規定により優遇いたしま...</strong></td>
+                      </tr>
+                      <tr>
+                        <th>勤務地</th>
+                        <td>川崎市川崎区砂子2-4-10　ヒューリック川崎ビル5F</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="jobinfo-body-right col-xs-3">
+                  <div class="photo box p_5">
+                    <figure><img src="https://tenshoku-ex.jp/job_image/1523/2835/2158_101766.jpg?type=resize&height=120&width=160" alt=""></figure>
+                    <figcaption>キャプションテキスト</figcaption>
+                  </div>
+                  <div class="pickup m_5"><p>少数精鋭での運営に加え、フラットな環境もある当社でなら、入社後もすぐに馴染めるはずです！</p></div>
+                </div>
+              </div>
+              <div class="action-button-set">
+                <nav>
+                  <div class="detail-button">
+                    <a class="btn-reaf-green" href="">この求人の詳細を見る</a>
+                  </div>
+                  <div class="favorite-button">
+                    <a class="btn-smokeygray" href=""><span class="icon-attach"></span>気になる！</a>
+                  </div>
+                </nav>
+              </div>
+            </section>
           </div>
-          <div class="col-xs">
-            <div class="box">
-              <nav>
-                <ul class="f_right">
-                  <li><span class="no-link">前</span></li>
-                  <li><span class="no-link">１</span></li>
-                  <li><a href="">２</a></li>
-                  <li><a href="">３</a></li>
-                  <li><a href="">４</a></li>
-                  <li><a href="">５</a></li>
-                  <li><span class="no-link">…</span></li>
-                  <li><span class="no-link">次</span></li>
-                </ul>
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="results-joblists">
-        <div class="jobinfo-content">
-          <section>
-            <div class="jobinfo-header">
-              <div class="header-label-group">
-                <div class="jobinfo-label">
-                  <span class="label-new">NEW</span>
-                  <span class="label-type">正社員</span>
-                  <span class="label-type">派遣社員</span>
-                  <span class="label-type">契約社員</span>
-                </div>
-                <div class="jobinfo-partner">
-                  <img src="images/partner/green.svg" alt="">
-                </div>
-              </div>
-              <a class="jobinfo-link" href="">
-                <div class="result-jobinfo-company-name">株式会社じげん<span class="job-id">求人ID：15232835</span></div>
-                <h2 class="result-jobinfo-title">【急募】WEBデザイナー／ユニットマネージャー</h2>
-              </a>
-              <dl class="jobinfo-pr">
-                <dt class="title">求人の特徴</dt>
-                <dd class="label-group">
-                  <span class="label-pr">定時退勤奨励</span>
-                  <span class="label-pr">残業少ない</span>
-                  <span class="label-pr">福利厚生充実</span>
-                  <span class="label-pr">各種保険完備</span>
-                </dd>
-              </dl>
-            </div>
-            <div class="jobinfo-body row">
-              <div class="jobinfo-body-left col-xs-9">
-                <div class="box p_5">
-                  <table class="table-style border-horizontal style-default">
-                    <tr>
-                      <th>仕事内容</th>
-                      <td>遊技機演出（予告、リーチ等）のコンテ制作。 また企画段階から参加し、企画・演出の提案、制作も行います。 【具体的には】 企画演出打ち合わせに参加し、演出詳細を把握してコンテに起こします。 絵コンテは、飽きのこないカメラワーク、テンポの良いカットつなぎ、高いアクション性、尺に合った演出、明確なゲーム要素、演出の肝となる煽りを大事に描いていきます。 絵コンテを見ながら演出の会議を行い、修正、変更、練り直し等のブラ...
-                      応募資格</td>
-                    </tr>
-                    <tr>
-                      <th>応募資格</th>
-                      <td>【必須スキル】 ■絵コンテ制作 ■遊技機が好きな人（自身が遊技者である人） 【歓迎スキル】 ■遊技機の絵コンテ制作経験 ■パチンコ、パチスロ知識 【あると望ましいスキル】 ■遊技機業界経験 ■伝達＆表現能力、コミュニケーション能力がある人</td>
-                    </tr>
-                    <tr>
-                      <th>給与</th>
-                      <td><strong class="textcolor-orange">年収：320万円 - 550万円 ※希望、経験、能力を考慮のうえ、当社規定により優遇いたしま...</strong></td>
-                    </tr>
-                    <tr>
-                      <th>勤務地</th>
-                      <td>川崎市川崎区砂子2-4-10　ヒューリック川崎ビル5F</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="jobinfo-body-right col-xs-3">
-                <div class="photo box p_5">
-                  <figure><img src="https://tenshoku-ex.jp/job_image/1523/2835/2158_101766.jpg?type=resize&height=120&width=160" alt=""></figure>
-                  <figcaption>キャプションテキスト</figcaption>
-                </div>
-                <div class="pickup m_5"><p>少数精鋭での運営に加え、フラットな環境もある当社でなら、入社後もすぐに馴染めるはずです！</p></div>
-              </div>
-            </div>
-            <div class="action-button-set">
-              <nav>
-                <div class="detail-button">
-                  <a class="btn-reaf-green" href="">この求人の詳細を見る</a>
-                </div>
-                <div class="favorite-button">
-                  <a class="btn-smokeygray" href=""><span class="icon-attach"></span>気になる！</a>
-                </div>
-              </nav>
-            </div>
-          </section>
-        </div>
-        <div class="jobinfo-content">
-          <section>
-            <div class="jobinfo-header">
-              <div class="header-label-group">
-                <div class="jobinfo-label">
-                  <span class="label-new">NEW</span>
-                  <span class="label-type">正社員</span>
-                  <span class="label-type">派遣社員</span>
-                  <span class="label-type">契約社員</span>
-                </div>
-                <div class="jobinfo-partner">
-                  <img src="images/partner/green.svg" alt="">
-                </div>
-              </div>
-              <a class="jobinfo-link" href="">
-                <div class="result-jobinfo-company-name">株式会社じげん<span class="job-id">求人ID：15232835</span></div>
-                <h2 class="result-jobinfo-title">【急募】WEBデザイナー／ユニットマネージャー</h2>
-              </a>
-              <dl class="jobinfo-pr">
-                <dt class="title">求人の特徴</dt>
-                <dd class="label-group">
-                  <span class="label-pr">定時退勤奨励</span>
-                  <span class="label-pr">残業少ない</span>
-                  <span class="label-pr">福利厚生充実</span>
-                  <span class="label-pr">各種保険完備</span>
-                </dd>
-              </dl>
-            </div>
-            <div class="jobinfo-body row">
-              <div class="jobinfo-body-left col-xs-9">
-                <div class="box p_5">
-                  <table class="table-style border-horizontal style-default">
-                    <tr>
-                      <th>仕事内容</th>
-                      <td>遊技機演出（予告、リーチ等）のコンテ制作。 また企画段階から参加し、企画・演出の提案、制作も行います。 【具体的には】 企画演出打ち合わせに参加し、演出詳細を把握してコンテに起こします。 絵コンテは、飽きのこないカメラワーク、テンポの良いカットつなぎ、高いアクション性、尺に合った演出、明確なゲーム要素、演出の肝となる煽りを大事に描いていきます。 絵コンテを見ながら演出の会議を行い、修正、変更、練り直し等のブラ...
-                      応募資格</td>
-                    </tr>
-                    <tr>
-                      <th>応募資格</th>
-                      <td>【必須スキル】 ■絵コンテ制作 ■遊技機が好きな人（自身が遊技者である人） 【歓迎スキル】 ■遊技機の絵コンテ制作経験 ■パチンコ、パチスロ知識 【あると望ましいスキル】 ■遊技機業界経験 ■伝達＆表現能力、コミュニケーション能力がある人</td>
-                    </tr>
-                    <tr>
-                      <th>給与</th>
-                      <td><strong class="textcolor-orange">年収：320万円 - 550万円 ※希望、経験、能力を考慮のうえ、当社規定により優遇いたしま...</strong></td>
-                    </tr>
-                    <tr>
-                      <th>勤務地</th>
-                      <td>川崎市川崎区砂子2-4-10　ヒューリック川崎ビル5F</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="jobinfo-body-right col-xs-3">
-                <div class="photo box p_5">
-                  <figure><img src="https://tenshoku-ex.jp/job_image/1523/2835/2158_101766.jpg?type=resize&height=120&width=160" alt=""></figure>
-                  <figcaption>キャプションテキスト</figcaption>
-                </div>
-                <div class="pickup m_5"><p>少数精鋭での運営に加え、フラットな環境もある当社でなら、入社後もすぐに馴染めるはずです！</p></div>
-              </div>
-            </div>
-            <div class="action-button-set">
-              <nav>
-                <div class="detail-button">
-                  <a class="btn-reaf-green" href="">この求人の詳細を見る</a>
-                </div>
-                <div class="favorite-button">
-                  <a class="btn-smokeygray" href=""><span class="icon-attach"></span>気になる！</a>
-                </div>
-              </nav>
-            </div>
-          </section>
-        </div>
-        <div class="jobinfo-content">
-          <section>
-            <div class="jobinfo-header">
-              <div class="header-label-group">
-                <div class="jobinfo-label">
-                  <span class="label-new">NEW</span>
-                  <span class="label-type">正社員</span>
-                  <span class="label-type">派遣社員</span>
-                  <span class="label-type">契約社員</span>
-                </div>
-                <div class="jobinfo-partner">
-                  <img src="images/partner/green.svg" alt="">
-                </div>
-              </div>
-              <a class="jobinfo-link" href="">
-                <div class="result-jobinfo-company-name">株式会社じげん<span class="job-id">求人ID：15232835</span></div>
-                <h2 class="result-jobinfo-title">【急募】WEBデザイナー／ユニットマネージャー</h2>
-              </a>
-              <dl class="jobinfo-pr">
-                <dt class="title">求人の特徴</dt>
-                <dd class="label-group">
-                  <span class="label-pr">定時退勤奨励</span>
-                  <span class="label-pr">残業少ない</span>
-                  <span class="label-pr">福利厚生充実</span>
-                  <span class="label-pr">各種保険完備</span>
-                </dd>
-              </dl>
-            </div>
-            <div class="jobinfo-body row">
-              <div class="jobinfo-body-left col-xs-9">
-                <div class="box p_5">
-                  <table class="table-style border-horizontal style-default">
-                    <tr>
-                      <th>仕事内容</th>
-                      <td>遊技機演出（予告、リーチ等）のコンテ制作。 また企画段階から参加し、企画・演出の提案、制作も行います。 【具体的には】 企画演出打ち合わせに参加し、演出詳細を把握してコンテに起こします。 絵コンテは、飽きのこないカメラワーク、テンポの良いカットつなぎ、高いアクション性、尺に合った演出、明確なゲーム要素、演出の肝となる煽りを大事に描いていきます。 絵コンテを見ながら演出の会議を行い、修正、変更、練り直し等のブラ...
-                      応募資格</td>
-                    </tr>
-                    <tr>
-                      <th>応募資格</th>
-                      <td>【必須スキル】 ■絵コンテ制作 ■遊技機が好きな人（自身が遊技者である人） 【歓迎スキル】 ■遊技機の絵コンテ制作経験 ■パチンコ、パチスロ知識 【あると望ましいスキル】 ■遊技機業界経験 ■伝達＆表現能力、コミュニケーション能力がある人</td>
-                    </tr>
-                    <tr>
-                      <th>給与</th>
-                      <td><strong class="textcolor-orange">年収：320万円 - 550万円 ※希望、経験、能力を考慮のうえ、当社規定により優遇いたしま...</strong></td>
-                    </tr>
-                    <tr>
-                      <th>勤務地</th>
-                      <td>川崎市川崎区砂子2-4-10　ヒューリック川崎ビル5F</td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-              <div class="jobinfo-body-right col-xs-3">
-                <div class="photo box p_5">
-                  <figure><img src="https://tenshoku-ex.jp/job_image/1523/2835/2158_101766.jpg?type=resize&height=120&width=160" alt=""></figure>
-                  <figcaption>キャプションテキスト</figcaption>
-                </div>
-                <div class="pickup m_5"><p>少数精鋭での運営に加え、フラットな環境もある当社でなら、入社後もすぐに馴染めるはずです！</p></div>
-              </div>
-            </div>
-            <div class="action-button-set">
-              <nav>
-                <div class="detail-button">
-                  <a class="btn-reaf-green" href="">この求人の詳細を見る</a>
-                </div>
-                <div class="favorite-button">
-                  <a class="btn-smokeygray" href=""><span class="icon-attach"></span>気になる！</a>
-                </div>
-              </nav>
-            </div>
-          </section>
         </div>
       </div>
     </div>
-    
     
     
   </main>
