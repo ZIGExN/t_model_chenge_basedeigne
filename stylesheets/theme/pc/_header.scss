@@ -57,6 +57,8 @@
     }
   }
   .utility-nav-list{
+    margin: 0;
+    padding-left: 0;
     display: table;
     width: 100%;
     border-right: 1px solid darken($cherry-red, 10%);
