@@ -23,17 +23,17 @@ ul{
 // headline setting
 //=========================================
 
-%headline-default-style{
+@mixin headline-default-style($shadow-color){
   margin: 0;
   padding: .2rem .4rem;
   border-radius: 4px;
+  box-shadow: 0 4px 0 lighten($shadow-color, 20%);
   @include font-size(18);
   font-weight: bold;
   color: $z_color_white;
   text-shadow: 0 -1px 0 rgba($z_color_black, .5);
 }
 [class^="headlinetype-"]{
-  @extend %headline-default-style;
   &.sample-demo:before{
     content:'headline sample demo';
   }
@@ -44,23 +44,29 @@ ul{
   text-shadow: none;
 }
 .headlinetype-red{
+  @include headline-default-style($cherry-red);
   background: $cherry-red;
 }
 .headlinetype-blue{
+  @include headline-default-style($sky-blue);
   background: $sky-blue;
 }
 .headlinetype-green{
+  @include headline-default-style($reaf-green);
   background: $reaf-green;
 }
 .headlinetype-orange{
+  @include headline-default-style($apricot-orange);
   background: $apricot-orange;
 }
 .headlinetype-chacolegray{
+  @include headline-default-style($chacole-gray);
   background: $chacole-gray;
 }
 .headlinetype-smokeygray{
   color: $chacole-gray;
   text-shadow: 0 1px 0 $z_color_white;
+  @include headline-default-style($smokey-gray);
   background: $smokey-gray;
 }
 
