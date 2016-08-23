@@ -26,6 +26,7 @@ ul{
 %headline-default-style{
   margin: 0;
   padding: .2rem .4rem;
+  border-radius: 4px;
   @include font-size(18);
   font-weight: bold;
   color: $z_color_white;
