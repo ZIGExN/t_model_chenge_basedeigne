@@ -28,14 +28,6 @@ $font_size_list: 62%, 70%, 77%, 85%, 93%, 100%, 108%, 116%, 124%, 131%, 139%, 14
 
 
 //====================================
-//
-// width module setting
-//
-// ex. if class name was width_500px.
-// .width_500px{
-//   width: 500px;
-// }
-//====================================
 //@for $width_value from 1 through 960{
 //  .width_#{$width_value}px{
 //    width: 1px * $width_value;
@@ -52,9 +44,4 @@ $font_size_list: 62%, 70%, 77%, 85%, 93%, 100%, 108%, 116%, 124%, 131%, 139%, 14
      font-size: ($font-size-value / 14) * 1rem !important;
   }
 }
-
-
-
-
-
 
