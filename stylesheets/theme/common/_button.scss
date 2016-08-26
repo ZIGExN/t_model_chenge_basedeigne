@@ -77,6 +77,13 @@
   @include btn-border-style(4px,$apricot-orange);
   background: $apricot-orange;
 }
+.btn-milky-white{
+  @extend %btn;
+  @include btn-border-style(4px, $smokey-gray);
+  @include textshadow-white;
+  background: $z_color_white;
+  color: $chacole-gray;
+}
 
 //button sizing
 .btn-medium{

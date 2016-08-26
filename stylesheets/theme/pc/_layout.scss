@@ -626,108 +626,146 @@ category: Smartphone
 //=========================================
 // site home layout setting
 //=========================================
-.box-shadow{
-  @extend %box-shadow-black;
-}
-.top-registerarea,
-.top-read,
-.top-counter{
-  background: $z_color_white;
-}
-
-.top-registerarea,
-.top-read,
-.top-counter{
-   text-align: center;
-}
-.top-registerarea{
-  margin: (10 / 14)*1rem;
-}
-.top-read{
-  margin: 5px 0 0;
-  padding: 5px;
-  background: $smokey-gray;
-  h1{
-    @include font-size(14);
-    margin-bottom: 0;
+.top-mainvisual{
+  position: relative;
+  padding-top: 30px;
+  padding-left: 25px;
+  height: 180px;
+  background-image: url(../../../../images/index.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  .top-index-read{
+    float: left;
+    h1{
+      margin-bottom: 10px;
+      line-height: 1;
+    }
   }
-}
-.top-counter{
-  p{
-    margin-bottom: 0;
-    .count-num{
-      color: $cherry-red;
-      font-weight: bold;
-      @include font-size(18);
+  .partner-logo-list{
+    float: right;
+    width: (440 / 14) * 1rem;
+    padding-right: 10px;
+    ul{
+      display: table;
+      margin: 0;
+      padding-left: 0;
+      li{
+        display: table-cell;
+        padding: 5px;
+        margin: 0;
+        vertical-align: middle;
+        img{
+          vertical-align: middle;
+        }
+      }
     }
   }
 }
-
-
-.top-refinesearch{
-  .tab-nab{
+.top-main-container{
+  .top-main-container-box{
+    border: 1px solid $chacole-gray;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .search-map-area{
+    position: relative;
+    float: left;
+    width:293px;
+    height: 257px;
+    background-image: url(../../../../images/index.svg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
     ul{
       margin: 0;
       padding-left: 0;
-      display: table;
-      width: 100%;
-      white-space: nowrap;
       li{
+        list-style: none;
+        [class*='btn-']{
+          font-size: (12 / 14) * 1rem;;
+        }
+        [class*='area-']{
+          position: absolute;
+        }
+        .area-hokkaido-tohoku{
+          top: 10px;
+          left: 100px;
+        }
+        .area-hokuriku-kitashinetsu{
+          top: 90px;
+          left: 60px;;
+        }
+        .area-kanto{
+          top: 120px;
+          left: 200px;
+        }
+        .area-tokai{
+          top: 160px;
+          left: 160px;
+        }
+        .area-kansai{
+          top: 180px;
+          left: 100px;
+        }
+        .area-chugoku-shikoku{
+          top: 140px;
+          left: 20px;
+        }
+        .area-kyusyu-okinawa{
+          top: 220px;
+          left: 10px;
+        }
+        .area-other{
+          top: 220px;
+          right: 10px;
+        }
+      }
+    }
+  }
+  .search-list-area{
+    float: right;
+    width: 420px;
+    font-size: (12 / 14) * 1rem;
+    border-left: 1px solid $chacole-gray;
+    dl{
+      display: table;
+      margin-bottom: 0;
+      padding-left: 0;
+      width: 100%;
+      border-bottom: 1px dotted $chacole-gray;
+      &:last-child{
+        border-bottom: none;
+      }
+      dt,dd{
         display: table-cell;
-        width: (100 / 3) * 1%;
-        text-align: center;
-        a{
-          display: block;
-          @extend %btn;
-          @include btn-border-style(4px, $cherry-red);
-          border-radius: 4px 4px 0 0;
-          background: $cherry-red;
-          box-sizing: border-box;
-          color: $z_color_white;
-          text-decoration: none;
-          &.disable{
-            @include btn-border-style(4px, $smokey-gray);
-            border-radius: 4px 4px 0 0;
-            color: rgba($chacole-gray, .5);
-            @include textshadow-white;
-            background: $smokey-gray;
-            cursor: default;
-          }
-          [class^='icon-']{
-            display: block;
-          }
-          .nav-name{
-            font-size: (8 /14) * 1rem;
+        padding: 5px;
+      }
+      dt{
+        width: 6rem;
+        background: $smokey-gray;
+      }
+      dd{
+        ul{
+          margin: 0;
+          padding-left: 0;
+          li{
+            display: inline-block;
+            list-style: none;
+            &:after{
+              padding-left: 5px;
+              content: '|';
+            }
+            &:last-child{
+              &:after{
+                content: none;
+              }
+            }
           }
         }
       }
     }
-  }
-  .menu-area{
-    .list-nav-style{
-      .list-nav-cols{
-        display: inline-block;
-        width: 50%;
-        box-sizing: border-box;
-        border-bottom: solid 1px $smokey-gray;
-        &:nth-child(odd){
-          border-right: solid 1px $smokey-gray;
-        }
-        &:nth-child(even){
-          margin-left: -5px;
-        }
-      }
-    }
-  }
-  .menu-occupation{
-  
-  }
-  .menu-feature{
-  
   }
 }
-.newer-recruit{
-  .list-nav-style{
-    border-left: none;
-  }
+.top-side-container{
+
 }
