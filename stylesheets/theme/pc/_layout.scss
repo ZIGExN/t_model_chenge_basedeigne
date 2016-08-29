@@ -664,13 +664,22 @@ category: Smartphone
 }
 .top-main-container{
   .top-main-container-box{
-    border: 1px solid $chacole-gray;
+    margin-bottom: 2rem;
+    border: 1px solid lighten($chacole-gray, 40%);
     border-radius: 4px;
     overflow: hidden;
+    [class*='headlinetype-']{
+      margin-bottom: 0;
+      padding: 3px 0 3px 3px;
+      font-size: (16 / 14) * 1rem;
+      small{
+        padding-left: 1rem;
+        font-weight: normal;
+      }
+    }
   }
   .search-map-area{
     position: relative;
-    float: left;
     width:293px;
     height: 257px;
     background-image: url(../../../../images/index.svg);
@@ -722,17 +731,16 @@ category: Smartphone
       }
     }
   }
-  .search-list-area{
-    float: right;
+  .search-list-prefecture{
     width: 420px;
     font-size: (12 / 14) * 1rem;
-    border-left: 1px solid $chacole-gray;
+    border-left: 1px solid lighten($chacole-gray, 40%);
     dl{
       display: table;
       margin-bottom: 0;
       padding-left: 0;
       width: 100%;
-      border-bottom: 1px dotted $chacole-gray;
+      border-bottom: 1px dotted lighten($chacole-gray, 40%);
       &:last-child{
         border-bottom: none;
       }
@@ -761,6 +769,23 @@ category: Smartphone
               }
             }
           }
+        }
+      }
+    }
+  }
+  .search-list-occupation{
+    ul{
+      margin: 0;
+      padding-left: 0;
+      li{
+        display: inline-block;
+        padding: 0 10px;
+        width: (280 / 14) * 1rem;
+        font-size: (10 / 14) * 1rem;
+        vertical-align: top;
+        &:before{
+          content: '-';
+          padding-right: 5px;
         }
       }
     }
