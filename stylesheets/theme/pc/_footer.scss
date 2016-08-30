@@ -11,7 +11,8 @@
 .global-footer{
   @include font-size(10);
   text-shadow: 1px 1px 0 $z_color_white;
-  margin-top: (20 / 14) * 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid $smokey-gray;
   .clients-logo-area{
     margin-right: auto;
     margin-left: auto;
