@@ -1,0 +1,715 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 layout setting
+//    date: 2016.05.20
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+//=========================================
+// section container setting
+//=========================================
+%box-shadow-black{
+  box-shadow: 0 0 3px $chacole-gray;
+}
+@mixin section-default-style($border-color){
+  margin: 0;
+  padding: 0;
+  border-top: solid 4px $border-color;
+  background: $z_color_white;
+  @extend %box-shadow-black;
+}
+.container-red{
+  @include section-default-style($cherry-red);
+}
+.container-blue{
+  @include section-default-style($sky-blue);
+}
+.container-green{
+  @include section-default-style($reaf-green);
+}
+.container-orange{
+  @include section-default-style($apricot-orange);
+}
+.container-gray{
+  @include section-default-style($chacole-gray);
+}
+
+.container-demo{
+  height: 200px;
+}
+.container-demo:before{
+  content: 'ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。';
+}
+
+/*doc
+---
+title: container style
+name: container style
+category: Smartphone
+---
+
+``` html_example
+<div class="mb_20 container-red container-demo"></div>
+<div class="mb_20 container-blue container-demo"></div>
+<div class="mb_20 container-green container-demo"></div>
+<div class="mb_20 container-orange container-demo"></div>
+```
+
+*/
+
+//=========================================
+// pagination
+//=========================================
+.pagination{
+  .page-count{
+    margin-bottom: (10 / 14) * 1rem;
+  }
+  nav{
+    display: table;
+    width: 100%;
+  }
+  .prev,.next{
+    display: table-cell;
+    width: 50%;
+  }
+  .prev{
+    padding-right: .2rem;
+  }
+  .next{
+    padding-left: .2rem;
+  }
+}
+
+//=========================================
+// フローナビゲーション
+//=========================================
+.navigate-flow{
+  padding: 5px;
+  ul{
+    margin: 0;
+    padding-left: 0;
+    display: table;
+    width: 100%;
+    li{
+      display: table-cell;
+      padding: .2rem;
+      font-size: (8 / 14) * 1rem;
+      text-align: center;
+      vertical-align: middle;
+      background: $smokey-gray;
+      box-sizing: border-box;
+      &.current{
+        background: $reaf-green;
+        color: $z_color_white;
+        text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+      }
+    }
+  }
+}
+//=========================================
+// 応募
+//=========================================
+.entry-form{
+  font-size: (10 / 14 ) * 1rem;
+  .navigate-flow{
+    ul{
+      li{
+        width: 50%;
+        font-size: (10 / 14) * 1rem;
+      }
+    }
+  }
+  .bulk-entry{
+    margin: 5px;
+    .bulk-entry-job-list{
+      display: table;
+      border: 1px solid $smokey-gray;
+      .bulk-entry-check,
+      .bulk-entry-jobinfo{
+        display: table-cell;
+      }
+      .bulk-entry-check{
+        padding: .4rem;
+        background: $smokey-gray;
+        vertical-align: middle;
+      }
+      .bulk-entry-jobinfo{
+        padding: 5px;
+        .jobinfo-label{
+          padding-left: 0;
+        }
+        .jobinfo-header{
+          display: table;
+          margin-top: 5px;
+          .result-jobinfo-title,
+          .result-jobinfo-photo{
+            display: table-cell;
+            vertical-align: middle;
+          }
+          .result-jobinfo-photo{
+            margin: 0;
+            padding-left: 5px;
+          }
+        }
+        .jobinfo-partner{
+          margin: 0;
+          padding-left: 0;
+          .partner-name,
+          .partner-logo{
+            display: inline-block;
+            margin-left: 0;
+            padding-left: 0;
+            vertical-align: top;
+          }
+          .partner-name{
+            font-size: (10 / 14) * 1rem;
+          }
+          .partner-logo{
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+.headline-button{
+  float: right;
+}
+
+//=========================================
+// 会員登録
+//=========================================
+.register-form{
+  [class^='headlinetype-']{
+    [class^='label-']{
+      margin-right: .2rem;
+    }
+  }
+  .d_table{
+    width: 100%;
+    box-sizing: border-box;
+    .d_table_cell:first-child{
+      padding-right: 5px;
+    }
+  }
+}
+
+//=========================================
+// エラー
+//=========================================
+.error{
+  color: $cherry-red;
+  font-weight: bold;
+  font-size: (12 /14)*1rem;
+  text-align: center;
+  .messege-box{
+    padding: .4rem .2rem;
+    border-radius: 4px;
+    border: 1px solid $cherry-red;
+    background: rgba($cherry-red, .05);
+  }
+}
+//=========================================
+// マイページ周り
+//=========================================
+.mypage{
+
+}
+
+//=========================================
+// favorite list setting
+//=========================================
+.favorite-read{
+  margin: 5px;
+  padding: 5px;
+  background: rgba($smokey-gray, .5);
+  font-size: (12 / 14) *1rem;
+}
+.integrate-entry-button{
+  margin: 5px;
+  text-align: center;
+}
+.integrat-entry-check{
+  margin-bottom: 5px;
+  padding: 5px;
+  background: rgba($apricot-orange, .2);
+  label{
+    display: block;
+  }
+}
+
+//=========================================
+// search formn setting
+//=========================================
+.form-body{
+  padding-bottom: 50px;
+  h1{
+    font-size: (16 / 14) * 1rem;
+    margin-bottom: .4rem;
+    margin-left: 5px;
+  }
+  h2{
+    font-size: (14 / 14) *1rem;
+  }
+  h3{
+    font-size: (12 / 14 ) * 1rem;
+  }
+}
+.form{
+  .form-check-list{
+    margin: 5px;
+    padding-left: 0;
+    border-top: solid 1px $smokey-gray;
+    border-left: solid 1px $smokey-gray;
+    li{
+      border-right: solid 1px $smokey-gray;
+      border-bottom: solid 1px $smokey-gray;
+      label{
+        display: block;
+        padding: .6rem .4rem;
+      }
+    }
+  }
+  .search-form-sendbutton{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 5px;
+    background: rgba($chacole-gray, .8);
+    text-align: center;
+  }
+  .form-check-list{
+    margin: 5px;
+    padding-left: 0;
+    border-top: solid 1px $smokey-gray;
+    border-left: solid 1px $smokey-gray;
+    li{
+      border-right: solid 1px $smokey-gray;
+      border-bottom: solid 1px $smokey-gray;
+      label{
+        display: block;
+        padding: .6rem .4rem;
+      }
+    }
+  }
+}
+//=========================================
+//求人詳細
+//=========================================
+.screen-jobdetails{
+  padding-bottom: 50px;
+}
+.jobdetails{
+  padding: 5px;
+  font-size: (12 / 14) * 1rem;
+  .jobdetails-header{
+    .jobdetails-label-group{
+      [class^='label-']{
+        margin-bottom: (5 / 14) * 1rem;
+        margin-right: (5 / 14) * 1rem;
+      }
+    }
+    .jobdetails-header-inner-group{
+      display: table;
+      width: 100%;
+      .jobdetails-title,
+      .jobdetails-photo{
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .jobdetails-title{
+        .company-name{
+          margin-bottom: 0;
+          font-size: (10 / 14) * 1rem;
+        }
+        .title-name{
+          font-size: 1rem;
+        }
+      }
+      .jobdetails-photo{
+        figure{
+          margin: 0;
+          padding-left: 5px;
+        }
+      }
+    }
+    .jobdetails-partner{
+      dl{
+        display: table;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        vertical-align: middle;
+        dt,dd{
+          display: table-cell;
+        }
+        dt{
+          width: 5rem;
+        }
+        dd{
+          img{
+            width: 85px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+  .sendmail-jobdetails{
+    margin-top: 10px;
+  }
+  .action-button-set{
+    position: fixed;
+    right:0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    padding: .8rem .5rem;
+    background: rgba($chacole-gray, .8);
+  }
+}
+//=========================================
+//求人リスト (新着・レコメンド用）
+//=========================================
+.job-list-wrapper{
+  display: table;
+  padding: 5px;
+  width: 100%;
+  border-bottom: solid 1px $smokey-gray;
+  box-sizing: border-box;
+  &:last-child{
+    border-bottom: none;
+  }
+  .job-list-detail-content,
+  .job-list-photo,
+  .job-list-link-button{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .job-list-detail-content{
+    width: 100%;
+    padding-right: 4px;
+    .company-name,
+    .job-title,
+    .job-salary,
+    .job-place{
+     margin: 0;
+    }
+    .company-name,
+    .job-place{
+      font-size: (10 / 14) * 1rem;
+    }
+    .job-salary{
+      font-size: (12 /14) * 1rem;
+    }
+  }
+  .job-list-photo{
+    width: (80 / 14) * 1rem;
+    padding-right: 4px;
+  }
+  .job-list-link-button{
+    width: (10 / 14) * 1rem;
+    background: $smokey-gray;
+    border-radius: 4px;
+    .link-arrow{
+      display: block;
+      padding: .2rem .4rem;
+      text-decoration: none;
+      &:after{
+        display: block;
+        content: '';
+        width: 0;
+        height: 0;
+        line-height: 0;
+        border-style: solid;
+        border-color: #000;
+        border-width: 4px;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+}
+
+//=========================================
+//検索結果用の求人リスト
+//=========================================
+.results-joblists{
+  .jobinfo-content{
+    margin: 5px 5px 20px;
+    padding: 5px;
+    &:last-child{
+      margin-bottom: 10px;
+    }
+    .jobinfo-label{
+      margin: 0 0 (5 / 14) * 1rem;
+      padding-left: 0;
+    }
+    .jobinfo-partner{
+      margin: 0;
+      padding-left: 0;
+      .partner-name,
+      .partner-logo{
+        display: inline-block;
+        margin-left: 0;
+        padding-left: 0;
+        vertical-align: top;
+      }
+      .partner-name{
+        font-size: (10 / 14) * 1rem;
+      }
+      .partner-logo{
+        width: 80px;
+      }
+    }
+    .jobinfo-header{
+      display: table;
+      .result-jobinfo-title,
+      .result-jobinfo-photo{
+        display: table-cell;
+        vertical-align: middle;
+      }
+      .result-jobinfo-title{
+        font-size: (14 / 14) * 1rem;
+        .title-link{
+          display: block;
+        }
+      }
+      .result-jobinfo-photo{
+        width: (80 / 14) * 1rem;
+        text-align: center;
+      }
+    }
+    .jobinfo-details{
+      th{
+        white-space: nowrap;
+      }
+      th,td{
+        font-size: (10 /14) * 1rem;
+      }
+    }
+  }
+}
+
+//=========================================
+// action button setting
+//==uiii===================================
+.action-button-set{
+  nav{
+    display: table;
+    width: 100%;
+    .detail-button,
+    .favorite-button,
+    .entry-button{
+      display: table-cell;
+      width: 50%;
+      box-sizing: border-box;
+    }
+    .detail-button,
+    .entry-button{
+      padding-right: .2rem;
+    }
+    .favorite-button{
+      padding-left: .2rem;
+    }
+  }
+}
+//=========================================
+// list nav style setting
+//=========================================
+.list-nav-style{
+  margin: 0;
+  padding-left: 0;
+  font-size: (12 /14) *1rem;
+  li{
+    list-style: none;
+  }
+  .list-nav-indent{
+    padding-left: 0;
+  }
+  .list-nav-cols{
+  }
+  .list-nav-cols-full{
+    padding-left: 0;
+    border-bottom: solid 1px $smokey-gray;
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+  .list-nav-button-arrow{
+    position: relative;
+    display: block;
+    padding: .8rem .6rem;
+    color: $chacole-gray;
+    &:after{
+      position: absolute;
+      content: '';
+      display: block;
+      width: (8 / 14) * 1rem;
+      height: (8 / 14) * 1rem;
+      line-height: 0;
+      border-top: solid 1px $cherry-red;
+      border-right: solid 1px $cherry-red;
+      border-bottom: solid 1px transparent;
+      border-left: solid 1px transparent;
+      transform: rotate(45deg);
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+  .slidedown-button{
+    position: relative;
+    padding: .2rem .4rem;
+    background: $smokey-gray;
+    font-weight: bold;
+    .icon-arrow-down{
+      position: absolute;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      top: .4rem;
+      right: .8rem;
+      line-height: 0;
+      &.open{
+        border-top: solid 5px transparent;
+        border-right: solid 5px transparent;
+        border-bottom: solid 5px $chacole-gray;
+        border-left: solid 5px transparent;
+      }
+      &.close{
+        border-top: solid 5px $chacole-gray;
+        border-right: solid 5px transparent;
+        border-bottom: solid 5px transparent;
+        border-left: solid 5px transparent;
+      }
+    }
+  }
+}
+
+//=========================================
+// qa-contents  layout setting
+//=========================================
+.qa-contents{
+  .question{
+    font-size: (12 / 14) * 1rem;
+  }
+  .answer{
+    font-size: (10 / 14) * 1rem;
+  }
+}
+
+
+//=========================================
+// site home layout setting
+//=========================================
+.box-shadow{
+  @extend %box-shadow-black;
+}
+.top-registerarea,
+.top-read,
+.top-counter{
+  background: $z_color_white;
+}
+
+.top-registerarea,
+.top-read,
+.top-counter{
+   text-align: center;
+}
+.top-registerarea{
+  margin: (10 / 14)*1rem;
+}
+.top-read{
+  margin: 5px 0 0;
+  padding: 5px;
+  background: $smokey-gray;
+  h1{
+    @include font-size(14);
+    margin-bottom: 0;
+  }
+}
+.top-counter{
+  p{
+    margin-bottom: 0;
+    .count-num{
+      color: $cherry-red;
+      font-weight: bold;
+      @include font-size(18);
+    }
+  }
+}
+
+
+.top-refinesearch{
+  .tab-nab{
+    ul{
+      margin: 0;
+      padding-left: 0;
+      display: table;
+      width: 100%;
+      white-space: nowrap;
+      li{
+        display: table-cell;
+        width: (100 / 3) * 1%;
+        text-align: center;
+        a{
+          display: block;
+          @extend %btn;
+          @include btn-border-style(4px, $cherry-red);
+          border-radius: 4px 4px 0 0;
+          background: $cherry-red;
+          box-sizing: border-box;
+          color: $z_color_white;
+          text-decoration: none;
+          &.disable{
+            @include btn-border-style(4px, $smokey-gray);
+            border-radius: 4px 4px 0 0;
+            color: rgba($chacole-gray, .5);
+            @include textshadow-white;
+            background: $smokey-gray;
+            cursor: default;
+          }
+          [class^='icon-']{
+            display: block;
+          }
+          .nav-name{
+            font-size: (8 /14) * 1rem;
+          }
+        }
+      }
+    }
+  }
+  .menu-area{
+    .list-nav-style{
+      .list-nav-cols{
+        display: inline-block;
+        width: 50%;
+        box-sizing: border-box;
+        border-bottom: solid 1px $smokey-gray;
+        &:nth-child(odd){
+          border-right: solid 1px $smokey-gray;
+        }
+        &:nth-child(even){
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+  .menu-occupation{
+  
+  }
+  .menu-feature{
+  
+  }
+}
+.newer-recruit{
+  .list-nav-style{
+    border-left: none;
+  }
+}

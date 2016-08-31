@@ -1,0 +1,72 @@
+@charset 'utf-8';
+/*---------------------------------------------------
+  * _z_common.scss
+  * zigexn common footer class (sass partial file)
+  * date:2015.1.21
+  * author: vancho(kasumi suzuki)
+  * version 0.0.2
+  ---------------------------------------------------*/
+//====================================================
+// imageを読み込んでいる箇所があります
+// railsに載せる際はimageのpathを変更してください。
+// 例 <%= asset_path('logo.png') %>
+//====================================================
+.zigexn-footer{
+  padding: 1rem 0 2rem;
+  border-top: 3px solid $z_color_gray_130;
+  background: #e3e3e3;
+  overflow: hidden;
+  a{
+    color: $z_color_gray_70;
+    text-decoration: none;
+  }
+  .inner{
+    margin-right: auto;
+    margin-left: auto;
+    width: (960 / 16) * 1rem; //16のところにサイトのデフォルトフォントサイズを指定。
+    .zigexn-logo{
+      display: block;
+      float: left;
+      margin-top: (28 / 16) * 1rem;
+      margin-right: (20 / 16) * 1rem;
+      width: (91 / 16) * 1rem;
+      height: (31 / 16) * 1rem;
+      background: url(../../../../../images/zigexnLogo.png);
+    }
+    .zigexn-nav{
+      float: left;
+      margin: 0;
+      margin-top: (36 / 16) * 1rem;
+      padding-left: 0;
+      li{
+        display: inline-block;
+        list-style: none;
+        &:before{
+          margin-top: -3px;
+          content: "";
+          display: inline-block;
+          width: 0;
+          height: 0;
+          border: 3px solid transparent;
+          border-left-color: $z_color_gray_70;
+          vertical-align: middle;
+        }
+      }
+    }
+    .zigexn-policy{
+      float: right;
+      width: (254 / 16) * 1rem;
+      height: (55 / 16) *1rem;
+      padding: 1rem 0;
+      .privacy-mark{
+        float: left;
+        display: block;
+        padding-right: 1rem;
+        width: (55 / 16) * 1rem;
+        height: (55 / 16) * 1rem;
+        background-image: url(../../../../images/privacy.png);
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tenshoku Style Guide · layout</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/theme/sp/master.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="styleguide_header">
+        <h1 class="styleguide_brand">
+          tenshoku Style Guide
+        </h1>
+        <nav class="styleguide_nav">
+          <ul class="styleguide_nav--lists">
+            
+              <li class="styleguide_nav--list">
+                <a href="design.html">design</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="smartphone.html">Smartphone</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="layout.html">layout</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="form.html">form</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="table.html">table</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="index.html">z_template</a>
+              </li>
+            
+          </ul>
+        </nav>
+      </header>
+      <article class="styleguide_article">
+        
+          <h1>
+            layout
+          </h1>
+          <ul>
+            
+              <li><a href="#flexbox-layout">flexbox layout grid design pattern</a></li>
+            
+          </ul>
+        
+        <div class="styleguide_content">
+
+
+<h1 id="flexbox-layout" class="styleguide">flexbox layout grid design pattern</h1>
+
+<h2>sample demo</h2>
+<div class="example">
+<p>Responsive grid with Flexbox</p>
+<h1>Basic flexgrid</h1>
+<p></p>
+<div class="flexgrid flexgrid--full u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of1"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-2 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-4 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-6 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--cols-12 u-text-center">
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+  <div class="flexgrid-cell"><div class="demo content-1of12"></div></div>
+</div>  
+<hr />  
+
+<h1>Sidebar and main content</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of6">
+  <div class="flexgrid-cell"><div class="demo content-1of6"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--1of4">
+  <div class="flexgrid-cell"><div class="demo content-1of4"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--1of3">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo">auto</div></div>
+</div> 
+<hr /> 
+
+<h1>Left / Center / Right content alignment</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of2">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--center">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--right">
+  <div class="flexgrid-cell"><div class="demo content-1of2"></div></div>
+</div>
+<hr />   
+
+<h1>Nesting</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+  <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+  <div class="flexgrid-cell"><div class="demo">     
+      <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+        <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+        <div class="flexgrid-cell"><div class="demo">
+            <div class="flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested">
+              <div class="flexgrid-cell"><div class="demo content-1of3"></div></div>
+              <div class="flexgrid-cell"><div class="demo">auto</div></div>
+            </div>        
+        </div></div>
+      </div>      
+    </div>
+  </div>
+</div>
+<hr /> 
+
+<h1>Vertical alignment</h1>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--top">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>top-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--center">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>center-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+
+<div class="flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--bottom">
+  <div class="flexgrid-cell"><div class="demo">This cell should be <strong>bottom-aligned</strong>.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.</div></div>
+  <div class="flexgrid-cell"><div class="demo">Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. </div></div>
+</div>
+
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;p&gt;</span>Responsive grid with Flexbox<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Basic flexgrid<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--full u-text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of1"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-2 u-text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of2"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of2"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-3 u-text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of3"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of3"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of3"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-4 u-text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of4"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of4"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of4"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of4"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-6 u-text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of6"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of6"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of6"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of6"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of6"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of6"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-12 u-text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of12"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>  
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>  
+
+<span class="nt">&lt;h1&gt;</span>Sidebar and main content<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of6"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of6"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>auto<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of4"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of4"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>auto<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of3"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of3"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>auto<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span> 
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span> 
+
+<span class="nt">&lt;h1&gt;</span>Left / Center / Right content alignment<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of2"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of2"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of2"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of2 flexgrid--right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of2"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span>   
+
+<span class="nt">&lt;h1&gt;</span>Nesting<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of3"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>     
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of3"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--1of3 flexgrid--nested"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo content-1of3"</span><span class="nt">&gt;&lt;/div&gt;&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>auto<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>        
+        <span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>      
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;hr</span> <span class="nt">/&gt;</span> 
+
+<span class="nt">&lt;h1&gt;</span>Vertical alignment<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--top"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>This cell should be <span class="nt">&lt;strong&gt;</span>top-aligned<span class="nt">&lt;/strong&gt;</span>.<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. <span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>This cell should be <span class="nt">&lt;strong&gt;</span>center-aligned<span class="nt">&lt;/strong&gt;</span>.<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. <span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid flexgrid--gutters flexgrid--cols-3 flexgrid--bottom"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>This cell should be <span class="nt">&lt;strong&gt;</span>bottom-aligned<span class="nt">&lt;/strong&gt;</span>.<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>Vice keytar actually DIY Thundercats. Flannel heirloom lo-fi Blue Bottle Intelligentsia pour-over Etsy church-key banh mi Marfa lomo yr messenger bag.Artisan try-hard food truck +1 Cosby sweater.<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexgrid-cell"</span><span class="nt">&gt;&lt;div</span> <span class="na">class=</span><span class="s">"demo"</span><span class="nt">&gt;</span>Letterpress YOLO Austin Pinterest Helvetica. Cliche pug literally, church-key 90's twee you probably haven't heard of them meh fixie cornhole banh mi pork belly mustache. Stumptown bespoke Vice, bitters sustainable hoodie Echo Park letterpress 8-bit pug. Quinoa meh flexitarian roof party, actually selvage Carles put a bird on it umami vegan ethical. <span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</pre></div>        </div>
+      </article>
+      <footer>
+        <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+      </footer>
+    </div>
+  </body>
+</html>

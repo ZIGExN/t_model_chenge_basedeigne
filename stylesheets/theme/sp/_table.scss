@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 table setting
+//    date: 2016.04.15
+//  author: vancho
+// version: 0.0.1
+//
+//=========================================
+
+
+//=========================================
+//
+// base design setting
+//
+//=========================================
+
+//
+.table-style{
+  th{
+    white-space: nowrap;
+  }
+  th,td{
+    padding: .2rem .4rem;
+    border: none; //z_templateのスタイルをリセット
+    border-right: solid 1px lighten($chacole-gray, 50%);
+  }
+}
+

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="index,follow">
+  <meta name="discription" content="ほげほげ">
+  <link rel="stylesheet" href="./dist/stylesheets/theme/pc/master.css" media="all">
+  <title>求人EX - PC版</title>
+</head>
+<body>
+  <header class="global-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <p class="tenshoku-logo"><img src="images/tenshoku-ex.svg" width="110" alt="転職EX"></p>
+        </div>
+        <div class="col-xs-6">
+          <p class="counter-text">求人数<strong class="count-num">999,999</strong>件</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="breadcrumb">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="">トップページ</a></li>
+            <li><a href="">応募フォーム</a></li>
+            <li class="current"><a href="">応募完了ページ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="form entry-form">
+        <form action="">
+          <h1>求人応募フォーム</h1>
+          <div class="form-section">
+            <section>
+              <h2 class="headlinetype-border-blue">応募する会社情報</h2>
+              <table class="table-style style-blue">
+                <tr>
+                  <th>会社名</th>
+                  <td>株式会社じげん</td>
+                  <td rowspan="2" class="entry-partner-logo">
+                    <figcaption>情報提供元</figcaption>
+                    <figure>
+                      <img src="images/partner/green.svg" width="80" height="" alt="">
+                    </figure>
+                  </td>
+                </tr>
+                <tr>
+                  <th>職種</th>
+                  <td><a href="">フロントエンドエンジニア／ユニットマネージャー</a></td>
+                </tr>
+              </table>
+            </section>
+          </div>
+          <section>
+            <h3 class="headlinetype-border-red">応募情報の入力</h3>
+            <p class="fz12px">
+              入力情報は、この求人情報の提供元サイトを経由して応募企業に連絡されます。<br>
+              連絡される情報の項目は提供元サイトによって異なりますので、<a href="">こちら</a>の詳細をご確認の上、応募を完了して下さい。<br>
+              ※複数の求人に一括応募の場合、すでに応募されている「応募済」求人には再度応募はできませんので予めご了承ください。
+            </p>
+            <div class="form-section">
+              <section>
+                <div class="section-header">
+                  <header>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box-row">
+                          <h4 class="d_inline">基本情報</h4>
+                        </div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box t_right">
+                          <a class="btn-cherry-red" href="">この項目を修正する</a>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                </div>
+                <table class="table-style style-default">
+                  <tr>
+                    <th><span class="label-new">必須</span>お名前</th>
+                    <td>
+                      <div class="p_5">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="box-row"><input id="" class="text-field-long" type="text" name="" placeholder="転職"></div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="box-row"><input id="" class="text-field-long" type="text" name="" placeholder="太郎"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>フリガナ</th>
+                    <td>
+                      <div class="p_5">
+                        <div class="row">
+                          <div class="col-xs-6">
+                            <div class="box-row"><input id="" class="text-field-long" type="text" name="" placeholder="テンショク"></div>
+                          </div>
+                          <div class="col-xs-6">
+                            <div class="box-row"><input id="" class="text-field-long" type="text" name="" placeholder="タロウ"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>性別</th>
+                    <td>
+                      <div class="p_5">
+                        <div class="radio-checkbutton-set">
+                            <div class="check-cell">
+                              <input checked="checked" id="entry_sex_male" name="entry[sex]" type="radio" value="male" kl_vkbd_parsed="true">
+                              <label class="btn-check-label" for="entry_sex_male">男性</label>
+                            </div>
+                            <div class="check-cell">
+                              <input id="entry_sex_female" name="entry[sex]" type="radio" value="female" kl_vkbd_parsed="true">
+                              <label class="btn-check-label" for="entry_sex_female">女性</label>
+                            </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>生年月日</th>
+                    <td>
+                      <div class="p_5">
+                        <select class="form_size_80" id="user_birthday_1i_" name="user[birthday(1i)]" onfocus="ga('send', 'event', 'FormActive', '生年月日(年)', undefined, {'nonInteraction': 1});">
+                          <option value="">----</option>
+                          <option value="2000">2000</option>
+                          <option value="1999">1999</option>
+                          <option value="1998">1998</option>
+                          <option value="1997">1997</option>
+                          <option value="1996">1996</option>
+                          <option value="1995">1995</option>
+                          <option value="1994">1994</option>
+                          <option value="1993">1993</option>
+                          <option value="1992">1992</option>
+                          <option value="1991">1991</option>
+                          <option value="1990">1990</option>
+                          <option value="1989">1989</option>
+                          <option value="1988">1988</option>
+                          <option value="1987">1987</option>
+                         <option selected="selected" value="1986">1986</option>
+                          <option value="1985">1985</option>
+                          <option value="1984">1984</option>
+                          <option value="1983">1983</option>
+                          <option value="1982">1982</option>
+                          <option value="1981">1981</option>
+                          <option value="1980">1980</option>
+                          <option value="1979">1979</option>
+                          <option value="1978">1978</option>
+                          <option value="1977">1977</option>
+                          <option value="1976">1976</option>
+                          <option value="1975">1975</option>
+                          <option value="1974">1974</option>
+                          <option value="1973">1973</option>
+                          <option value="1972">1972</option>
+                          <option value="1971">1971</option>
+                          <option value="1970">1970</option>
+                          <option value="1969">1969</option>
+                          <option value="1968">1968</option>
+                          <option value="1967">1967</option>
+                          <option value="1966">1966</option>
+                          <option value="1965">1965</option>
+                          <option value="1964">1964</option>
+                          <option value="1963">1963</option>
+                          <option value="1962">1962</option>
+                          <option value="1961">1961</option>
+                          <option value="1960">1960</option>
+                          <option value="1959">1959</option>
+                          <option value="1958">1958</option>
+                          <option value="1957">1957</option>
+                          <option value="1956">1956</option>
+                          <option value="1955">1955</option>
+                          <option value="1954">1954</option>
+                          <option value="1953">1953</option>
+                          <option value="1952">1952</option>
+                          <option value="1951">1951</option>
+                          <option value="1950">1950</option>
+                          <option value="1949">1949</option>
+                          <option value="1948">1948</option>
+                          <option value="1947">1947</option>
+                          <option value="1946">1946</option>
+                          <option value="1945">1945</option>
+                          <option value="1944">1944</option>
+                        </select>
+                        <span>年</span>
+                        <select class="form_size_60" id="user_birthday_2i_" name="user[birthday(2i)]" onfocus="ga('send', 'event', 'FormActive', '生年月日(月)', undefined, {'nonInteraction': 1});">
+                          <option value="">--</option>
+                          <option selected="selected" value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                        </select>
+                        <span>月</span>
+                        <select class="form_size_60" id="user_birthday_3i_" name="user[birthday(3i)]" onfocus="ga('send', 'event', 'FormActive', '生年月日(日)', undefined, {'nonInteraction': 1});">
+                          <option value="">--</option>
+                          <option selected="selected" value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                          <option value="13">13</option>
+                          <option value="14">14</option>
+                          <option value="15">15</option>
+                          <option value="16">16</option>
+                          <option value="17">17</option>
+                          <option value="18">18</option>
+                          <option value="19">19</option>
+                          <option value="20">20</option>
+                          <option value="21">21</option>
+                          <option value="22">22</option>
+                          <option value="23">23</option>
+                          <option value="24">24</option>
+                          <option value="25">25</option>
+                          <option value="26">26</option>
+                          <option value="27">27</option>
+                          <option value="28">28</option>
+                          <option value="29">29</option>
+                          <option value="30">30</option>
+                          <option value="31">31</option>
+                        </select>
+                        <span>日</span>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>メールアドレス</th>
+                    <td>
+                      <div class="p_5">
+                        <input type="email" id="" class="text-field-long" name="" placeholder="example@email.com">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>パスワード</th>
+                    <td>
+                      <div class="p_5">
+                        <ul class="fz10px">
+                          <li>ハイフン[ - ]やアンダーバー[ _ ]などの記号は使えません。</li>
+                          <li>メールアドレスの@以前と同じパスワードは設定できません。</li>
+                          <li>生年月日と同じパスワードは設定できません。</li>
+                          <li>8文字以上の異なる英数字4種類以上を組み合わせてください。</li>
+                          <li><strong class="marker-red">英字・数字のどちらも必ず使用してください</strong>。</li>
+                        </ul>
+                      </div>
+                      <div class="p_5">
+                        <input class="text-field-medium" id="" type="password" placeholder="example@email.com" name="">
+                      </div>
+                      <div class="p_5">
+                        <input class="text-field-medium" id="" type="password" placeholder="確認のためもう一度入力" name="">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>電話番号</th>
+                    <td>
+                      <div class="p_5">
+                        <input class="text-field-medium" type="tel" placeholder="09000000000" id="" name="">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>住所</th>
+                    <td>
+                      <div class="p_5">
+                        <div class="d_table p_5">
+                          <div class="d_table_cell p_5">郵便番号</div>
+                          <div class="d_table_cell p_5"><input class="text-field-medium" id="" type="text" name=""></div>
+                        </div>
+                        <div class="d_table p_5">
+                          <div class="d_table_cell p_5">都道府県</div>
+                          <div class="d_table_cell p_5">
+                            <select class="text-field-long" id="user_prefecture_code" name="user[prefecture_code]" onfocus="ga('send', 'event', 'FormActive', '住所(都道府県)', undefined, {'nonInteraction': 1});">
+                              <option value="">選択してください</option>
+                              <option value="01">北海道</option>
+                              <option value="02">青森県</option>
+                              <option value="03">岩手県</option>
+                              <option value="04">宮城県</option>
+                              <option value="05">秋田県</option>
+                              <option value="06">山形県</option>
+                              <option value="07">福島県</option>
+                              <option value="08">茨城県</option>
+                              <option value="09">栃木県</option>
+                              <option value="10">群馬県</option>
+                              <option value="11">埼玉県</option>
+                              <option value="12">千葉県</option>
+                              <option value="13">東京都</option>
+                              <option value="14">神奈川県</option>
+                              <option value="15">新潟県</option>
+                              <option value="19">山梨県</option>
+                              <option value="20">長野県</option>
+                              <option value="16">富山県</option>
+                              <option value="17">石川県</option>
+                              <option value="18">福井県</option>
+                              <option value="21">岐阜県</option>
+                              <option value="22">静岡県</option>
+                              <option value="23">愛知県</option>
+                              <option value="24">三重県</option>
+                              <option value="25">滋賀県</option>
+                              <option value="26">京都府</option>
+                              <option value="27">大阪府</option>
+                              <option value="28">兵庫県</option>
+                              <option value="29">奈良県</option>
+                              <option value="30">和歌山県</option>
+                              <option value="31">鳥取県</option>
+                              <option value="32">島根県</option>
+                              <option value="33">岡山県</option>
+                              <option value="34">広島県</option>
+                              <option value="35">山口県</option>
+                              <option value="36">徳島県</option>
+                              <option value="37">香川県</option>
+                              <option value="38">愛媛県</option>
+                              <option value="39">高知県</option>
+                              <option value="40">福岡県</option>
+                              <option value="41">佐賀県</option>
+                              <option value="42">長崎県</option>
+                              <option value="43">熊本県</option>
+                              <option value="44">大分県</option>
+                              <option value="45">宮崎県</option>
+                              <option value="46">鹿児島県</option>
+                              <option value="47">沖縄県</option>
+                            </select>
+                          </div>
+                          <div class="d_table_cell p_5">市区町村</div>
+                          <div class="d_table_cell p_5">
+                            <select class="text-field-long" id="user_city_code" name="user[city_code]" onfocus="ga('send', 'event', 'FormActive', '住所(市区町村)', undefined, {'nonInteraction': 1});">
+                              <option value="">選択してください</option>
+                              <option value="01101">札幌市中央区</option>
+                              <option value="01102">札幌市北区</option>
+                              <option value="01103">札幌市東区</option>
+                              <option value="01104">札幌市白石区</option>
+                              <option value="01105">札幌市豊平区</option>
+                              <option value="01106">札幌市南区</option>
+                              <option value="01107">札幌市西区</option>
+                              <option value="01108">札幌市厚別区</option>
+                              <option value="01109">札幌市手稲区</option>
+                              <option value="01110">札幌市清田区</option>
+                              <option value="01202">函館市</option>
+                              <option value="01203">小樽市</option>
+                              <option value="01204">旭川市</option>
+                              <option value="01205">室蘭市</option>
+                              <option value="01206">釧路市</option>
+                              <option value="01207">帯広市</option>
+                              <option value="01208">北見市</option>
+                              <option value="01209">夕張市</option>
+                              <option value="01210">岩見沢市</option>
+                              <option value="01211">網走市</option>
+                              <option value="01212">留萌市</option>
+                              <option value="01213">苫小牧市</option>
+                              <option value="01214">稚内市</option>
+                              <option value="01215">美唄市</option>
+                              <option value="01216">芦別市</option>
+                              <option value="01217">江別市</option>
+                              <option value="01218">赤平市</option>
+                              <option value="01219">紋別市</option>
+                              <option value="01220">士別市</option>
+                              <option value="01221">名寄市</option>
+                              <option value="01222">三笠市</option>
+                              <option value="01223">根室市</option>
+                              <option value="01224">千歳市</option>
+                              <option value="01225">滝川市</option>
+                              <option value="01226">砂川市</option>
+                              <option value="01227">歌志内市</option>
+                              <option value="01228">深川市</option>
+                              <option value="01229">富良野市</option>
+                              <option value="01230">登別市</option>
+                              <option value="01231">恵庭市</option>
+                              <option value="01233">伊達市</option>
+                              <option value="01234">北広島市</option>
+                              <option value="01235">石狩市</option>
+                              <option value="01236">北斗市</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th><span class="label-new">必須</span>未婚／既婚</th>
+                    <td>
+                      <div class="p_5">
+                        <div class="radio-checkbutton-set">
+                            <div class="check-cell">
+                              <input checked="checked" id="dismarried" name="marry" type="radio" value="male" kl_vkbd_parsed="true">
+                              <label class="btn-check-label" for="dismarried">未婚</label>
+                            </div>
+                            <div class="check-cell">
+                              <input id="married" name="marry" type="radio" value="female" kl_vkbd_parsed="true">
+                              <label class="btn-check-label" for="married">既婚</label>
+                            </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </section>
+            </div>
+            <div class="form-section">
+              <section>
+                <div class="section-header">
+                  <header>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box">
+                          <h4 class="d_inline">学歴情報</h4>
+                        </div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box t_right">
+                          <span><a class="btn-cherry-red" href="">この項目を修正する</a></span>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                </div>
+                <table class="table-style style-default">
+                  <tr>
+                    <th>最終学歴</th>
+                    <td>
+                      <div class="p_5">
+                        <select class="text-field-medium" id="user_graduation_code" name="user[graduation_code]" onfocus="ga('send', 'event', 'FormActive', '最終学歴', undefined, {'nonInteraction': 1});">
+                          <option value="">選択してください</option>
+                          <option value="1">大学院</option>
+                          <option value="2">大学</option>
+                          <option value="3">短大</option>
+                          <option value="4">高専</option>
+                          <option value="5">専門/専修/その他</option>
+                          <option value="6">高校</option>
+                          <option value="7">中学校</option>
+                        </select>
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </section>
+            </div>
+            <div class="form-section">
+              <section>
+                <div class="section-header">
+                  <header>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box">
+                          <h4 class="d_inline">語学力</h4>
+                        </div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box t_right">
+                          <a class="btn-cherry-red" href="">この項目を修正する</a>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                </div>
+                <table class="table-style style-default">
+                  <tr>
+                    <th>語学英語レベル</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>TOEIC</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>その他外国語</th>
+                    <td></td>
+                  </tr>
+                </table>
+              </section>
+            </div>
+            <div class="form-section">
+              <section>
+                <div class="section-header">
+                  <header>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box">
+                          <h4 class="d_inline">職務経歴</h4>
+                        </div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box t_right">
+                          <a class="btn-cherry-red" href="">この項目を修正する</a>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                </div>
+                <table class="table-style style-default">
+                  <tr>
+                    <th>最終学歴</th>
+                    <td></td>
+                  </tr>
+                </table>
+              </section>
+            </div>
+            <div class="form-section">
+              <section>
+                <div class="section-header">
+                  <header>
+                    <div class="row">
+                      <div class="col-xs">
+                        <div class="box">
+                          <h4 class="d_inline">転職理由・自己PR</h4>
+                        </div>
+                      </div>
+                      <div class="col-xs">
+                        <div class="box t_right">
+                          <a class="btn-cherry-red" href="">この項目を修正する</a>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+                </div>
+                <table class="table-style style-default">
+                  <tr>
+                    <th>最終学歴</th>
+                    <td></td>
+                  </tr>
+                </table>
+              </section>
+            </div>
+          </section>
+        
+        </form>
+      </div>
+    </div>
+
+
+
+  </main>
+  <footer class="global-footer">
+    <div class="clients-logo-area">
+      <ul>
+        <li><img src="images/partner/at_type.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/bizreach.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/career_tasu.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/cookbiz.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/credence.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/doda.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/ecareer.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/geekly.svg" width="80" height="" alt=""></li>
+        <li><img src="images/partner/green.svg" width="80" height="" alt=""></li>
+      </ul>
+    </div>
+    <div class="footer-nav-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="/">転職EXトップ</a></li>
+                <li><a href="/search/detail">詳細求人検索</a></li>
+                <li><a href="/agent">紹介会社検索</a></li>
+                <li><a href="/statics/company">会社案内</a></li>
+                <li><a href="/statics/partner">パートナー紹介</a></li>
+                <li><a href="/statics/help">ヘルプ</a></li>
+                <li><a href="/statics/rules">利用規約</a></li>
+                <li><a href="/statics/privacy">個人情報保護方針</a></li>
+                <li><a href="/promo/oiwaikin">お祝い金に関して</a></li>
+              </ul>
+            </nav>
+            <p class="copyright">©ZIGExN Co., Ltd. ALL RIGHTS RESERVED.</p>
+          </div>
+          <div class="col-xs-6">
+            <p class="licence">厚生労働大臣許可：13-ユ-305190</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="zigexn-footer">
+      <div class="inner">
+        <span class="zigexn-logo"></span>
+        <ul class="zigexn-nav">
+          <li><a href="http://zigexn.co.jp" target="_blank">株式会社じげん</a></li>
+          <li><a href="http://zigexn.co.jp/service/list" target="_blank">サービス一覧</a></li>
+        </ul>
+        <div class="zigexn-policy">
+          <span class="privacy-mark"></span>
+          <b>安心への取り組み</b><br>
+          株式会社じげんはプライバシーマークを取得しています。
+        </div>
+      </div><!-- /.footer_inner -->
+    </div>
+  </footer>
+</body>
+</html>

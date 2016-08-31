@@ -1,0 +1,449 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 typography setting
+//    date: 2016.04.15
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+
+
+//=========================================
+// font size mixin setting
+//=========================================
+@mixin font-size($size: 24, $base: 14){
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+@mixin textshadow-black{
+  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+}
+@mixin textshadow-white{
+  text-shadow: 0 1px 0 $z_color_white;
+}
+//=========================================
+// base setting
+//=========================================
+html{
+  @include font-size(14);
+}
+
+body{
+  background: #fff;
+  font-style: normal;
+  font:100 1em/150%;
+  font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', "游ゴシック体", "Yu Gothic", 'meiryo', 'メイリオ', sans-serif;
+  color: $chacole-gray;
+}
+
+
+//=========================================
+// anchr elements setting
+//=========================================
+a{
+  color: #0c3bff;
+  text-decoration: underline;
+  &:hover{
+    color: #0b85ff;
+    text-decoration: none;
+  }
+}
+//=========================================
+// headline elements setting
+//=========================================
+%headline-bottom-margin{
+  margin: 0 0 1rem 0;
+}
+h1,h2,h3,h4,h5,h6{
+  @extend %headline-bottom-margin;
+}
+h1{
+  @include font-size(36);
+  small{
+    @include font-size(36 / 2)
+  }
+}
+h2{
+  @include font-size(24);
+  small{
+    @include font-size(24 / 2);
+  }
+}
+h3{
+  @include font-size(18);
+  small{
+    @include font-size(18 /2);
+  }
+}
+h4, h5, h6{
+  @include font-size(14);
+  small{
+    @include font-size(14 / 2);
+  }
+}
+
+/*doc
+---
+title: headline setting
+name: headline setting
+category: design
+---
+
+
+``` html_example
+
+<h1>見出しサンプル</h1>
+<h2>見出しサンプル</h2>
+<h3>見出しサンプル</h3>
+<h4>見出しサンプル</h4>
+<h5>見出しサンプル</h5>
+<h6>見出しサンプル</h6>
+```
+
+*/
+//=========================================
+// list style setting
+//=========================================
+
+ul{
+  li{
+    list-style: disc;
+    
+  }
+}
+ol{
+  li{
+    list-style: decimal;
+  }
+}
+dl{
+  margin: 0 0 2rem;
+  padding: 0 0 0 1rem;
+  dt{
+    margin: 0;
+  }
+  dd{
+    margin: 0 0 0 1rem;
+  }
+}
+/*doc
+---
+  title: list style setting
+  name: list style setting
+  category: design
+---
+``` html_example
+
+<ul>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+</ul>
+```
+
+---
+
+``` html_example
+
+<ol>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li> 
+</ol>
+```
+
+---
+
+``` html_example
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+```
+
+*/
+
+//=========================================
+// paragraph style setting
+//=========================================
+p{
+  margin: 0 0 1rem 0;
+}
+
+/*doc
+---
+  title: paragraph setting
+  name: paragraph setting
+  category: design
+---
+
+``` html_example
+
+<p>ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。</p>
+<p>それからちょっとくたくたたでしとかいう虎たで。</p>
+<p>くたくたうたんたらはだするとゴーシュの変がいのままでももう生意気でしまして、何じゃあとに飛び立ちせのたまし。考えすぎみんなは外がないますて一生けん命の町の扉めを云い第一ドレミファたちのおじぎがひきがくださいだだ。勢は前もっちゃいで。</p>
+<p>狸も万いけゴーシュのようで考えとしまった。助けも床からだたりわたしがつっ込んでいじ。</p>
+<p>鳥はたばこをどうに立って眼へ底のようにしてからだが睡っがにやにやかっこうに引きずっています。じっときっとけちで野鼠にやめるです。</p>
+<p>それそうにたばこがなって子を困るだた。曲をちがいですう。</p>
+<p>「楽長を思えた。セロ、みんなを気分。</p>
+<p>消し。」何は前のうちのちょっといまのところを見ましじ。かっこうは大物とばかゴーシュに飛びたちとセロから糸をもごてじつはいま考えついせますときへしですた。</p>
+<p>まるで返事云いて、呑みが出ていうて野ねずみへそれから自分とねから日ちがうだた。</p>
+```
+
+*/
+
+//=========================================
+// text color style setting
+//=========================================
+.textcolor-red{
+  color: $cherry-red;
+}
+.textcolor-blue{
+  color: $sky-blue;
+}
+.textcolor-green{
+  color: $reaf-green;
+}
+.textcolor-orange{
+  color: $apricot-orange;
+}
+
+.textcolor-demo:before{
+  content:'text color demo.';
+}
+
+/*doc
+---
+  title: text color
+  name: text color
+  category: design
+---
+
+``` html_example
+<p class="textcolor-demo textcolor-red"></p>
+<p class="textcolor-demo textcolor-blue"></p>
+<p class="textcolor-demo textcolor-green"></p>
+<p class="textcolor-demo textcolor-orange"></p>
+```
+
+*/
+//=========================================
+// strong style setting
+//=========================================
+@mixin strong-style($color){
+  font-weight: bold;
+  border-bottom: dotted 1px $color;
+}
+.strong-red{
+  @include strong-style($cherry-red);
+  color: $cherry-red;
+}
+.strong-orange{
+  @include strong-style($apricot-orange);
+  color: $apricot-orange;
+}
+
+.strong-demo:before{
+  content: 'marker-demo-text-style';
+}
+/*doc
+
+---
+title: strong style
+name: strong style
+category: design
+---
+
+``` html_example
+
+<span class="strong-red strong-demo"></span>
+<span class="strong-orange strong-demo"></span>
+```
+
+*/
+
+
+//=========================================
+// marker style setting
+//=========================================
+@mixin marker-color($color){
+  background: linear-gradient(transparent 60%, $color 60%); 
+}
+.marker-red{
+  @include marker-color(lighten($cherry-red,30%));
+}
+.marker-blue{
+  @include marker-color(lighten($sky-blue,30%));
+}
+.marker-green{
+  @include marker-color(lighten($reaf-green,30%));
+}
+.marker-orange{
+  @include marker-color(lighten($apricot-orange,30%));
+}
+
+.marker-demo:before{
+  content: 'marker-demo-text-style';
+}
+
+/*doc
+
+---
+title: marker style
+name: marker style
+category: design
+---
+
+``` html_example
+
+<span class="marker-red marker-demo"></span>
+<span class="marker-blue marker-demo"></span>
+<span class="marker-green marker-demo"></span>
+<span class="marker-orange marker-demo"></span>
+```
+
+*/
+
+//=========================================
+// label setting
+//=========================================
+%label-default-style{
+  display: inline-block;
+  margin: 0 .2rem 0 0;
+  padding: .2rem .4rem;
+  border-radius: 2px;
+  @include font-size(10);
+}
+.label-new{
+  @extend %label-default-style;
+  @include textshadow-black;
+  background: $cherry-red;
+  color: $z_color_white;
+  font-weight: bold;
+}
+.label-type{
+  @extend %label-default-style;
+  @include textshadow-black;
+  background: $chacole-gray;
+  color: $z_color_white;
+  font-weight: bold;
+}
+.label-pr{
+  @extend %label-default-style;
+  border: solid 1px $reaf-green;
+}
+
+.label-demo:before{
+  content: 'icon demo';
+}
+
+/*doc
+
+---
+  title: label style
+  name: label style
+  category: design
+---
+
+``` html_example
+
+<span class="label-new label-demo"></span>
+<span class="label-type label-demo"></span>
+<span class="label-pr label-demo"></span>
+```
+
+*/
+
+
+//=========================================
+// bage setting
+//=========================================
+
+%bage-default-style{
+  margin: 0;
+  padding: .2rem .4rem;
+  border-radius: 2rem;
+  color: $z_color_white;
+  @include font-size(8);
+  @include textshadow-black;
+}
+
+.bage-color-red{
+  @extend %bage-default-style;
+  background: $cherry-red;
+}
+.bage-color-blue{
+  @extend %bage-default-style;
+  background: $sky-blue;
+}
+.bage-color-green{
+  @extend %bage-default-style;
+  background: $reaf-green;
+}
+.bage-color-orange{
+  @extend %bage-default-style;
+  background: $apricot-orange;
+}
+.bage-demo:before{
+  content: '999';
+}
+
+/*doc
+
+---
+title: bage style
+name: bage style
+category: design
+---
+
+``` html_example
+
+<span class="bage-color-red bage-demo"></span>
+<span class="bage-color-blue bage-demo"></span>
+<span class="bage-color-green bage-demo"></span>
+<span class="bage-color-orange bage-demo"></span>
+```
+
+*/
+
+
+//=========================================
+// tenshoku headline element style setting
+//=========================================
+
+// level h1 setting
+%headline-default-style{
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+}
+.headlinetype-mt-001{
+  @extend %headline-default-style;
+  border-bottom: solid 3px $cherry-red;
+}
+
+// level h2 setting
+.hedlinetype-st-001{
+  border-bottom: solid 1px $smokey-gray;
+}
+.headlinetype-st-002{
+  border-top: solid 1px transparent;
+  border-bottom: dotted 1px transparent;
+  border-color: $smokey-gray;
+}
+

@@ -1,0 +1,226 @@
+/*---------------------------------------------------
+  * _z_layout.scss
+  * zigexn common layout class (sass partial file)
+  * date:2015.4.15
+  * author: zigexn
+  * version 1.0.1
+  ---------------------------------------------------*/
+
+/*doc
+---
+title: z_layout
+name: z_layout
+category: z_template
+---
+
+## Responsive
+レスポンシブ対応する場合、containerのブレイクポイントは768px,992px,1200pxです。
+
+```html_example
+<div class="container">
+  <div class="demo_box">container box</div>
+</div>
+```
+
+## grid
+- グリッドレイアウトをする際に使用します。(グリッドレイアウトを理解していない場合、使用しないでください)
+- 固定カラムを採用する場合は、theme内で独自のクラス定義を行ってください。
+- 固定カラムを採用する場合は、予めサイズを計算して、それぞれの値を付与したクラスを使用してください。
+- レスポンシブ対応する場合は、固定カラムは非推奨です。レイアウトが崩れてしまうからです。
+- 固定値と相対値を混同しないようにしてください。(左カラムが210pxで、右カラムが70%とか。)
+
+```html_example
+<div class="mb_30">
+  <div class="row">
+    <div class="cols_12">
+      <div class="demo_box">cols_12</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_11">
+      <div class="demo_box">cols_11</div>
+    </div>
+    <div class="cols_1">
+      <div class="demo_box">cols_1</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_10">
+      <div class="demo_box">cols_10</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_9">
+      <div class="demo_box">cols_9</div>
+    </div>
+    <div class="cols_3">
+      <div class="demo_box">cols_3</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_8">
+      <div class="demo_box">cols_8</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_7">
+      <div class="demo_box">cols_7</div>
+    </div>
+    <div class="cols_5">
+      <div class="demo_box">cols_5</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="cols_6">
+      <div class="demo_box">cols_6</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+    <div class="cols_2">
+      <div class="demo_box">cols_2</div>
+    </div>
+  </div>
+</div>
+```
+
+## table_grid
+- グリッドレイアウトを採用し、更にインライン要素の縦方向を操作したい際に使用します。
+- 固定カラムを採用する場合は、theme内で独自のクラス定義を行ってください。
+- 固定カラムを採用する場合は、予めサイズを計算して、それぞれの値を付与したクラスを使用してください。
+- レスポンシブ対応する場合は、固定カラムは非推奨です。レイアウトが崩れてしまうからです。
+- 固定値と相対値を混同しないようにしてください。(左カラムが210pxで、右カラムが70%とか。)
+
+```html_example
+<div class="mb_30">
+  <div class="demo">
+    <div class="table_row mb_10">
+      <div class="cols_12">
+        cols_12
+      </div>
+    </div>
+    <div class="table_row mb_10">
+      <div class="cols_11">
+        cols_11
+      </div>
+      <div class="cols_1">
+        cols_1
+      </div>
+    </div>
+    <div class="table_row mb_10">
+      <div class="cols_10">
+        cols_10
+      </div>
+      <div class="cols_2">
+        cols_2
+      </div>
+    </div>
+  </div>
+</div>
+```
+*/
+
+
+/* clearfix */
+.clear:before,
+.row:before,
+ {
+  content: '';
+  display: table;
+}
+
+.clear:after,
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// レスポンシブレイアウト適応時にコンテナレイアウトを変更する
+@if $responsive == true {
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .container {
+      width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+}
+
+// グリッドシステム
+// row > cols_**のセットで使用する
+// グリッド以外で左右カラムを作りたい場合はclearを使用する
+.row {
+  margin-right: -($cols_spacing) + px;
+  margin-left: -($cols_spacing) + px;
+  [class^='cols_']{
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    padding-right: ($cols_spacing) + px;
+    padding-left: ($cols_spacing) + px;
+  }
+}
+
+.table_row {
+  display: table;
+  width: 100%;
+  [class*='cols_'] {
+    display: table-cell;
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding-right: $table_cols_spacing + px;
+    padding-left: $table_cols_spacing + px;
+  }
+}
+
+// グリッドパターン
+// 必ず数値まで入れること(OK:cols_1, NG:cols_)
+@for $i from 1 through $cols_count {
+  .cols_#{$i} {
+    width: ($cols_total_width / $cols_count) * $i;
+  }
+}
+
+// demo用
+.demo_box {
+  text-align: center;
+  background-color: #efefef;
+  height: 50px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.demo [class*='cols_']{
+  text-align: center;
+  background-color: #efefef;
+  height: 50px;
+  border: 1px solid #ccc;
+}

@@ -1,0 +1,103 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 typography setting
+//    date: 2016.05.19
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+//=========================================
+// smarthpne base typograph
+//=========================================
+ul{
+  margin: 0;
+  padding-left: 1.3rem;
+  li{
+   list-style: disc;
+  }
+}
+//=========================================
+// headline setting
+//=========================================
+
+%headline-default-style{
+  margin: 0;
+  padding: .2rem .4rem;
+  @include font-size(18);
+  font-weight: bold;
+  color: $z_color_white;
+  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+}
+[class^="headlinetype-"]{
+  @extend %headline-default-style;
+  &.sample-demo:before{
+    content:'headline sample demo';
+  }
+}
+@mixin headline-border-style($border-color){
+  border-bottom: 3px solid $border-color;
+  color: $chacole-gray;
+  text-shadow: none;
+}
+.headlinetype-red{
+  background: $cherry-red;
+}
+.headlinetype-blue{
+  background: $sky-blue;
+}
+.headlinetype-green{
+  background: $reaf-green;
+}
+.headlinetype-orange{
+  background: $apricot-orange;
+}
+.headlinetype-chacolegray{
+  background: $chacole-gray;
+}
+.headlinetype-smokeygray{
+  color: $chacole-gray;
+  text-shadow: 0 1px 0 $z_color_white;
+  background: $smokey-gray;
+}
+
+.headlinetype-border-red{
+  @include headline-border-style($cherry-red);
+}
+.headlinetype-border-blue{
+  @include headline-border-style($sky-blue);
+}
+.headlinetype-border-green{
+  @include headline-border-style($reaf-green);
+}
+.headlinetype-border-orange{
+  @include headline-border-style($apricot-orange);
+}
+.headlinetype-border-chacolegray{
+  @include headline-border-style($chacole-gray);
+}
+.headlinetype-border-smokeygray{
+  @include headline-border-style($smokey-gray);
+}
+
+/*doc
+---
+title: headline style
+name: headline style
+category: Smartphone
+---
+
+```html_example
+<div class="headlinetype-red sample-demo"></div>
+<div class="headlinetype-blue sample-demo"></div>
+<div class="headlinetype-green sample-demo"></div>
+<div class="headlinetype-orange sample-demo"></div>
+<div class="headlinetype-chacolegray sample-demo"></div>
+<div class="headlinetype-smokeygray sample-demo"></div>
+```
+
+*/ 
+
+

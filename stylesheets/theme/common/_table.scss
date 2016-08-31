@@ -1,0 +1,441 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 table setting
+//    date: 2016.04.15
+//  author: vancho
+// version: 0.0.1
+//
+//=========================================
+
+
+//=========================================
+//
+// base design setting
+//
+//=========================================
+
+//
+.table-style{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $z_color_white;
+  font-weight: normal;
+  tr{
+    border-width: 1px;
+    border-style: solid;
+    border-color: lighten($chacole-gray, 50%);
+  }
+  th{
+    box-shadow: inset 2px 2px 0 $z_color_white;
+    font-weight: bold;
+    text-shadow: 0 1px 0 $z_color_white; 
+  }
+  th,td{
+    padding: .8rem 1.2rem;
+    border: none; //z_templateのスタイルをリセット
+    border-right: solid 1px lighten($chacole-gray, 50%);
+  }
+  &.border-horizontal{
+    tr{
+      border-width: 0 0 1px;
+      border-style: dotted;
+      border-color: lighten($chacole-gray, 40%);
+    }
+    tr:last-child{
+      border-bottom: none;
+    }
+    th{
+      box-shadow: none;
+      font-weight: bold;
+      text-shadow: 0 1px 0 $z_color_white;
+    }
+    th,td{
+      border-right: none;
+      border-left: none;
+    }
+  }
+  &.style-default{
+    th{
+      background: $smokey-gray;
+    }
+  }
+  &.style-blue{
+    th{
+      background: lighten($sky-blue, 45%);
+    }
+  }
+  &.style-red{
+    th{
+      background: lighten($cherry-red, 55%);
+    }
+  }
+  &.style-green{
+    th{
+      background: lighten($reaf-green, 60%);
+    }
+  }
+  &.style-orange{
+    th{
+      background: lighten($apricot-orange, 50%);
+    }
+  }
+}
+
+/*doc
+---
+title: table style setting
+name: table default setting
+category: table
+---
+
+## table default setting
+
+
+``` html_example
+<table class="table-style style-default">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+---
+
+## table color setting
+
+
+``` html_example
+<table class="table-style style-blue">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+``` html_example
+<table class="table-style style-red">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+``` html_example
+<table class="table-style style-green">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+``` html_example
+<table class="table-style style-orange">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+```
+
+
+``` html_example
+<table class="table-style border-horizontal style-default">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-blue">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-red">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-green">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+``` html_example
+<table class="table-style border-horizontal style-orange">
+  <tr>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+    <th>セル見出しテキスト</th>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+  <tr>
+    <th>セル見出しテキスト</th>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+    <td>セルテキスト</td>
+  </tr>
+</table>
+
+```
+
+*/
+
+
+

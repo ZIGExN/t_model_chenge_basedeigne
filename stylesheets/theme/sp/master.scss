@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 smartphone setting
+//    date: 2016.05.19
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+// browser reset
+@import '../../global/_normalize';
+
+// zigexn template set
+@import '../../global/_z_color';
+@import '../../global/_z_typography';
+@import '../../global/_z_common';
+//@import '../../global/_z_layout';
+@import '../../global/_z_list';
+@import '../../global/_z_skin';
+//@import '../../global/_z_button';
+@import '../../global/_z_table';
+@import '../../global/_z_breadcrumb';
+@import '../../global/_z_forms';
+@import '../../global/_z_helper';
+
+// theme set
+
+@import '../common/_font';
+@import '../common/_flexbox';
+@import '../common/_color';
+@import '../common/_typography';
+@import '../common/_form';
+@import '../common/_helper';
+@import '../common/_table';
+@import '../common/_button';
+@import '../common/_header';
+@import '../common/_footer';
+@import '../common/_breadcrumb';
+@import '../common/_layout';
+
+// Smartphone style set
+@import '_typography';
+@import '_button';
+@import '_header';
+@import '_footer';
+@import '_table';
+@import '_layout';

@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 tenshoku-ex color setting
+//    date: 2016.04.15
+//  author: vancho
+// version: 0.0.1
+//
+//=========================================
+
+// 基本色の変数設定
+//$t-pallete-chacole-gray  : #333, #111;
+//$t-pallete-smokey-gray   : #eeeeee, #e3e3e3;
+//$t-pallete-cherry-red    : #d90000, #bd0000;
+//$t-pallete-sky-blue      : #5274ff, #0d3cff;
+//$t-pallete-reaf-green    : #98cb00, #76bd00;
+//$t-pallete-apricot-orange: #ee994d, #eb730c;
+
+// 基本色
+$chacole-gray  : #333;
+$smokey-gray   : #eee;
+$cherry-red    : #d90000;
+$sky-blue      : #0d3cff;
+$reaf-green    : #76bd00;
+$apricot-orange: #e8730c;
+
+//テキスト色
+body{
+  color: $chacole-gray;
+}
+
+//リンク色
+@mixin link-color($normal, $hover){
+  color: $normal;
+  &:hover{
+    color: $hover;
+    text-decoration: none;
+  }
+}
+a{
+  @include link-color($sky-blue, lighten($sky-blue,20%));
+}
+
+//ボーダー色
+$border-default-color: $smokey-gray;
+$border-red-color    : $cherry-red;
+
+// グラデーション設定
+// z-templateの設定を使う。
+
+

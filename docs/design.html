@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tenshoku Style Guide · design</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/theme/sp/master.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="styleguide_header">
+        <h1 class="styleguide_brand">
+          tenshoku Style Guide
+        </h1>
+        <nav class="styleguide_nav">
+          <ul class="styleguide_nav--lists">
+            
+              <li class="styleguide_nav--list">
+                <a href="design.html">design</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="smartphone.html">Smartphone</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="layout.html">layout</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="form.html">form</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="table.html">table</a>
+              </li>
+            
+              <li class="styleguide_nav--list">
+                <a href="index.html">z_template</a>
+              </li>
+            
+          </ul>
+        </nav>
+      </header>
+      <article class="styleguide_article">
+        
+          <h1>
+            design
+          </h1>
+          <ul>
+            
+              <li><a href="#bage style">bage style</a></li>
+            
+              <li><a href="#button style$">button style</a></li>
+            
+              <li><a href="#headline setting">headline setting</a></li>
+            
+              <li><a href="#label style">label style</a></li>
+            
+              <li><a href="#list style setting">list style setting</a></li>
+            
+              <li><a href="#marker style">marker style</a></li>
+            
+              <li><a href="#paragraph setting">paragraph setting</a></li>
+            
+              <li><a href="#strong style">strong style</a></li>
+            
+              <li><a href="#text color">text color</a></li>
+            
+          </ul>
+        
+        <div class="styleguide_content">
+
+
+<h1 id="bage style" class="styleguide">bage style</h1>
+<div class="example">
+<span class="bage-color-red bage-demo"></span>
+<span class="bage-color-blue bage-demo"></span>
+<span class="bage-color-green bage-demo"></span>
+<span class="bage-color-orange bage-demo"></span>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"bage-color-red bage-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"bage-color-blue bage-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"bage-color-green bage-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"bage-color-orange bage-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</pre></div>
+<h1 id="button style$" class="styleguide">button style</h1>
+
+<h2>anchr button style</h2>
+<div class="example">
+<a class="btn-demo"></a>
+
+<a class="btn-smokygray btn-demo"></a>
+<a class="btn-cherry-red btn-demo"></a>
+<a class="btn-sky-blue btn-demo"></a>
+<a class="btn-reaf-green btn-demo"></a>
+<a class="btn-apricot-orange btn-demo"></a>
+
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-cherry-red btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-sky-blue btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-reaf-green btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-apricot-orange btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+
+</pre></div>
+<h2>button sizing</h2>
+<div class="example">
+<a class="btn-smokygray btn-medium btn-demo"></a>
+<a class="btn-smokygray btn-small btn-demo"></a>
+<a class="btn-smokygray btn-large btn-demo"></a>
+
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-medium btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-small btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-large btn-demo"</span><span class="nt">&gt;&lt;/a&gt;</span>
+
+</pre></div>
+<h2>button display type</h2>
+<div class="example">
+<p><a class="btn-smokygray btn-inline btn-demo"></a></p>
+<p><a class="btn-smokygray btn-block btn-demo"></a></p>
+<p><a class="btn-smokygray btn-iblock btn-demo"></a></p>
+
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-inline btn-demo"</span><span class="nt">&gt;&lt;/a&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-block btn-demo"</span><span class="nt">&gt;&lt;/a&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-iblock btn-demo"</span><span class="nt">&gt;&lt;/a&gt;&lt;/p&gt;</span>
+
+</pre></div>
+<h2>button elements style demo</h2>
+<div class="example">
+<div class="mb_20">
+  <button class="btn-demo"></button>
+
+  <button class="btn-smokygray btn-demo"></button>
+  <button class="btn-cherry-red btn-demo"></button>
+  <button class="btn-sky-blue btn-demo"></button>
+  <button class="btn-reaf-green btn-demo"></button>
+  <button class="btn-apricot-orange btn-demo"></button>
+</div>
+<div class="mb_20">
+  <button class="btn-smokygray btn-medium btn-demo"></button>
+  <button class="btn-smokygray btn-small btn-demo"></button>
+  <button class="btn-smokygray btn-large btn-demo"></button>
+</div>
+
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb_20"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-cherry-red btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-sky-blue btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-reaf-green btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-apricot-orange btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"mb_20"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-medium btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-small btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn-smokygray btn-large btn-demo"</span><span class="nt">&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+</pre></div>
+<h1 id="headline setting" class="styleguide">headline setting</h1>
+<div class="example">
+<h1>見出しサンプル</h1>
+<h2>見出しサンプル</h2>
+<h3>見出しサンプル</h3>
+<h4>見出しサンプル</h4>
+<h5>見出しサンプル</h5>
+<h6>見出しサンプル</h6>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;h1&gt;</span>見出しサンプル<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>見出しサンプル<span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>見出しサンプル<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>見出しサンプル<span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>見出しサンプル<span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>見出しサンプル<span class="nt">&lt;/h6&gt;</span>
+</pre></div>
+<h1 id="label style" class="styleguide">label style</h1>
+<div class="example">
+<span class="label-new label-demo"></span>
+<span class="label-type label-demo"></span>
+<span class="label-pr label-demo"></span>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label-new label-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label-type label-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label-pr label-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</pre></div>
+<h1 id="list style setting" class="styleguide">list style setting</h1>
+<div class="example">
+<ul>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+</ul>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;ul&gt;</span>
+  <span class="nt">&lt;li&gt;</span>リストサンプルテキスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>リストサンプルテキスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>リストサンプルテキスト<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+<hr>
+<div class="example">
+<ol>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li>
+  <li>リストサンプルテキスト</li> 
+</ol>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;ol&gt;</span>
+  <span class="nt">&lt;li&gt;</span>リストサンプルテキスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>リストサンプルテキスト<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>リストサンプルテキスト<span class="nt">&lt;/li&gt;</span> 
+<span class="nt">&lt;/ol&gt;</span>
+</pre></div>
+<hr>
+<div class="example">
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+
+<dl>
+  <dt>定義語サンプル</dt>
+  <dd>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。</dd>
+</dl>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>定義語サンプル<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+
+<span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>定義語サンプル<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+
+<span class="nt">&lt;dl&gt;</span>
+  <span class="nt">&lt;dt&gt;</span>定義語サンプル<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd&gt;</span>定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。定義説明テキストサンプル。<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span>
+</pre></div>
+<h1 id="marker style" class="styleguide">marker style</h1>
+<div class="example">
+<span class="marker-red marker-demo"></span>
+<span class="marker-blue marker-demo"></span>
+<span class="marker-green marker-demo"></span>
+<span class="marker-orange marker-demo"></span>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"marker-red marker-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"marker-blue marker-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"marker-green marker-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"marker-orange marker-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</pre></div>
+<h1 id="paragraph setting" class="styleguide">paragraph setting</h1>
+<div class="example">
+<p>ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。</p>
+<p>それからちょっとくたくたたでしとかいう虎たで。</p>
+<p>くたくたうたんたらはだするとゴーシュの変がいのままでももう生意気でしまして、何じゃあとに飛び立ちせのたまし。考えすぎみんなは外がないますて一生けん命の町の扉めを云い第一ドレミファたちのおじぎがひきがくださいだだ。勢は前もっちゃいで。</p>
+<p>狸も万いけゴーシュのようで考えとしまった。助けも床からだたりわたしがつっ込んでいじ。</p>
+<p>鳥はたばこをどうに立って眼へ底のようにしてからだが睡っがにやにやかっこうに引きずっています。じっときっとけちで野鼠にやめるです。</p>
+<p>それそうにたばこがなって子を困るだた。曲をちがいですう。</p>
+<p>「楽長を思えた。セロ、みんなを気分。</p>
+<p>消し。」何は前のうちのちょっといまのところを見ましじ。かっこうは大物とばかゴーシュに飛びたちとセロから糸をもごてじつはいま考えついせますときへしですた。</p>
+<p>まるで返事云いて、呑みが出ていうて野ねずみへそれから自分とねから日ちがうだた。</p>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;p&gt;</span>ゴーシュもゴーシュのかっかガラスらを窓に云っ小太鼓たた。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>それからちょっとくたくたたでしとかいう虎たで。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>くたくたうたんたらはだするとゴーシュの変がいのままでももう生意気でしまして、何じゃあとに飛び立ちせのたまし。考えすぎみんなは外がないますて一生けん命の町の扉めを云い第一ドレミファたちのおじぎがひきがくださいだだ。勢は前もっちゃいで。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>狸も万いけゴーシュのようで考えとしまった。助けも床からだたりわたしがつっ込んでいじ。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>鳥はたばこをどうに立って眼へ底のようにしてからだが睡っがにやにやかっこうに引きずっています。じっときっとけちで野鼠にやめるです。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>それそうにたばこがなって子を困るだた。曲をちがいですう。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>「楽長を思えた。セロ、みんなを気分。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>消し。」何は前のうちのちょっといまのところを見ましじ。かっこうは大物とばかゴーシュに飛びたちとセロから糸をもごてじつはいま考えついせますときへしですた。<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>まるで返事云いて、呑みが出ていうて野ねずみへそれから自分とねから日ちがうだた。<span class="nt">&lt;/p&gt;</span>
+</pre></div>
+<h1 id="strong style" class="styleguide">strong style</h1>
+<div class="example">
+<span class="strong-red strong-demo"></span>
+<span class="strong-orange strong-demo"></span>
+</div><div class="codeblock"><pre>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"strong-red strong-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"strong-orange strong-demo"</span><span class="nt">&gt;&lt;/span&gt;</span>
+</pre></div>
+<h1 id="text color" class="styleguide">text color</h1>
+<div class="example"><p class="textcolor-demo textcolor-red"></p>
+<p class="textcolor-demo textcolor-blue"></p>
+<p class="textcolor-demo textcolor-green"></p>
+<p class="textcolor-demo textcolor-orange"></p>
+</div><div class="codeblock"><pre><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"textcolor-demo textcolor-red"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"textcolor-demo textcolor-blue"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"textcolor-demo textcolor-green"</span><span class="nt">&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"textcolor-demo textcolor-orange"</span><span class="nt">&gt;&lt;/p&gt;</span>
+</pre></div>        </div>
+      </article>
+      <footer>
+        <p>This documentation generated using <a href="http://github.com/trulia/hologram">Hologram</a>
+      </footer>
+    </div>
+  </body>
+</html>

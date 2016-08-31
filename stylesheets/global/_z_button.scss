@@ -1,0 +1,125 @@
+/*---------------------------------------------------
+  * _z_button.scss
+  * zigexn common button class (sass partial file)
+  * date:2015.5.8
+  * author: zigexn
+  * version 0.0.3
+  ---------------------------------------------------*/
+
+/*doc
+---
+title: z_button
+name: z_button
+category: z_template
+---
+
+
+### button style
+
+```html_example
+
+<a href="#" class="btn">default ボタン</a>
+<a href="#" class="btn btn_flat_a">flat b ボタン</a>
+<a href="#" class="btn btn_raised_a">raised a ボタン</a>
+<a href="#" class="btn btn_action_a">action a ボタン</a>
+<a href="#" class="btn_link_a">text リンク</a>
+<a href="#" class="btn_link_b">text リンク</a>
+
+```
+
+### button size
+
+```html_example
+
+<a href="#" class="btn btn_flat_a btn_x_large">x large サイズ</a>
+<a href="#" class="btn btn_flat_a btn_large">large サイズ</a>
+<a href="#" class="btn btn_flat_a btn_midium">midium サイズ</a>
+<a href="#" class="btn btn_flat_a">default サイズ</a>
+<a href="#" class="btn btn_flat_a btn_small">small サイズ</a>
+<a href="#" class="btn btn_flat_a btn_x_small">x_small サイズ</a>
+
+```
+*/
+
+
+// default buttons
+.btn {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 8px;
+  background-image: none;
+  outline: 0;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  transition: background-color .3s ease-in;
+  &:hover {
+    background-color: #efefef;
+  }
+}
+
+// button style
+.btn_flat_a {
+  color: #333;
+  background-color: #efefef;
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
+.btn_raised_a {
+  color: #333;
+  background-color: #efefef;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,.3);
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
+.btn_action_a {
+  color: #333;
+  background-color: #efefef;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.4), 0 0 0 1px rgba(255,255,255,.2);
+  &:hover {
+    background-color: #ccc;
+  }
+}
+
+// link buttons
+@mixin btn_link($nomal, $hover) {
+  color: $link_color;
+  text-decoration: $nomal;
+  &:hover {
+    text-decoration: $hover;
+  }
+}
+
+.btn_link_a {
+  @include btn_link(none, underline);
+}
+
+.btn_link_b {
+  @include btn_link(underline, none);
+}
+
+// button size
+@mixin btn_size($fontSize, $padding) {
+  font-size: $fontSize;
+  padding: $padding;
+}
+
+.btn_x_small { @include btn_size($fontXSmall, $btnXSmall);}
+.btn_small { @include btn_size($fontSmall, $btnSmall);}
+.btn_midium { @include btn_size($fontMedium, $btnMidium);}
+.btn_large { @include btn_size($fontLarge, $btnLarge);}
+.btn_x_large { @include btn_size($fontXLarge, $btnXLarge);}
+
+.btn_full {
+  display: block;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: .3em;
+}

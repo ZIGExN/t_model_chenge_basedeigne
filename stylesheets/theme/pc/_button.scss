@@ -1,0 +1,185 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 Smartphones button setting
+//    date: 2016.05.19
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+//=========================================
+// headline toggle button
+//=========================================
+
+%headline-toggle-button{
+  margin: 0;
+  padding: 0;
+  display: table;
+  width: 100%;
+  box-sizing: border-box;
+  @include font-size(18);
+  font-weight: bold;
+  color: $z_color_white;
+  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+}
+
+[class^=headlinebutton-]{
+  @extend %headline-toggle-button;
+  a,a:hover{
+    text-decoration: none;
+  }
+  .text,.arrow{
+    display: table-cell;
+    padding: .2rem .4rem;
+  }
+  .arrow{
+    width: 1rem;
+  }
+  .text{
+    &.sample-demo:before{
+      content: 'headline toggle button sample demo';
+    }
+  }
+}
+.headlinebutton-red{
+  background: $cherry-red;
+}
+.headlinebutton-blue{
+  background: $sky-blue;
+}
+.headlinebutton-green{
+  background: $reaf-green;
+}
+.headlinebutton-orange{
+  background: $apricot-orange;
+}
+
+/*doc
+
+---
+
+  title: headline toggle button
+  name: headline toggle button
+  category: Smartphone
+
+---
+
+<div class="headlinebutton-red"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+<div class="headlinebutton-blue"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+<div class="headlinebutton-green"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+<div class="headlinebutton-orange"><div class="text sample-demo"></div><div class="arrow"><span class="icon-down-open-big"></span></div></div>
+
+*/
+
+//=========================================
+// menu list button
+//=========================================
+
+%listmenu-button{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-color: $smokey-gray;
+  border-width: 1px 1px 0;
+  border-style: solid;
+}
+
+.listmenu-button-group{
+  @extend %listmenu-button;
+  li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    .listmenu-button-wrap{
+      margin: 0;
+      padding: .2rem .4rem;
+      display: block;
+      color: $chacole-gray;
+      text-decoration: none;
+      border-bottom: solid 1px $smokey-gray;
+      .list-button{
+        margin: 0;
+        padding: 0;
+        display: table;
+        width: 100%;
+        .text,.arrow{
+          display: table-cell;
+        }
+        .text{
+          &.sample-demo:before{
+            content: 'list menu sample demo';
+          }
+        }
+        .arrow{
+          width: 1rem;
+          color: $cherry-red;
+        }
+      }
+    }
+  }
+}
+
+/*doc
+
+---
+
+  title: list menu button
+  name: list menu button
+  category: Smartphone
+
+---
+``` html_example
+
+<nav>
+  <ul class="listmenu-button-group">
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+    <li><a class="listmenu-button-wrap" href=""><span class="list-button"><span class="text sample-demo"></span><span class="arrow icon-right-open-big"></span></span></a></li>
+  </ul>
+</nav>
+```
+*/
+.radio-checkbutton-set{
+  display: table;
+  width: 100%;
+  .check-cell{
+    display: table-cell;
+    width: 50%;
+    box-sizing: border-box;
+    input[type="radio"]{/*ラジオボタンを非表示*/
+      display: none;
+      &:checked + .btn-check-label{
+        display: block;
+        @extend %btn;
+        border-color: darken($sky-blue, .7%);
+        border-width: 1px;
+        border-bottom-width: 3px;
+        background: $sky-blue;
+      }
+    }
+    .btn-check-label{
+      display: block;
+      @extend %btn;
+      @include btn-border-style(4px, $smokey-gray);
+      color: rgba($chacole-gray, .5);
+      @include textshadow-white;
+      background: $smokey-gray;
+    }
+    &:first-child .btn-check-label{
+      border-radius: 4px 0px 0px 4px;
+      border-right: none;
+    }
+    &:last-child .btn-check-label{
+      border-radius: 0px 4px 4px 0px;
+      border-right-width: 1px;
+    }
+    &.two-col{
+      width: 50%;
+    }
+  }
+}

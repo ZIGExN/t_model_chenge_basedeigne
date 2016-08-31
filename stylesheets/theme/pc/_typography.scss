@@ -1,0 +1,115 @@
+@charset 'utf-8';
+
+//=========================================
+//
+// tenshoku-ex v3 typography setting
+//    date: 2016.05.19
+//  author: vancho
+// version:0.0.1
+//
+//=========================================
+
+//=========================================
+// headline setting
+//=========================================
+
+@mixin headline-default-style($shadow-color){
+  margin: 0;
+  padding: .2rem .4rem;
+  border-radius: 4px;
+  box-shadow: 0 4px 0 lighten($shadow-color, 20%);
+  @include font-size(18);
+  font-weight: bold;
+  color: $z_color_white;
+  text-shadow: 0 -1px 0 rgba($z_color_black, .5);
+}
+[class^="headlinetype-"]{
+  &.sample-demo:before{
+    content:'headline sample demo';
+  }
+}
+@mixin headline-border-style($border-color){
+  border-bottom: 3px solid $border-color;
+  color: $chacole-gray;
+  text-shadow: none;
+}
+
+
+@mixin headline-border-style-dotted($border-color){
+  padding-left: 5px;
+  border-bottom: 1px dotted $border-color;
+  @include font-size(18);
+  font-weight: bold;
+  color: $chacole-gray;
+  text-shadow: none;
+}
+
+.headlinetype-red{
+  @include headline-default-style($cherry-red);
+  background: $cherry-red;
+}
+.headlinetype-blue{
+  @include headline-default-style($sky-blue);
+  background: $sky-blue;
+}
+.headlinetype-green{
+  @include headline-default-style($reaf-green);
+  background: $reaf-green;
+}
+.headlinetype-orange{
+  @include headline-default-style($apricot-orange);
+  background: $apricot-orange;
+}
+.headlinetype-chacolegray{
+  @include headline-default-style($chacole-gray);
+  background: $chacole-gray;
+}
+.headlinetype-smokeygray{
+  color: $chacole-gray;
+  text-shadow: 0 1px 0 $z_color_white;
+  @include headline-default-style($smokey-gray);
+  background: $smokey-gray;
+}
+
+.headlinetype-border-red{
+  @include headline-border-style($cherry-red);
+}
+.headlinetype-border-blue{
+  @include headline-border-style($sky-blue);
+}
+.headlinetype-border-green{
+  @include headline-border-style($reaf-green);
+}
+.headlinetype-border-orange{
+  @include headline-border-style($apricot-orange);
+}
+.headlinetype-border-chacolegray{
+  @include headline-border-style($chacole-gray);
+}
+.headlinetype-border-smokeygray{
+  @include headline-border-style($smokey-gray);
+}
+
+.headlinetype-border-dotted-smokeygray{
+  @include headline-border-style-dotted(lighten($chacole-gray, 40%));
+  background: $smokey-gray;
+}
+/*doc
+---
+title: headline style
+name: headline style
+category: Smartphone
+---
+
+```html_example
+<div class="headlinetype-red sample-demo"></div>
+<div class="headlinetype-blue sample-demo"></div>
+<div class="headlinetype-green sample-demo"></div>
+<div class="headlinetype-orange sample-demo"></div>
+<div class="headlinetype-chacolegray sample-demo"></div>
+<div class="headlinetype-smokeygray sample-demo"></div>
+```
+
+*/ 
+
+

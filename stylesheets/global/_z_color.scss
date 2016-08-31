@@ -1,0 +1,59 @@
+/*---------------------------------------------------
+  * _z_color.scss
+  * zigexn common color class (sass partial file)
+  * date:2015.4.20
+  * author: zigexn
+  * version 1.0.1
+  ---------------------------------------------------*/
+
+// grayscale
+$z_color_black: #000;
+$z_color_white: #fff;
+
+// one color pallete
+$palette_orange: #f93 #f60;
+$palette_blue: #7cf #2ae;
+$palette_green: #ad5 #8b1;
+$palette_pink: #f68 #f36;
+$palette_navy: #4f515d #242635;
+
+// color definitions
+$z_color_orange_a: nth($palette_orange, 1);
+$z_color_orange_b: nth($palette_orange, 2);
+$z_color_blue_a: nth($palette_blue, 1);
+$z_color_blue_b: nth($palette_blue, 2);
+$z_color_green_a: nth($palette_green, 1);
+$z_color_green_b: nth($palette_green, 2);
+$z_color_pink_a: nth($palette_pink, 1);
+$z_color_pink_b: nth($palette_pink, 2);
+$z_color_navy_a: nth($palette_navy, 1);
+$z_color_navy_b: nth($palette_navy, 2);
+
+// grayscale
+$z_color_gray_150 : #efefef;
+$z_color_gray_140 : #e6e6e6;
+$z_color_gray_130 : #ccc;
+$z_color_gray_120 : #b3b3b3;
+$z_color_gray_110 : #999;
+$z_color_gray_100 : #808080;
+$z_color_gray_90  : #666;
+$z_color_gray_80  : #4d4d4d;
+$z_color_gray_70  : #333;
+
+// gradation_vertical
+@mixin gradient-two-vertical($color_a, $color_b) {
+  background-color: $color_a;
+  background: linear-gradient(top, $color_a 0%, $color_b 100%);
+}
+
+// gradation_horizontal
+@mixin gradient-two-horizontal($color_a, $color_b) {
+  background-color: $color_a;
+  background: linear-gradient(to right, $color_a 0%, $color_b 100%);
+}
+
+// twotone
+@mixin two-tone-colors($color_a, $color_b) {
+  background-color: $color_a;
+  @include background-image(linear-gradient($color_a 50%, $color_b 50%));
+}
