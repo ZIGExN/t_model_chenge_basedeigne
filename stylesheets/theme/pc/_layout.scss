@@ -379,21 +379,6 @@ category: Smartphone
   }
 }
 //=========================================
-//求人リスト (新着・レコメンド用）
-//=========================================
-.recommend-jobinfo-content{
-  .photo{
-    figure{
-      margin: 0;
-      img{
-        padding: 3px;
-        border: 1px solid $smokey-gray;
-      }
-    }
-  }
-}
-
-//=========================================
 //検索結果用の求人リスト
 //=========================================
 .results-joblists{
@@ -622,6 +607,47 @@ category: Smartphone
   }
 }
 
+
+//=========================================
+// レコメンド・新着求人リスト
+//=========================================
+.recommend-joblist{
+  .recommend-joblist-linkblock{
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 1px solid $smokey-gray;
+    text-decoration: none;
+    &:last-child{
+      border-bottom: none;
+    }
+    .recommend-joblist-header{
+      overflow: hidden;
+      text-decoration: none;
+      figure{
+        margin: 0;
+        padding: 3px;
+        float: left;
+        width: 80px;
+        border: 1px solid $smokey-gray;
+      }
+      .recommend-joblist-title{
+        @include font-size(10);
+        text-decoration: underline;
+      }
+    }
+    .recommend-joblist-info{
+      ul{
+        margin: 0;
+        padding-left: 0;
+        li{
+          list-style: none;
+          color: $chacole-gray;
+        }
+      }
+    }
+  }
+}
 
 //=========================================
 // site home layout setting
@@ -903,13 +929,13 @@ category: Smartphone
   }
   .side-content{
     margin-top: 1rem;
-  }
-  .pickup-content{
     @include font-size(10);
     [class*='headlinetype-']{
       margin-bottom: 10px;
       @include font-size(12);
     }
+  }
+  .pickup-content{
     .anker-link{
       display: block;
       margin-bottom: 10px;
